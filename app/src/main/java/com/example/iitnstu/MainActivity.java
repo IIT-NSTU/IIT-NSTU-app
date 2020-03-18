@@ -2,7 +2,6 @@ package com.example.iitnstu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.os.Bundle;
 
 
