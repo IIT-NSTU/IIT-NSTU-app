@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
          //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         getWindow().setStatusBarColor(this.getResources().getColor(R.color.white));
 
         new Handler().postDelayed(new Runnable() {
