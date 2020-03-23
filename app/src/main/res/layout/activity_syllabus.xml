@@ -9,60 +9,99 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="189dp"
             android:layout_height="197dp"
-            app:srcCompat="@drawable/nstulogo"
-            tools:layout_editor_absoluteX="111dp"
-            tools:layout_editor_absoluteY="27dp" />
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="111dp"
+            android:layout_marginBottom="46dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nstulogo" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
             android:text=" Noakhali Science and Technology University"
             android:textAlignment="center"
             android:textSize="18sp"
-            tools:layout_editor_absoluteX="29dp"
-            tools:layout_editor_absoluteY="327dp" />
+            app:layout_constraintBottom_toTopOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="401dp"
             android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="20dp"
             android:text="Institute of Information Technology (IIT)"
             android:textSize="22sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="270dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="174dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/iitlogo"
-            tools:layout_editor_absoluteX="119dp"
-            tools:layout_editor_absoluteY="371dp" />
+            android:layout_marginStart="119dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="118dp"
+            android:layout_marginBottom="67dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/iitlogo" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="157dp"
+            android:layout_marginBottom="25dp"
             android:text="Syllabus for"
             android:textSize="18sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="156dp"
-            tools:layout_editor_absoluteY="588dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="386dp"
             android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="54dp"
             android:text="BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING (BSSE)"
-            tools:layout_editor_absoluteX="14dp"
-            tools:layout_editor_absoluteY="637dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
