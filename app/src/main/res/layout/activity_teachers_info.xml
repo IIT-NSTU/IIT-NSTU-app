@@ -31,10 +31,11 @@
 
         </RelativeLayout>
 
-        <androidx.gridlayout.widget.GridLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:rowCount="7">
+            android:rowCount="7"
+            >
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -63,7 +64,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/sumon" />
+                        android:src="@drawable/sumonsir"
+                        />
 
                     <TextView
                         android:id="@+id/textView1"
@@ -81,84 +83,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="303dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:layout_column="0"
-                app:layout_row="1"
-                app:layout_rowWeight="0" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="303dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:layout_column="0"
-                app:layout_row="2"
-                app:layout_rowWeight="0" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="303dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:layout_column="0"
-                app:layout_row="3"
-                app:layout_rowWeight="0" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="303dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:layout_column="0"
-                app:layout_row="4"
-                app:layout_rowWeight="0" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="303dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:layout_column="0"
-                app:layout_row="5"
-                app:layout_rowWeight="0" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="303dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:layout_column="0"
-                app:layout_row="6"
-                app:layout_rowWeight="0" />
-
-        </androidx.gridlayout.widget.GridLayout>
+        </GridLayout>
     </LinearLayout>
 </ScrollView>

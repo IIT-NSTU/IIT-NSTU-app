@@ -25,11 +25,11 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void startCourseCoodinator(View view){
-        Intent intent1=new Intent(HomeActivity.this,courseCoordinatorAcitivity.class);
-        startActivity(intent1);
+        Intent intent2=new Intent(HomeActivity.this,courseCoordinatorAcitivity.class);
+        startActivity(intent2);
     }
     public void teachers(View view){
-        Intent intent1=new Intent(HomeActivity.this,TeachersInfoActivity.class);
-        startActivity(intent1);
+        Intent intent3=new Intent(HomeActivity.this,TeachersInfoActivity.class);
+        startActivity(intent3);
     }
 }
