@@ -235,22 +235,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
                     android:gravity="center"
-                    >
+                    android:onClick="startCourseCoodinator"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
-                        android:src="@drawable/coursecoicon"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"/>
+                        android:layout_height="80dp"
+                        android:src="@drawable/coursecoicon" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="Course \nCoordinator's"
-                        android:textSize="18sp"
                         android:textColor="#6f6f6f"
-                        android:layout_marginTop="12dp"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

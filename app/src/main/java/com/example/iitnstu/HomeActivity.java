@@ -23,4 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent1=new Intent(HomeActivity.this,SyllabusActivity.class);
         startActivity(intent1);
     }
+
+    public void startCourseCoodinator(View view){
+        Intent intent1=new Intent(HomeActivity.this,courseCoordinatorAcitivity.class);
+        startActivity(intent1);
+    }
 }
