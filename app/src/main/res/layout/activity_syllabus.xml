@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="189dp"
+            android:layout_height="197dp"
+            app:srcCompat="@drawable/nstulogo"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="27dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Noakhali Science and Technology University"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="327dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="401dp"
+            android:layout_height="37dp"
+            android:text="Institute of Information Technology (IIT)"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="270dp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="174dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/iitlogo"
+            tools:layout_editor_absoluteX="119dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Syllabus for"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="588dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="386dp"
+            android:layout_height="40dp"
+            android:text="BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING (BSSE)"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="637dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

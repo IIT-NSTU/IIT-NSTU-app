@@ -19,4 +19,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void Click_Function(View view){
+        Intent intent1=new Intent(HomeActivity.this,SyllabusActivity.class);
+        startActivity(intent1);
+    }
 }
