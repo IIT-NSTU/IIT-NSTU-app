@@ -5,7 +5,9 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
     android:orientation="vertical">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -39,6 +41,7 @@
             android:layout_marginBottom="20dp"
             android:text=" Noakhali Science and Technology University"
             android:textAlignment="center"
+            android:textColor="#020000"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +57,7 @@
             android:layout_marginEnd="2dp"
             android:layout_marginBottom="20dp"
             android:text="Institute of Information Technology (IIT)"
+            android:textColor="#020000"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -84,6 +88,7 @@
             android:layout_marginEnd="157dp"
             android:layout_marginBottom="25dp"
             android:text="Syllabus for"
+            android:textColor="#020000"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView6"
@@ -99,6 +104,7 @@
             android:layout_marginEnd="11dp"
             android:layout_marginBottom="54dp"
             android:text="BACHELOR OF SCIENCE IN SOFTWARE ENGINEERING (BSSE)"
+            android:textColor="#020000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
