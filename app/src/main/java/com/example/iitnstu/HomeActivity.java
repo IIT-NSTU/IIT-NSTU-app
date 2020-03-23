@@ -28,4 +28,8 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent1=new Intent(HomeActivity.this,courseCoordinatorAcitivity.class);
         startActivity(intent1);
     }
+    public void teachers(View view){
+        Intent intent1=new Intent(HomeActivity.this,TeachersInfoActivity.class);
+        startActivity(intent1);
+    }
 }
