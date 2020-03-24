@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/bgapps"
     tools:context=".HomeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="125dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="25dp"
-                android:text="Teachers"
+                android:text="@string/teachers"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -33,9 +33,8 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:rowCount="7"
-            >
+            android:layout_height="1000dp"
+            android:rowCount="7">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -45,43 +44,146 @@
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp"
-                app:layout_column="0"
                 app:layout_row="0"
-                app:layout_rowWeight="0" >
+                app:layout_rowWeight="0">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center"
 
                     >
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageView1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/sumonsir"
-                        />
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/this_is_an_imageview"
+                        android:src="@drawable/sumonsir" />
 
                     <TextView
-                        android:id="@+id/textView1"
+                        android:id="@+id/textView8"
                         android:layout_width="match_parent"
-                        android:layout_height="180dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Md. Auhidur Rahman
-            ASSISTANT PROFESSOR and DIRECTOR (ACTING)
-        auhidsumon@gmail.com"
+                        android:layout_marginBottom="5dp"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:text="@string/md_auhidur_rahman"
+                        android:fontFamily="@font/assistant_regular"/>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="@string/assistant_professor_director_acting"/>
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="auhidsumon@gmail.com"/>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Discover More"/>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_row="1"
+                app:layout_rowWeight="0"
+                android:layout_column="0"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="286dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/this_is_an_imageview"
+                        app:srcCompat="@drawable/nbhuiyansir" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Mohammad Nuruzzaman Bhuiyan" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="ASSISTANT PROFESSOR (ON STUDY LEAVE)" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="mdnuruzzaman2001@yahoo.com" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Discover More" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
 
         </GridLayout>
     </LinearLayout>
