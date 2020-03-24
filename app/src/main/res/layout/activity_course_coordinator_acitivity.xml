@@ -21,42 +21,141 @@ tools:context=".IntroActivity">
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
         <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView12"
+            android:layout_width="227dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="205dp"
+            android:layout_marginRight="246dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:text="2nd Batch Course-Coordinator:"
+            android:text="1st Batch Course-Coordinator:"
             android:textColor="#020000"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="16dp" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="144dp"
             android:layout_height="121dp"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             app:srcCompat="@drawable/sumonsir"
-            tools:layout_editor_absoluteX="114dp"
-            tools:layout_editor_absoluteY="51dp" />
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="290dp" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:text="Md. Auhidur Rahman\nAssistent Professor and Acting Director"
+            android:layout_marginLeft="104dp"
+            android:text="Md. Auhidur Rahman"
             android:textColor="#020000"
-            tools:layout_editor_absoluteX="53dp"
-            tools:layout_editor_absoluteY="187dp" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="418dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="30dp"
+            android:text="Assistant Professor and Acting Director(IIT)"
+            android:textColor="#020000"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="451dp" />
+
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="2nd Batch Course-Coordinator:"
+            android:textColor="#020000"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="256dp" />
+
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="145dp"
+            android:layout_marginLeft="120dp"
+            android:text="Dipanita Saha"
+            android:textColor="#020000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginBottom="30dp"
+            android:text="Assistant Professor"
+            android:textColor="#020000"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="3rd Batch Course-Coordinator:"
+            android:textColor="#020000"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="502dp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="144dp"
+            android:layout_height="121dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/falgunimam"
+            tools:layout_editor_absoluteX="145dp"
+            tools:layout_editor_absoluteY="534dp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="142dp"
+            android:text="Falguni Roy"
+            android:textColor="#020000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="665dp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:text="Assistant Professor"
+            android:textColor="#020000"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="696dp" />
+
+
     </LinearLayout>
 </ScrollView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
