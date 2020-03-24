@@ -20,16 +20,20 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void Click_Function(View view){
-        Intent intent1=new Intent(HomeActivity.this,SyllabusActivity.class);
-        startActivity(intent1);
+        Intent intent=new Intent(HomeActivity.this,SyllabusActivity.class);
+        startActivity(intent);
     }
 
     public void startCourseCoodinator(View view){
-        Intent intent2=new Intent(HomeActivity.this,courseCoordinatorAcitivity.class);
-        startActivity(intent2);
+        Intent intent=new Intent(HomeActivity.this,courseCoordinatorAcitivity.class);
+        startActivity(intent);
     }
     public void teachers(View view){
-        Intent intent3=new Intent(HomeActivity.this,TeachersInfoActivity.class);
-        startActivity(intent3);
+        Intent intent=new Intent(HomeActivity.this,TeachersInfoActivity.class);
+        startActivity(intent);
+    }
+    public void startStudentInfo(View view){
+        Intent intent=new Intent(HomeActivity.this, StudentInfoLogin.class);
+        startActivity(intent);
     }
 }
