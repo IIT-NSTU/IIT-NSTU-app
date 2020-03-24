@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pdf_Syllabus_Activity"></activity>
+        <activity android:name=".DirectorProfile"></activity>
+        <activity android:name=".Pdf_Syllabus_Activity" />
         <activity android:name=".StudentInfoMain" />
         <activity android:name=".StudentInfoLogin" />
         <activity android:name=".courseCoordinatorAcitivity" />

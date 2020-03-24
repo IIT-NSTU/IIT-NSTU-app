@@ -93,6 +93,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/ic_launcher_background"
                     android:gravity="center"
+                    android:onClick="startDirectorProfile"
                     android:orientation="vertical"
                     android:padding="16dp">
 
