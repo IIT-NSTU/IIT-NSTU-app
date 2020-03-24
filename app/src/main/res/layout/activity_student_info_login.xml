@@ -67,13 +67,14 @@
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/button_bg"
+        android:onClick="login"
         android:text="Login"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/button_bg"/>
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
