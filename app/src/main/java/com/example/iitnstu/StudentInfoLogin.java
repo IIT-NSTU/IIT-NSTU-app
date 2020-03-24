@@ -23,8 +23,10 @@ public class StudentInfoLogin extends AppCompatActivity {
         if (Pattern.matches("[ashASHmuMUbkBKfF]{3}[1-2][890]250[0-4][0-9][mfMF]",id)){
             Intent intent=new Intent(StudentInfoLogin.this, StudentInfoMain.class);
             startActivity(intent);
+            idText.setText("");
         }
-        else
+        else {
             Toast.makeText(this, "sorry only student!!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
