@@ -27,6 +27,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="45dp"
+                android:fontFamily="@font/assistant_regular"
                 android:text="Director's Profile"
                 android:textColor="#FFFFFF"
                 android:textSize="22dp" />
@@ -36,7 +37,7 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="2210dp"
+            android:layout_height="wrap_content"
             android:rowCount="1">
 
 
@@ -55,18 +56,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:padding="10dp"
-                    >
-
+                    android:padding="10dp">
 
 
                     <ImageView
                         android:id="@+id/imageView8"
                         android:layout_width="182dp"
                         android:layout_height="153dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_gravity="center"
                         app:srcCompat="@drawable/sumonsir" />
 
                     <TextView
@@ -74,8 +73,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Md. Auhidur Rahman"
                         android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Md. Auhidur Rahman"
                         android:textColor="#020000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -86,18 +86,20 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginBottom="5dp"
-                        android:text="Assistant Professor and Acting Director"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="@string/assistant_professor_director_acting"
                         android:textColor="#020000"
-                        android:textSize="16sp" />
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/textView21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/assistant_regular"
                         android:text="Institute of Information Technology (IIT)"
                         android:textColor="#020000"
-                        android:textSize="16sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/textView27"
@@ -105,6 +107,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
+                        android:fontFamily="@font/assistant_regular"
                         android:text="Email: auhidsumon@gmail.com"
                         android:textColor="#020000"
                         android:textSize="16sp" />
@@ -115,6 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_marginTop="60dp"
+                        android:fontFamily="@font/assistant_regular"
                         android:text="Director's Message:"
                         android:textSize="18sp" />
 
@@ -123,16 +127,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/assistant_regular"
                         android:text="@string/DirectorMessage"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
-
-
 
 
         </GridLayout>

@@ -5,7 +5,7 @@
         By assuring professionalism,distinction and recognition IIT ensures that alumni from our Institute can efficiently contribute to the IT industry
         of Bangladesh and all over the world.</string>
     <string name="md_auhidur_rahman">Md. Auhidur Rahman</string>
-    <string name="assistant_professor_director_acting"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
+    <string name="assistant_professor_director_acting_"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
     <string name="teachers">Teachers</string>
     <string name="this_is_an_imageview">this_is_an_imageview</string>
     <string name="DirectorMessage">It is my pleasure to introduce you to one of the vibrant Technological institutes in Bangladesh.  Institute of Information Technology (IIT), Noakhali Science and Technology University.
@@ -23,5 +23,6 @@ Mr. Md. Auhidur Rahman\n
 Assistant Professor and Director (Acting)\n
 
 Institute of Information Technology (IIT)</string>
+    <string name="assistant_professor_director_acting"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
     >
 </resources>
