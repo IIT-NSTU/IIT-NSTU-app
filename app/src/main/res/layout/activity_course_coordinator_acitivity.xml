@@ -64,6 +64,7 @@
                         android:layout_width="164dp"
                         android:layout_height="145dp"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         app:srcCompat="@drawable/dipamam" />
 
                     <TextView
@@ -73,6 +74,7 @@
                         android:layout_row="0"
                         android:layout_column="0"
                         android:fontFamily="@font/assistant_regular"
+                        android:layout_marginTop="10dp"
                         android:text="Dipanita Saha"
                         android:layout_gravity="center"
                         android:textColor="#020000"
@@ -98,7 +100,7 @@
                         android:layout_row="0"
                         android:layout_column="0"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="1st Batch Coordinator"
+                        android:text="1st Batch Course Coordinator"
                         android:layout_marginTop="18dp"
                         android:layout_gravity="center"
                         android:textColor="#020000"
@@ -133,6 +135,7 @@
                         android:layout_width="164dp"
                         android:layout_height="145dp"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         app:srcCompat="@drawable/sumonsir" />
 
                     <TextView
@@ -141,6 +144,7 @@
                         android:layout_height="wrap_content"
                         android:layout_row="0"
                         android:layout_column="0"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/assistant_regular"
                         android:text="Md. Auhidur Rahman"
                         android:layout_gravity="center"
@@ -167,7 +171,7 @@
                         android:layout_row="0"
                         android:layout_column="0"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="2nd Batch Coordinator"
+                        android:text="2nd Batch Course Coordinator"
                         android:layout_marginTop="18dp"
                         android:layout_gravity="center"
                         android:textColor="#020000"
@@ -202,6 +206,7 @@
                         android:layout_width="164dp"
                         android:layout_height="145dp"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         app:srcCompat="@drawable/falgunimam" />
 
                     <TextView
@@ -212,6 +217,7 @@
                         android:layout_column="0"
                         android:fontFamily="@font/assistant_regular"
                         android:text="Falguni Roy"
+                        android:layout_marginTop="10dp"
                         android:layout_gravity="center"
                         android:textColor="#020000"
                         android:textSize="20sp"
@@ -236,7 +242,7 @@
                         android:layout_row="0"
                         android:layout_column="0"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="3rd Batch Coordinator"
+                        android:text="3rd Batch Course Coordinator"
                         android:layout_marginTop="18dp"
                         android:layout_gravity="center"
                         android:textColor="#020000"
