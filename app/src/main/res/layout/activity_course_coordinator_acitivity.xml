@@ -1,175 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/cardview_light_background"
-tools:context=".IntroActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapps"
+    android:orientation="vertical"
+    tools:context=".StudentInfoLogin">
 
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="227dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="246dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="1st Batch Course-Coordinator:"
-            android:textColor="#020000"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="16dp" />
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
 
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="144dp"
-            android:layout_height="121dp"
-            android:layout_marginLeft="115dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/dipamam" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="45dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Course-Coordinator's"
+                android:textColor="#FFFFFF"
+                android:textSize="22dp" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="135dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="Dipanita Saha"
-            android:textColor="#020000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="120dp"
-            tools:layout_editor_absoluteY="418dp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="122dp"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="Assistant Professor"
-            android:textColor="#020000"
-            android:textSize="17sp"
-            tools:layout_editor_absoluteX="67dp"
-            tools:layout_editor_absoluteY="451dp" />
+            android:rowCount="3">
 
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="2nd Batch Course-Coordinator:"
-            android:textColor="#020000"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="256dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:layout_row="0"
+                app:layout_rowWeight="0">
 
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="145dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="Md. Auhidur Rahman"
-            android:textColor="#020000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="179dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="55dp"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="@string/assistant_professor_director_acting_3"
-            android:textColor="#020000"
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="210dp" />
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="3rd Batch Course-Coordinator:"
-            android:textColor="#020000"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="502dp" />
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="164dp"
+                        android:layout_height="145dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/dipamam" />
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="144dp"
-            android:layout_height="121dp"
-            android:layout_marginLeft="115dp"
-            android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/falgunimam"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="534dp" />
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Dipanita Saha"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="142dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="Falguni Roy"
-            android:textColor="#020000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="665dp" />
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Assistant Professor"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="122dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="Assistant Professor"
-            android:textColor="#020000"
-            android:textSize="17sp"
-            tools:layout_editor_absoluteX="151dp"
-            tools:layout_editor_absoluteY="696dp" />
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="1st Batch Coordinator"
+                        android:layout_marginTop="18dp"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="22sp" />
+                </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="144dp"
-            android:layout_height="121dp"
-            android:layout_marginTop="-415dp"
-            android:layout_marginLeft="120dp"
-            app:srcCompat="@drawable/sumonsir" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:layout_rowWeight="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="164dp"
+                        android:layout_height="145dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/sumonsir" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Md. Auhidur Rahman"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Assistant Professor and Acting Director"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="2nd Batch Coordinator"
+                        android:layout_marginTop="18dp"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="164dp"
+                        android:layout_height="145dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/falgunimam" />
+
+                    <TextView
+                        android:id="@+id/textView48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Falguni Roy"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="Assistant Professor"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="3rd Batch Coordinator"
+                        android:layout_marginTop="18dp"
+                        android:layout_gravity="center"
+                        android:textColor="#020000"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+
 
 
     </LinearLayout>
 </ScrollView>
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
