@@ -30,25 +30,26 @@
 
 
     </RelativeLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textSize="22dp"
 
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="#FFFFFF"
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:gravity="center"
-        android:text="To have student information you need to login \nusing you ID."
-        android:textColor="#DF272424"
+            android:textSize="22dp" />
 
-        android:textSize="14sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:text="To have student information you need to login \nusing you ID."
+            android:textColor="#DF272424"
+
+            android:textSize="14sp" />
 
     <EditText
         android:id="@+id/loginId"

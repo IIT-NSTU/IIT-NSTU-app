@@ -26,7 +26,7 @@ public class StudentInfoLogin extends AppCompatActivity {
             idText.setText("");
         }
         else {
-            Toast.makeText(this, "sorry only student!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry only student!!", Toast.LENGTH_SHORT).show();
         }
     }
 }

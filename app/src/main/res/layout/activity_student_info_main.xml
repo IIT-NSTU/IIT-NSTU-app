@@ -19,15 +19,15 @@
             android:layout_marginRight="20dp">
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="45dp"
                 android:text="Student Information"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="22dp" />
 
         </RelativeLayout>
 
@@ -66,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="1st Batch\nSession 17-18"
-                        android:textSize="22sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="2nd Batch\nSession 18-19"
-                        android:textSize="22sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -130,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="3rd Batch\nSession 19-20"
-                        android:textSize="22sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
