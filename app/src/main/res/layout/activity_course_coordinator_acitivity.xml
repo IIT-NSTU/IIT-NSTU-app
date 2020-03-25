@@ -10,7 +10,6 @@ tools:context=".IntroActivity">
 <ScrollView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="-100dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="1.0"
     app:layout_constraintStart_toStartOf="parent"
@@ -25,21 +24,31 @@ tools:context=".IntroActivity">
             android:id="@+id/textView12"
             android:layout_width="227dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="246dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="246dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="1st Batch Course-Coordinator:"
             android:textColor="#020000"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="16dp" />
 
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="144dp"
+            android:layout_height="121dp"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/dipamam" />
+
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="135dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="Dipanita Saha"
             android:textColor="#020000"
             android:textSize="18sp"
@@ -51,13 +60,14 @@ tools:context=".IntroActivity">
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="126dp"
+            android:layout_marginLeft="122dp"
             android:layout_marginBottom="30dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="Assistant Professor"
             android:textColor="#020000"
+            android:textSize="17sp"
             tools:layout_editor_absoluteX="67dp"
             tools:layout_editor_absoluteY="451dp" />
-
 
 
         <TextView
@@ -65,6 +75,7 @@ tools:context=".IntroActivity">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="2nd Batch Course-Coordinator:"
             android:textColor="#020000"
             android:textStyle="bold"
@@ -72,13 +83,13 @@ tools:context=".IntroActivity">
             tools:layout_editor_absoluteY="256dp" />
 
 
-
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="145dp"
             android:layout_marginLeft="110dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="Md. Auhidur Rahman"
             android:textColor="#020000"
             android:textSize="18sp"
@@ -92,7 +103,8 @@ tools:context=".IntroActivity">
             android:layout_height="wrap_content"
             android:layout_marginLeft="55dp"
             android:layout_marginBottom="30dp"
-            android:text="Assistant Professor and Acting Director()IIT"
+            android:fontFamily="@font/assistant_regular"
+            android:text="@string/assistant_professor_director_acting_3"
             android:textColor="#020000"
             tools:layout_editor_absoluteX="163dp"
             tools:layout_editor_absoluteY="210dp" />
@@ -103,6 +115,7 @@ tools:context=".IntroActivity">
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="3rd Batch Course-Coordinator:"
             android:textColor="#020000"
             android:textStyle="bold"
@@ -113,7 +126,7 @@ tools:context=".IntroActivity">
             android:id="@+id/imageView9"
             android:layout_width="144dp"
             android:layout_height="121dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="115dp"
             android:layout_marginBottom="10dp"
             app:srcCompat="@drawable/falgunimam"
             tools:layout_editor_absoluteX="145dp"
@@ -124,6 +137,7 @@ tools:context=".IntroActivity">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="142dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="Falguni Roy"
             android:textColor="#020000"
             android:textSize="18sp"
@@ -135,9 +149,11 @@ tools:context=".IntroActivity">
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginLeft="122dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="Assistant Professor"
             android:textColor="#020000"
+            android:textSize="17sp"
             tools:layout_editor_absoluteX="151dp"
             tools:layout_editor_absoluteY="696dp" />
 
@@ -145,7 +161,7 @@ tools:context=".IntroActivity">
             android:id="@+id/imageView10"
             android:layout_width="144dp"
             android:layout_height="121dp"
-            android:layout_marginTop="-405dp"
+            android:layout_marginTop="-415dp"
             android:layout_marginLeft="120dp"
             app:srcCompat="@drawable/sumonsir" />
 

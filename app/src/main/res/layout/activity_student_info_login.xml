@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
             android:gravity="center"
-            android:text="To have student information you need to login \nusing you ID."
+            android:text="To have student information you need to login \nusing your ID."
             android:textColor="#DF272424"
 
             android:textSize="14sp" />
