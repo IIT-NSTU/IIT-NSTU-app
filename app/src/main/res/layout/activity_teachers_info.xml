@@ -74,7 +74,8 @@
                         android:text="@string/md_auhidur_rahman"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -148,7 +149,8 @@
                         android:text="Mohammad Nuruzzaman Bhuiyan"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView13"
@@ -220,7 +222,8 @@
                         android:text="Dipanita Saha"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView22"
@@ -290,7 +293,8 @@
                         android:text="Falguni Roy"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView26"
@@ -360,7 +364,8 @@
                         android:text="Dipok Chandra Das"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView30"
@@ -430,7 +435,8 @@
                         android:text="Md. Iftekharul Alam Efat"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView34"
@@ -500,7 +506,8 @@
                         android:text="Tasniya Ahmed"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView38"
