@@ -24,6 +24,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="45dp"
+            android:fontFamily="@font/assistant_regular"
             android:text="Student Information"
             android:textColor="#FFFFFF"
             android:textSize="22dp" />
@@ -35,51 +36,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
+            android:fontFamily="@font/assistant_regular"
             android:gravity="center"
             android:text="Login"
-            android:textColor="#FFFFFF"
 
+            android:textColor="#FFFFFF"
             android:textSize="22dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
+            android:fontFamily="@font/assistant_regular"
             android:gravity="center"
             android:text="To have student information you need to login \nusing your ID."
-            android:textColor="#DF272424"
 
+            android:textColor="#DF272424"
             android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/loginId"
-        style="@android:style/Widget.DeviceDefault.EditText"
-        android:layout_width="347dp"
-        android:layout_height="62dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="60dp"
-        android:autofillHints="ID"
-        android:defaultFocusHighlightEnabled="true"
-        android:hint="ID"
-        android:inputType="textPassword"
-        android:outlineSpotShadowColor="#000A0A0A"
-        android:shadowColor="#050505"
-        android:textColor="#090909"
-        android:textColorHint="#7C2B2929"
-        android:textCursorDrawable="@color/colorAccent"
-        android:visibility="visible"
-        tools:visibility="visible" />
+        <EditText
+            android:id="@+id/loginId"
+            style="@android:style/Widget.DeviceDefault.EditText"
+            android:layout_width="347dp"
+            android:layout_height="62dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="60dp"
+            android:autofillHints="ID"
+            android:defaultFocusHighlightEnabled="true"
+            android:fontFamily="@font/assistant_regular"
+            android:hint="ID"
+            android:inputType="textPassword"
+            android:outlineSpotShadowColor="#000A0A0A"
+            android:shadowColor="#050505"
+            android:textColor="#090909"
+            android:textColorHint="#7C2B2929"
+            android:textCursorDrawable="@color/colorAccent"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_bg"
-        android:onClick="login"
-        android:text="Login"
-        android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_bg"
+            android:fontFamily="@font/assistant_regular"
+            android:onClick="login"
+            android:text="Login"
+            android:textColor="#FFFFFF" />
 </LinearLayout>
 
 </ScrollView>
