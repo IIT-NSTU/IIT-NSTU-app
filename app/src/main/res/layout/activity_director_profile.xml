@@ -7,10 +7,13 @@
     android:background="@drawable/bgapps"
     android:orientation="vertical"
     tools:context=".StudentInfoLogin">
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,79 +36,109 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="1"
-            android:rowCount="1"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false">
+            android:layout_height="2210dp"
+            android:rowCount="1">
+
 
             <androidx.cardview.widget.CardView
-                android:layout_width="285dp"
-                android:layout_height="578dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+                app:layout_row="0"
+                app:layout_rowWeight="0">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/cardview_light_background"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="10dp"
+                    >
+
+
 
                     <ImageView
                         android:id="@+id/imageView8"
-                        android:layout_width="160dp"
-                        android:layout_height="165dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
+                        android:layout_width="182dp"
+                        android:layout_height="153dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="-250dp"
                         app:srcCompat="@drawable/sumonsir" />
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:text="Md. Auhidur Rahman"
-                        android:textColor="#020000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:text="Assistant Professor and Acting Director"
-                        android:textColor="#020000"
-                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:text="Md. Auhidur Rahman"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#020000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:text="Assistant Professor and Acting Director"
+                        android:textColor="#020000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="Institute of Information Technology (IIT)"
                         android:textColor="#020000"
                         android:textSize="16sp" />
 
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Email: auhidsumon@gmail.com"
+                        android:textColor="#020000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="60dp"
+                        android:text="Director's Message:"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/DirectorMessage"
+                        android:textSize="16sp" />
+
 
                 </LinearLayout>
+
+
             </androidx.cardview.widget.CardView>
 
 
 
 
         </GridLayout>
-    </LinearLayout>
 
+
+
+
+    </LinearLayout>
 </ScrollView>
