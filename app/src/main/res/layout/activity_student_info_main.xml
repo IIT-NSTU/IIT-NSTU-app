@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgapps"
+    tools:ignore="contentDescription"
     tools:context=".HomeActivity">
 
     <LinearLayout
@@ -28,7 +29,7 @@
                 android:fontFamily="@font/assistant_regular"
                 android:text="Student Information"
                 android:textColor="#FFFFFF"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
 
         </RelativeLayout>
 
@@ -79,7 +80,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                android:onClick="goSecondInfo"
+                android:onClick="onClick"
                 app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp">

@@ -20,13 +20,13 @@ public class StudentInfoLogin extends AppCompatActivity {
     public void login(View view){
         TextView idText=findViewById(R.id.loginId);
         String id=idText.getText().toString();
-       // if (Pattern.matches("[ashASHmuMUbkBKfF]{3}[1-2][890]250[0-4][0-9][mfMF]",id)){
+        if (Pattern.matches("[ashASHmuMUbkBKfF]{3}[1-2][890]250[0-4][0-9][mfMF]",id)){
             Intent intent=new Intent(StudentInfoLogin.this, StudentInfoMain.class);
             startActivity(intent);
-       //     idText.setText("");
-        //}
-      //  else {
-       //     Toast.makeText(this, "Sorry only student!!", Toast.LENGTH_SHORT).show();
-       // }
+           idText.setText("");
+        }
+        else {
+            Toast.makeText(this, "Sorry only student!!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
