@@ -12,7 +12,6 @@
         <activity android:name=".Cards"></activity>
         <activity android:name=".SecondBatchInfo" />
         <activity android:name=".DirectorProfile" />
-        <activity android:name=".Pdf_Syllabus_Activity" />
         <activity android:name=".StudentInfoMain" />
         <activity android:name=".StudentInfoLogin" />
         <activity android:name=".courseCoordinatorAcitivity" />

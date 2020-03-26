@@ -1,126 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
-    tools:context=".IntroActivity">
+    tools:context=".Pdf_Syllabus_Activity">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="157dp"
-        android:layout_height="161dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/nstulogo" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="@font/assistant_regular"
-        android:text="Institute of Information Technology (IIT)"
-        android:textColor="#020000"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/assistant_regular"
-        android:text="Noakhali Science and Technology University"
-        android:textColor="#020000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="259dp"
-        android:layout_height="182dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/iitlogo" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="6dp"
-        android:fontFamily="@font/assistant_regular"
-        android:text="Syllabus for"
-        android:textColor="#020000"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="14dp"
-        android:fontFamily="@font/assistant_regular"
-        android:text="Bachelor of Science in Software Engineering (BSSE)"
-        android:textColor="#020000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="33dp"
-        android:fontFamily="@font/assistant_regular"
-        android:text="View Syllabus"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/PdfSyllabus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+</LinearLayout>
