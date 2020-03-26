@@ -1,33 +1,23 @@
 package com.example.iitnstu;
-
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.barteksc.pdfviewer.PDFView;
+
 public class SyllabusActivity extends AppCompatActivity {
 
-    Button View_Syllabus;
+    PDFView syllabus1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
 
-        View_Syllabus = (Button) findViewById(R.id.button);
+        syllabus1 = (PDFView) findViewById(R.id.PdfSyllabus);
+        syllabus1.fromAsset("BSSE-Syllabus1.pdf").load();
 
-        View_Syllabus.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                Intent i = new Intent (SyllabusActivity.this, Pdf_Syllabus_Activity.class);
-                startActivity(i);
-
-            }
-
-
-        });
     }
 
 
