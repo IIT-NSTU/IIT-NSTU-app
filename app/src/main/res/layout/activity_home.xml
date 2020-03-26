@@ -319,15 +319,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
                     android:gravity="center"
-                    >
+                    android:onClick="startAllcourse"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
-                        android:src="@drawable/allcourseicon"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"/>
+                        android:layout_height="80dp"
+                        android:src="@drawable/allcourseicon" />
 
                     <TextView
                         android:layout_width="wrap_content"

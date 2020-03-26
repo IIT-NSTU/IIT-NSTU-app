@@ -44,4 +44,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent=new Intent(HomeActivity.this, DirectorProfile.class);
         startActivity(intent);
     }
+
+    public void startAllcourse(View view){
+        Intent intent=new Intent(HomeActivity.this, Allcourse.class);
+        startActivity(intent);
+    }
 }
