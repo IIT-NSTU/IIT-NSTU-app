@@ -14,7 +14,8 @@ public class Allcourse extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allcourse);
 
-        syllabus2 = (PDFView) findViewById(R.id.Pdf);
-        syllabus2.fromAsset("Syllabus.pdf").load();
+        //syllabus2 = (PDFView) findViewById(R.id.Pdf);
+        //syllabus2.fromAsset("Syllabus.pdf").load();
     }
+
 }

@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
 
 
-        lintOptions {
-            checkReleaseBuilds false
-        }
+    lintOptions {
+        checkReleaseBuilds false
+    }
 
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
