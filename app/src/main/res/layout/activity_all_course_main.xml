@@ -63,7 +63,6 @@
                     android:padding="16dp">
 
 
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -91,10 +90,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="secondsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -102,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 2nd Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -124,10 +122,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="thirdsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -135,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 3rd Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -157,10 +154,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="fourthsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -168,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 4th Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -190,10 +186,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="fifthsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -201,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 5th Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -223,10 +218,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="sixthsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -234,7 +228,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 6th Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -256,10 +250,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="seventhsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -267,7 +260,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 7th Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -289,10 +282,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="eighthsemesterstart"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
 
                     <TextView
@@ -300,7 +292,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text=" 1st Semester \n"
+                        android:text=" 8th Semester \n"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
