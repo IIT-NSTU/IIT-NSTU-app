@@ -28,7 +28,7 @@
                 android:fontFamily="@font/assistant_regular"
                 android:text="Students of 2nd Batch"
                 android:textColor="#FFFFFF"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
 
         </RelativeLayout>
 

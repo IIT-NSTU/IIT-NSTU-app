@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background"
+    tools:ignore="contentDescription"
     tools:context=".IntroActivity">
 
     <ImageView

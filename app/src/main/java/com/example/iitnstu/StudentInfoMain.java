@@ -14,8 +14,8 @@ public class StudentInfoMain extends AppCompatActivity {
         setContentView(R.layout.activity_student_info_main);
     }
 
-    public void goSecondInfo(View view){
-        Intent intent=new Intent(StudentInfoMain.this,SecondBatchInfo.class);
+    public void onClick(View view){
+        Intent intent=new Intent(this,SecondBatchInfo.class);
         startActivity(intent);
     }
 }

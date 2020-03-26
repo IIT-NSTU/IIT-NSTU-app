@@ -21,9 +21,9 @@ public class SecondBatchInfo extends AppCompatActivity {
         GridLayout gridLayout=findViewById(R.id.gridlayout);
 
         try {
-            inputStreamId=getAssets().open("id_database.txt");
+            inputStreamId=getAssets().open("ID_database_second.txt");
             inId=new Scanner(inputStreamId);
-            inputStreamName=getAssets().open("file_database.txt");
+            inputStreamName=getAssets().open("Name_database_second.txt");
             inName=new Scanner(inputStreamName);
                 String name="",id="";
             while (inId.hasNext()) {

@@ -161,7 +161,7 @@
                         android:text="ASSISTANT PROFESSOR (ON STUDY LEAVE)"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="16dp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView14"
@@ -234,7 +234,7 @@
                         android:text="ASSISTANT PROFESSOR"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="16dp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView23"
@@ -305,7 +305,7 @@
                         android:text="ASSISTANT PROFESSOR"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="16dp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView27"
@@ -376,7 +376,7 @@
                         android:text="LECTURER"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="16dp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView31"
@@ -447,7 +447,7 @@
                         android:text="LECTURER"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="16dp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView35"
@@ -518,7 +518,7 @@
                         android:text="LECTURER"
                         android:textAlignment="center"
                         android:textColor="@color/cardview_dark_background"
-                        android:textSize="16dp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView39"

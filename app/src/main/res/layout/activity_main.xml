@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
     android:backgroundTint="@color/white"
+    tools:ignore="contentDescription"
     tools:context=".MainActivity">
 
     <ImageView

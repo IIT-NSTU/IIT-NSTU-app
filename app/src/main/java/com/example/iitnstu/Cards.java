@@ -3,6 +3,7 @@ package com.example.iitnstu;
 import androidx.annotation.NonNull;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+@SuppressLint("ViewConstructor")
 public class Cards extends FrameLayout {
 
 
@@ -21,7 +23,7 @@ public class Cards extends FrameLayout {
 
         ImageView studentPic=findViewById(R.id.studentPic);
         Context context1 = studentPic.getContext();
-        int picId = context.getResources().getIdentifier(id, "drawable", context1.getPackageName());
+        int picId = context.getResources().getIdentifier(id.toLowerCase(), "drawable", context1.getPackageName());
         studentPic.setImageResource(picId);
 
 
