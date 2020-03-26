@@ -5,32 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgapps"
+    android:foregroundGravity="bottom|fill"
     android:orientation="vertical"
     tools:context=".StudentInfoLogin">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="45dp"
-            android:fontFamily="@font/assistant_regular"
-            android:text="Student Information"
-            android:textColor="#FFFFFF"
-            android:textSize="22dp" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="45dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="Student Information"
+                android:textColor="#FFFFFF"
+                android:textSize="22dp" />
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -85,6 +88,6 @@
             android:onClick="login"
             android:text="Login"
             android:textColor="#FFFFFF" />
-</LinearLayout>
+    </LinearLayout>
 
 </ScrollView>
