@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgapps"
-    tools:ignore="contentDescription"
-    tools:context=".HomeActivity">
+    tools:ignore="contentDescription">
 
 
     <LinearLayout
@@ -17,8 +16,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,10 +37,10 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="3"
             android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false">
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="3">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -58,7 +57,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="firstSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -90,7 +89,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="secondsemesterstart"
+                    android:onClick="secondSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -122,7 +121,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="thirdsemesterstart"
+                    android:onClick="thirdSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -154,7 +153,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="fourthsemesterstart"
+                    android:onClick="fourthSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -186,7 +185,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="fifthsemesterstart"
+                    android:onClick="fifthSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -218,7 +217,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="sixthsemesterstart"
+                    android:onClick="sixthSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -250,7 +249,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="seventhsemesterstart"
+                    android:onClick="seventhSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -282,7 +281,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="eighthsemesterstart"
+                    android:onClick="eighthSemesterStart"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -300,14 +299,7 @@
             </androidx.cardview.widget.CardView>
 
 
-
-
-
         </GridLayout>
-
-
-
-
 
 
     </LinearLayout>

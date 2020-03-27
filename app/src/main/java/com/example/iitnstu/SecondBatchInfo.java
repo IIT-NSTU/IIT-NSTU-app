@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 public class SecondBatchInfo extends AppCompatActivity {
 
-    InputStream inputStreamName,inputStreamId;
-    Scanner inName,inId;
+    InputStream inputStreamName,inputStreamId,inputStreamPhnNo,inputStreamEmail;
+    Scanner inName,inId,inPhnNo,inEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,14 +23,24 @@ public class SecondBatchInfo extends AppCompatActivity {
         try {
             inputStreamId=getAssets().open("ID_database_second.txt");
             inId=new Scanner(inputStreamId);
+
             inputStreamName=getAssets().open("Name_database_second.txt");
             inName=new Scanner(inputStreamName);
-                String name="",id="";
+
+            inputStreamPhnNo=getAssets().open("phn_no_second.txt");
+            inPhnNo=new Scanner(inputStreamPhnNo);
+
+            inputStreamEmail=getAssets().open("email_second.txt");
+            inEmail=new Scanner(inputStreamEmail);
+
+                String name="",id="",phnNo="",email="";
             while (inId.hasNext()) {
                 name = inName.nextLine();
                 id = inId.next();
+                phnNo=inPhnNo.next();
+                email=inEmail.next();
 
-                Cards cards = new Cards(this, name,id);
+                Cards cards = new Cards(this, name,id,phnNo,email);
                 gridLayout.addView(cards);
 
             }
@@ -40,8 +50,13 @@ public class SecondBatchInfo extends AppCompatActivity {
             try {
                 inputStreamName.close();
                 inputStreamId.close();
+                inputStreamPhnNo.close();
+                inputStreamEmail.close();
+
                 inName.close();
                 inId.close();
+                inPhnNo.close();
+                inEmail.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

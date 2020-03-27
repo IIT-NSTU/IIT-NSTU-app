@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class Cards extends FrameLayout {
 
 
-    public Cards(@NonNull Context context,String name,String id) {
+    public Cards(@NonNull Context context,String name,String id,String phnNo,String email) {
         super(context);
         LayoutInflater.from(context).inflate(R.layout.activity_cards, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
@@ -32,5 +32,11 @@ public class Cards extends FrameLayout {
 
         TextView studentID=findViewById(R.id.studentID);
         studentID.setText(id);
+
+        TextView studentPhnNo=findViewById(R.id.studentPhnNo);
+        studentPhnNo.setText(phnNo);
+
+        TextView studentEmail=findViewById(R.id.studentEmail);
+        studentEmail.setText(email);
     }
 }

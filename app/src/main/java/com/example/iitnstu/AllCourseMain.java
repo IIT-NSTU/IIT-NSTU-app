@@ -14,42 +14,42 @@ public class AllCourseMain extends AppCompatActivity {
         setContentView(R.layout.activity_all_course_main);
     }
 
-    public void onClick(View view){
+    public void firstSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","1stSemester.pdf");
         startActivity(intent);
     }
 
-    public void secondsemesterstart(View view){
+    public void secondSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","2ndSemester.pdf");
         startActivity(intent);
     }
 
-    public void thirdsemesterstart(View view){
+    public void thirdSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","3rdSemester.pdf");
         startActivity(intent);
     }
 
-    public void fourthsemesterstart(View view){
+    public void fourthSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","4thSemester.pdf");
         startActivity(intent);
     }
 
-    public void fifthsemesterstart(View view){
+    public void fifthSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","5thSemester.pdf");
         startActivity(intent);
     }
 
-    public void sixthsemesterstart(View view){
+    public void sixthSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","6thSemester.pdf");
         startActivity(intent);
     }
 
-    public void seventhsemesterstart(View view){
+    public void seventhSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","7thSemester.pdf");
         startActivity(intent);
     }
 
-    public void eighthsemesterstart(View view){
+    public void eighthSemesterStart(View view){
         Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","8thSemester.pdf");
         startActivity(intent);
     }
