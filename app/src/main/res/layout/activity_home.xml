@@ -298,7 +298,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="Academic\nSyllabus"
+                        android:text="All Course\nDetails"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -335,7 +335,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="All Course\nDetails"
+                        android:text="Academic\nSyllabus"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
