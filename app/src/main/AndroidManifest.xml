@@ -9,14 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EighthSemester"></activity>
-        <activity android:name=".SeventhSemester" />
-        <activity android:name=".SixthSemester" />
-        <activity android:name=".FifthSemester" />
-        <activity android:name=".FourthSemester" />
-        <activity android:name=".ThirdSemester" />
-        <activity android:name=".SecondSemester" />
-        <activity android:name=".FirstSemester" />
+        <activity android:name=".PdfViewer"/>
         <activity android:name=".AllCourseMain" />
         <activity android:name=".Cards" />
         <activity android:name=".SecondBatchInfo" />

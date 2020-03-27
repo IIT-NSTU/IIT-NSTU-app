@@ -15,42 +15,42 @@ public class AllCourseMain extends AppCompatActivity {
     }
 
     public void onClick(View view){
-        Intent intent=new Intent(AllCourseMain.this, FirstSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","1stSemester.pdf");
         startActivity(intent);
     }
 
     public void secondsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, SecondSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","2ndSemester.pdf");
         startActivity(intent);
     }
 
     public void thirdsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, ThirdSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","3rdSemester.pdf");
         startActivity(intent);
     }
 
     public void fourthsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, FourthSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","4thSemester.pdf");
         startActivity(intent);
     }
 
     public void fifthsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, FifthSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","5thSemester.pdf");
         startActivity(intent);
     }
 
     public void sixthsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, SixthSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","6thSemester.pdf");
         startActivity(intent);
     }
 
     public void seventhsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, SeventhSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","7thSemester.pdf");
         startActivity(intent);
     }
 
     public void eighthsemesterstart(View view){
-        Intent intent=new Intent(AllCourseMain.this, EighthSemester.class);
+        Intent intent=new Intent(AllCourseMain.this, PdfViewer.class).putExtra("pdfName","8thSemester.pdf");
         startActivity(intent);
     }
 
