@@ -15,7 +15,7 @@
         <activity android:name=".SecondBatchInfo" />
         <activity android:name=".DirectorProfile" />
         <activity android:name=".StudentInfoMain" />
-        <activity android:name=".StudentInfoLogin" />
+        <activity android:name=".StudentInfoLogin" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".courseCoordinatorAcitivity" />
         <activity android:name=".TeachersInfoActivity" />
         <activity android:name=".SyllabusActivity" />
