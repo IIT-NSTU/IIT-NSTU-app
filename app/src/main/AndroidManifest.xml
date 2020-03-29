@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".developers"></activity>
         <activity android:name=".PdfViewer" />
-        <activity android:name=".AllCourseMain" />
+        <activity android:name=".SyllabusMain" />
         <activity android:name=".Cards" />
         <activity android:name=".SecondBatchInfo" />
         <activity android:name=".DirectorProfile" />
@@ -23,7 +23,7 @@
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".courseCoordinatorAcitivity" />
         <activity android:name=".TeachersInfoActivity" />
-        <activity android:name=".SyllabusActivity" />
+        <activity android:name=".AllCourseDetails" />
         <activity android:name=".IntroActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">

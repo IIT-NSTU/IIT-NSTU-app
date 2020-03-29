@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class SyllabusActivity extends AppCompatActivity {
+public class AllCourseDetails extends AppCompatActivity {
 
     PDFView syllabus1;
     @Override

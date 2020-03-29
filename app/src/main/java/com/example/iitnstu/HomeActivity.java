@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void Click_Function(View view){
-        Intent intent=new Intent(HomeActivity.this,SyllabusActivity.class);
+        Intent intent=new Intent(HomeActivity.this, AllCourseDetails.class);
         startActivity(intent);
     }
 
@@ -46,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void startAllCourse(View view){
-        Intent intent=new Intent(HomeActivity.this, AllCourseMain.class);
+        Intent intent=new Intent(HomeActivity.this, SyllabusMain.class);
         startActivity(intent);
     }
 
