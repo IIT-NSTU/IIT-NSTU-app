@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgapps"
+    android:background="@drawable/bgapps1"
     tools:ignore="contentDescription">
 
 
@@ -69,7 +69,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 1st Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -101,7 +102,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 2nd Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -133,7 +135,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 3rd Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -165,7 +168,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 4th Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -197,7 +201,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 5th Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -229,7 +234,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 6th Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -261,7 +267,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 7th Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -293,7 +300,8 @@
                         android:fontFamily="@font/assistant_regular"
                         android:text=" 8th Semester \n"
                         android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

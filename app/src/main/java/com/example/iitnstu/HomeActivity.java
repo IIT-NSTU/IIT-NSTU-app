@@ -49,4 +49,10 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent=new Intent(HomeActivity.this, AllCourseMain.class);
         startActivity(intent);
     }
+
+
+    public void startdeveloper(View view){
+        Intent intent=new Intent(HomeActivity.this, developers.class);
+        startActivity(intent);
+    }
 }
