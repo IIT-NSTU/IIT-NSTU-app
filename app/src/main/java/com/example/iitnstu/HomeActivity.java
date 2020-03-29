@@ -54,4 +54,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent=new Intent(HomeActivity.this, developers.class);
         startActivity(intent);
     }
+
+    public void startSearch(View view){
+        Intent intent=new Intent(HomeActivity.this, Search.class);
+        startActivity(intent);
+    }
 }

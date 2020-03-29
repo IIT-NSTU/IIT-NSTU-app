@@ -16,16 +16,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 @SuppressLint("ViewConstructor")
 public class Cards extends FrameLayout {
-    String phnNo;
 
 
     public Cards(@NonNull final Context context, String name, String id, final String phnNo, String email) {
         super(context);
-        this.phnNo=phnNo;
         LayoutInflater.from(context).inflate(R.layout.activity_cards, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         setLayoutParams(layoutParams);
