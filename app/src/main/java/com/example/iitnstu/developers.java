@@ -32,37 +32,37 @@ public class developers extends AppCompatActivity {
 
     }
 
-    public void startcallarnab(View view){
+    public void startCallArnab(View view){
         Intent intent=new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel: 01725017282"));
         startActivity(intent);
     }
 
-    public void startcallnayeem(View view){
+    public void startCallNayeem(View view){
         Intent intent=new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel: 01724595168"));
         startActivity(intent);
     }
 
-    public void startcallsunaan(View view){
+    public void startCallSunaan(View view){
         Intent intent=new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel: 01766554344"));
         startActivity(intent);
     }
 
-    public void startfbarnab(View view){
+    public void startFbArnab(View view){
         Intent intent=new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("http://www.facebook.com/arnab.dey.5030"));
         startActivity(intent);
     }
 
-    public void startfbnayeem(View view){
+    public void startFbNayeem(View view){
         Intent intent=new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("http://www.facebook.com/nirzon.nayeem"));
         startActivity(intent);
     }
 
-    public void startfbsunaan(View view){
+    public void startFbSunaan(View view){
         Intent intent=new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("http://www.facebook.com/sunaan.sultan.3"));
         startActivity(intent);

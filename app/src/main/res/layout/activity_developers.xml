@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bgapps1"
-    tools:context=".HomeActivity">
+    tools:context=".developers">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:onClick="startcallarnab"
+                        android:onClick="startCallArnab"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -156,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:onClick="startfbarnab"
+                        android:onClick="startFbArnab"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -240,7 +240,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:onClick="startcallnayeem"
+                        android:onClick="startCallNayeem"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -310,7 +310,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:onClick="startfbnayeem"
+                        android:onClick="startFbNayeem"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -392,7 +392,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:onClick="startcallsunaan"
+                        android:onClick="startCallSunaan"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -462,7 +462,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:onClick="startfbsunaan"
+                        android:onClick="startFbSunaan"
                         android:orientation="vertical">
 
                         <LinearLayout

@@ -44,20 +44,75 @@
             android:fontFamily="@font/assistant_regular"
             android:gravity="center"
             android:textSize="18sp" />
-        <TextView
-            android:id="@+id/studentPhnNo"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/assistant_regular"
-            android:gravity="center"
-            android:textSize="18sp" />
-        <TextView
-            android:id="@+id/studentEmail"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:onClick="startCallArnab"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_local_phone_black_24dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/studentPhnNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/assistant_regular"
-            android:gravity="center"
-            android:textSize="18sp" />
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_email_black_24dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/studentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
