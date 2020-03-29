@@ -44,10 +44,16 @@ public class Search extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     input = s.toString();
+                    for (int i = 0; i < gridLayout.getChildCount(); i++)
+                        gridLayout.removeViewAt(i);
                 }
 
                 @Override
                 public void afterTextChanged(Editable s) {
+                    if (input.equals("")){
+                        for (int i = 0; i < gridLayout.getChildCount(); i++)
+                            gridLayout.removeViewAt(i);
+                    }
 
                     try {
                         inputStreamId = getAssets().open("ID_database_second.txt");
@@ -63,7 +69,9 @@ public class Search extends AppCompatActivity {
                         inEmail = new Scanner(inputStreamEmail);
 
                         String name = "", id = "", phnNo = "", email = "";
+                        boolean found=false;
                         while (inId.hasNext()) {
+
 
                             name = inName.nextLine();
                             String[] names;
@@ -73,53 +81,40 @@ public class Search extends AppCompatActivity {
                             phnNo = inPhnNo.next();
                             email = inEmail.next();
                             input=input.toLowerCase();
+                            for (String n:names) {
+                                Log.i("name",n);
+                            }
+                            Log.i("input",input);
+                            Toast.makeText(context, "2 "+names.length, Toast.LENGTH_SHORT).show();
                             if (names.length==1){
-                                if (input.equals(names[0]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
+                                if (input.equals(name.toLowerCase()) || input.equals(names[0]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
 
                                     Cards cards = new Cards(context, name, id, phnNo, email);
                                     gridLayout.addView(cards);
-
-                                    break;
-
-                                }else {
-                                    Toast.makeText(context, input, Toast.LENGTH_SHORT).show();
-                                    for (int i = 0; i < gridLayout.getChildCount(); i++) {
-                                        gridLayout.removeViewAt(i);
-                                    }
+                                    found=true;
 
                                 }
                             }
 
                             else if (names.length==2){
 
-                                if (input.equals(names[0]) || input.equals(names[1]) ||input.equals(id) || input.equals(email) || input.equals(phnNo)) {
+
+                                if (input.equals(name.toLowerCase()) || input.equals(names[0]) || input.equals(names[1]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
 
                                     Cards cards = new Cards(context, name, id, phnNo, email);
                                     gridLayout.addView(cards);
-                                    break;
-
-                                }else {
-                                    Toast.makeText(context, input, Toast.LENGTH_SHORT).show();
-                                    for (int i = 0; i < gridLayout.getChildCount(); i++) {
-                                        gridLayout.removeViewAt(i);
-                                    }
+                                    found=true;
 
                                 }
                             }
 
                             else if (names.length==3){
 
-                                if (input.equals(names[0]) || input.equals(names[1]) || input.equals(names[2]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
+                                if (input.equals(name.toLowerCase()) || input.equals(names[0]) || input.equals(names[1]) || input.equals(names[2]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
 
                                     Cards cards = new Cards(context, name, id, phnNo, email);
                                     gridLayout.addView(cards);
-                                    break;
-
-                                }else {
-                                    Toast.makeText(context, input, Toast.LENGTH_SHORT).show();
-                                    for (int i = 0; i < gridLayout.getChildCount(); i++) {
-                                        gridLayout.removeViewAt(i);
-                                    }
+                                    found=true;
 
                                 }
                             }
