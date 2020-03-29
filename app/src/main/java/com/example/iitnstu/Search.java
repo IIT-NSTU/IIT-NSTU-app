@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +16,8 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Search extends AppCompatActivity {
 
@@ -31,10 +35,6 @@ public class Search extends AppCompatActivity {
         gridLayout = findViewById(R.id.gridlayout1);
         TextView inputText = findViewById(R.id.input);
 
-
-
-
-
             inputText.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -44,8 +44,8 @@ public class Search extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     input = s.toString();
-                    for (int i = 0; i < gridLayout.getChildCount(); i++)
-                        gridLayout.removeViewAt(i);
+
+                        gridLayout.removeAllViews();
                 }
 
                 @Override
@@ -74,55 +74,26 @@ public class Search extends AppCompatActivity {
 
 
                             name = inName.nextLine();
-                            String[] names;
-                            names=name.toLowerCase().split("\\s");
+
 
                             id = inId.next();
                             phnNo = inPhnNo.next();
                             email = inEmail.next();
                             input=input.toLowerCase();
-                            for (String n:names) {
-                                Log.i("name",n);
-                            }
-                            Log.i("input",input);
-                            Toast.makeText(context, "2 "+names.length, Toast.LENGTH_SHORT).show();
-                            if (names.length==1){
-                                if (input.equals(name.toLowerCase()) || input.equals(names[0]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
+
+                            Pattern pattern = Pattern.compile(input);
+                            Matcher matcher = pattern.matcher(name.toLowerCase());
+
+
+
+                                if (matcher.find() || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
 
                                     Cards cards = new Cards(context, name, id, phnNo, email);
                                     gridLayout.addView(cards);
                                     found=true;
 
-                                }
+
                             }
-
-                            else if (names.length==2){
-
-
-                                if (input.equals(name.toLowerCase()) || input.equals(names[0]) || input.equals(names[1]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
-
-                                    Cards cards = new Cards(context, name, id, phnNo, email);
-                                    gridLayout.addView(cards);
-                                    found=true;
-
-                                }
-                            }
-
-                            else if (names.length==3){
-
-                                if (input.equals(name.toLowerCase()) || input.equals(names[0]) || input.equals(names[1]) || input.equals(names[2]) || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
-
-                                    Cards cards = new Cards(context, name, id, phnNo, email);
-                                    gridLayout.addView(cards);
-                                    found=true;
-
-                                }
-                            }
-
-
-
-
-
 
 
 
@@ -150,5 +121,13 @@ public class Search extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (getCurrentFocus() != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+        return super.dispatchTouchEvent(ev);
     }
 }

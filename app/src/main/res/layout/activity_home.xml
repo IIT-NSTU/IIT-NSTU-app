@@ -32,6 +32,17 @@
                 android:textColor="#FFFFFF"
                 android:textSize="22sp" />
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="324dp"
+                android:layout_marginTop="5dp"
+                android:onClick="startSearch"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
 
         </RelativeLayout>
 
@@ -386,6 +397,9 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            <!--
+                This is a comment
+                on multiple lines
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -410,7 +424,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/developericon" />
+                        android:src="@drawable/searchicon" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -422,7 +436,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+-->
 
         </GridLayout>
 
