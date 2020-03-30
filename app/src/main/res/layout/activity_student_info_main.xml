@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgapps"
     tools:ignore="contentDescription"
-    tools:context=".HomeActivity">
+    tools:context=".StudentInfoMain">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,7 +53,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/se1"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
@@ -69,7 +70,9 @@
                         android:fontFamily="@font/assistant_regular"
                         android:gravity="center"
                         android:text="1st Batch\nSession 17-18"
-                        android:textSize="18sp" />
+                        android:textColor="#070707"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -87,7 +90,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/se1"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
@@ -103,7 +107,9 @@
                         android:fontFamily="@font/assistant_regular"
                         android:gravity="center"
                         android:text="2nd Batch\nSession 18-19"
-                        android:textSize="18sp" />
+                        android:textColor="#070707"
+                        android:textSize="24sp"
+                        android:textStyle="bold"  />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -120,7 +126,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/se1"
                     android:gravity="center"
                     android:onClick="startThirdBatch"
                     android:orientation="vertical"
@@ -137,7 +144,9 @@
                         android:fontFamily="@font/assistant_regular"
                         android:gravity="center"
                         android:text="3rd Batch\nSession 19-20"
-                        android:textSize="18sp" />
+                        android:textColor="#070707"
+                        android:textSize="24sp"
+                        android:textStyle="bold"  />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
