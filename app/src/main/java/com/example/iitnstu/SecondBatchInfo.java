@@ -2,10 +2,7 @@ package com.example.iitnstu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.GridLayout;
 import android.widget.Toast;
 import java.io.IOException;
@@ -22,7 +19,7 @@ public class SecondBatchInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_batch_info);
 
-        GridLayout gridLayout=findViewById(R.id.gridlayout);
+        GridLayout gridLayout=findViewById(R.id.gridlayout_2);
 
         try {
             inputStreamId=getAssets().open("ID_database_second.txt");

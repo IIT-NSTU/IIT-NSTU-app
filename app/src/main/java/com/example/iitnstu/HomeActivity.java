@@ -59,4 +59,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent=new Intent(HomeActivity.this, Search.class);
         startActivity(intent);
     }
+
+    public void startAcademicOfficials(View view){
+        Intent intent=new Intent(HomeActivity.this, Officials.class);
+        startActivity(intent);
+    }
 }

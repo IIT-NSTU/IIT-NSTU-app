@@ -62,11 +62,14 @@
 
                     <ImageView
                         android:id="@+id/imageView8"
-                        android:layout_width="182dp"
-                        android:layout_height="153dp"
+                        android:layout_width="404dp"
+                        android:layout_height="391dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginBottom="15dp"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
                         app:srcCompat="@drawable/sumonsir" />
 
                     <TextView
