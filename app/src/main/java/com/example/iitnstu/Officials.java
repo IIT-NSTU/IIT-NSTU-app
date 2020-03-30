@@ -29,6 +29,9 @@ public class Officials extends AppCompatActivity {
             inputStreamContactInfo=getAssets().open("Staff_contact_address.txt");
             inContactInfo=new Scanner(inputStreamContactInfo);
 
+            inputStreamPhnNo=getAssets().open("Staff_phnno.txt");
+            inPhnNo=new Scanner(inputStreamPhnNo);
+
             inputStreamEmail=getAssets().open("Staff_email.txt");
             inEmail=new Scanner(inputStreamEmail);
 
@@ -54,7 +57,7 @@ public class Officials extends AppCompatActivity {
 
                 inName.close();
                 inContactInfo.close();
-                inPhnNo.close();
+               // inPhnNo.close();
                 inEmail.close();
             } catch (IOException e) {
                 e.printStackTrace();

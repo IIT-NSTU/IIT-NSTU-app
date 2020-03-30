@@ -21,7 +21,8 @@
                 android:id="@+id/input"
                 android:layout_width="350dp"
                 android:layout_height="80dp"
-
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:layout_marginStart="10dp"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp"

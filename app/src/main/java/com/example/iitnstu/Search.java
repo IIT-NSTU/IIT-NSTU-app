@@ -28,6 +28,7 @@ public class Search extends AppCompatActivity {
     Context context = this;
     GridLayout gridLayout;
     String input;
+    TextView inputText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,26 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.search);
 
         gridLayout = findViewById(R.id.gridlayout1);
-        TextView inputText = findViewById(R.id.input);
+        inputText = findViewById(R.id.input);
+
+
+        Thread thread=new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+            }
+        });
+        thread.start();
+        inputText.setFocusableInTouchMode(true);
+        inputText.requestFocus();
+
 
             inputText.addTextChangedListener(new TextWatcher() {
                 @Override

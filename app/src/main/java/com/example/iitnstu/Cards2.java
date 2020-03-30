@@ -26,7 +26,7 @@ public class Cards2 extends FrameLayout {
 
         ImageView staffPic=findViewById(R.id.staffPic);
         final Context context1 = staffPic.getContext();
-        int picId = context.getResources().getIdentifier(id.toLowerCase(), "drawable", context1.getPackageName());
+        int picId = context.getResources().getIdentifier("s"+phnNo, "drawable", context1.getPackageName());
         staffPic.setImageResource(picId);
 
 
