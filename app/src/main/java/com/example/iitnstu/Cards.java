@@ -1,6 +1,7 @@
 package com.example.iitnstu;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 
 
 import android.annotation.SuppressLint;
@@ -12,6 +13,8 @@ import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -27,6 +30,10 @@ public class Cards extends FrameLayout {
         LayoutInflater.from(context).inflate(R.layout.activity_cards, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         setLayoutParams(layoutParams);
+
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.fromdown);
+        CardView cardView=findViewById(R.id.card);
+        cardView.startAnimation(animation);
 
         ImageView studentPic=findViewById(R.id.studentPic);
         final Context context1 = studentPic.getContext();

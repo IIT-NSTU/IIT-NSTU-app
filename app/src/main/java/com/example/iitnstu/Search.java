@@ -8,6 +8,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.GridLayout;
 import android.widget.TextView;
@@ -44,16 +46,18 @@ public class Search extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     input = s.toString();
+                    for (int i = 0; i <gridLayout.getChildCount() ; i++) {
+                        Animation animation = AnimationUtils.loadAnimation(context, R.anim.goright);
+                        gridLayout.getChildAt(i).startAnimation(animation);
 
-                        gridLayout.removeAllViews();
+                    }
+                    gridLayout.removeAllViews();
                 }
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    if (input.equals("")){
-                        for (int i = 0; i < gridLayout.getChildCount(); i++)
-                            gridLayout.removeViewAt(i);
-                    }
+                    Toast.makeText(context, input, Toast.LENGTH_SHORT).show();
+
 
                     try {
                         inputStreamId = getAssets().open("ID_database_second.txt");
@@ -69,7 +73,6 @@ public class Search extends AppCompatActivity {
                         inEmail = new Scanner(inputStreamEmail);
 
                         String name = "", id = "", phnNo = "", email = "";
-                        boolean found=false;
                         while (inId.hasNext()) {
 
 
@@ -86,11 +89,10 @@ public class Search extends AppCompatActivity {
 
 
 
-                                if (matcher.find() || input.equals(id) || input.equals(email) || input.equals(phnNo)) {
+                                if (matcher.find() || input.equals(id.toLowerCase()) || input.equals(email) || input.equals(phnNo)) {
 
                                     Cards cards = new Cards(context, name, id, phnNo, email);
                                     gridLayout.addView(cards);
-                                    found=true;
 
 
                             }
@@ -115,6 +117,14 @@ public class Search extends AppCompatActivity {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+                    }
+                    if (input.equals("")){
+                        for (int i = 0; i <gridLayout.getChildCount() ; i++) {
+                            Animation animation = AnimationUtils.loadAnimation(context, R.anim.goright);
+                            gridLayout.getChildAt(i).startAnimation(animation);
+
+                        }
+                        gridLayout.removeAllViews();
                     }
                 }
             });

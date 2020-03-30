@@ -25,5 +25,6 @@ Assistant Professor and Director (Acting)\n
 Institute of Information Technology (IIT)</string>
     <string name="assistant_professor_director_acting"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
     <string name="assistant_professor_director_acting_3"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
-    >
+    <integer name="swing_anim_time">750</integer>
+
 </resources>
