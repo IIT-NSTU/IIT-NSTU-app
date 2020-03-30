@@ -18,4 +18,9 @@ public class StudentInfoMain extends AppCompatActivity {
         Intent intent=new Intent(this,SecondBatchInfo.class);
         startActivity(intent);
     }
+
+    public void startThirdBatch(View view){
+        Intent intent=new Intent(this,ThirdBatchInfo.class);
+        startActivity(intent);
+    }
 }
