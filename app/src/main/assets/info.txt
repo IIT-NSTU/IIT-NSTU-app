@@ -1,0 +1,65 @@
+ASH1925001M | MD. RAJU BISWAS                | 01921216051 | md.omarali746@gmail.com
+MUH1925002F | ISHRAT JAHAN RINTU             | 01756609963 | isratjahanrintu2@gmail.com
+ASH1925003M | ROICHUDDIN RANA                | 01930878889 | ranaswe2@gmail.com
+ASH1925004M | SUNAAN SULTAN                  | 01766554344 | sunaansultaniit@gmail.com
+ASH1925005M | PROSANTO DEB                   | 01793222825 | prosantodeb7@gmail.com
+BKH1925006F | NADIA ISLAM                    | 01712770912 | ndnadiaislam@gmail.com
+ASH1925007M | MOHAMMAD RIDWAN HOSSAIN POLASH | 01936224842 | mdredwanhossain99@gmail.com
+ASH1925008M | MD. AL-AMIN                    | 01957703927 | piashpiash222@gmail.com
+ASH1925009M | ABDULLAH ALIF                  | 01981490219 | abdullah.alif.167@gmail.com
+BKH1925010F | SULTANA MARJAN                 | 01790584773 | marjanmitu12@gmail.com
+ASH1925011M | MD. NAIMUR RAHMAN              | 01724595168 | nirzon.naim@gmail.com
+ASH1925012M | JOY BHOWMIK                    | 01748739642 | joybhowmik67@gmail.com
+ASH1925013M | MD. ARMANUR RASHID             | 01875560507 | armanurrashid105086@gmail.com
+ASH1925014M | ABDULLAH AL TAHMID             | 01967502206 | mdtahmid7@gmail.com
+ASH1925015M | SHAHRIAR AHMED                 | 01869868264 | sasnilsiyam321@gmail.com
+ASH1925016M | MD. ALAMGIR HOSSAIN            | 01953384950 | mahalamgir1213@gmail.com
+ASH1925018M | MD. ROKONUZZAMAN               | 01750035431 | rokonrabbi21@gmail.com
+BHF1925019F | IKRA CHOWDHURY NOWKSHI         | 01814940719 | nowshadparvin@gmail.com
+MUH1925020F | ANUPA DAS SHORMI               | 01789103077 | anupadasshormi@gmail.com
+ASH1925022M | SOUROV DEBNATH                 | 01521251681 | souravdebnath97@gmail.com 
+ASH1925023M | SANJATUL HASAN SIAM            | 01872493834 | shsiam800@gmail.com
+ASH1925024M | ARNAB DEY                      | 01725017282 | arnabdey665@gmail.com
+BKH1925025F | AYESHA NASRIN RIPA             | 01864162927 | ayesharipa25@gmail.com
+ASH1925026M | ABDULLAH-AL-MAMUN              | 01796008290 | mdmamun171339@gmail.com
+ASH1925027M | NAYEEM KHAN                    | 01960682666 | nayeemkhan201415@gmail.com 
+ASH1925028M | MD. RAYHAN BILLAH              | 01779548829 | rayhanbillah@hotmail.com
+ASH1925030M | SOURAV BARMAN                  | 01792488399 | sourav.iit.nstu@gmail.com 
+BKH1825010F | SANZIDA SULTANA                | 01882428980 | sanzidasultana823@gmail.com
+ASH1825018M | DHRUBO KANTI BAKSHI            | 01849581828 | dhrubabakshi15@gmail.com
+ASH1825019M | FARDIN AHOSAN SHAWON           | 01850757539 | shawon119@gmail.com
+ASH1825042M | RATNA KUMAR TRIPURA            | 01833090558 | ratnatripura99@gmail.com
+MUH2025001M | FARDIN ALAM ALIF			| 01789080090 | alamfardin1521@gmail.com
+BFH2025002F | FAZILATER JAHAN			| 01701859581 | fazilaterjahan@gmail.com
+MUH2025003M | SHORIFUL HABIB			| 01784380106 | shorifulhabib.iit@gmail.com
+MUH2025004M | MD. ASIF MAHMUD			| 01623712572 | asifmahmud.iit.nstu@gmail.com
+MUH2025005M | MD. RABIUL ISLAM SANTO		| 01904631544 | rabiulislamsanto.nstu@gmail.com
+BKH2025006F | NURE JANNAT			| 01630423968 | jannatnure928@gmail.com
+MUH2025007M | MIR MOHAMMOD TAHASIN		| 01303244508 | tahsinahmed.iit@gmail.com
+MUH2025008M | KAZI ASHIKUR RAHMAN		| 01857411320 | ashikur.rahman.iit@gmail.com
+BFH2025009F | JANNATUN NUR ETU			| 01880200385 | jannatietu.nstu@gmail.com
+BFH2025010F | SANJIDA AKTER SAMANTA		| 01972201743 | sanjidasamanta277@gmail.com
+MUH2025011M | MD. MAHBUB HASAN TALUKDER		| 01788285150 | mahbubhasan.iit.nstu@gmail.com
+ASH2025012M | MD ZAHID HASAN			| 01725396755 | jahidhasanakondo@gmail.com
+BKH2025013F | SURAIYA AKTER			| 01938739310 | suraiya.islam.iit@gmail.com
+MUH2025014M | RUBYA RASHED			| 01869241211 | rubya.rashed.rakib@gmail.com
+BKH2025015F | SUMAIYA BEGUM			| 01300036431 | bintenurulislam@gmail.com
+MUH2025016M | MD. RAJU MIA			| 01751843119 | mdrajumiacr@gmail.com
+BKH2025017F | MOSSA. SUMAIYA AKTER		| 01305701455 | sumaiyaakteriitse@gmail.com
+MUH2025018M | MD. SANWAR HOSSAIN		| 01761617363 | sanwarhossain.nstu@gmail.com
+MUH2025019M | MD. MAMUN HOSSAIN			| 01820702329 | mdmamunhossain.iit.nstu@gmail.com
+BKH2025020F | ISRAT JAHAN JHUMU			| 01533575527 | jhumu@live.com
+BFH2025021F | PRITY RANI DAS			| 01830608176 | prity825@gmail.com
+MUH2025022M | HASANUR RAHMAN SHISHIR		| 01776613637 | hasanur.rahman.shishir.iit@gmail.com
+BKH2025023F | SUMAIYEA AKTER PREMA		| 01403292822 | sumaiyeaakterprema@gmail.com
+MUH2025024M | NASIM MOLLA			| 01992548824 | nasimmolla120@gmail.com
+MUH2025025M | MD. FOYSAL MAHMUD			| 01715612590 | mdfoysalmahmudiitse@gmail.com
+MUH2025026M | WAKIL AHAMMAD			| 01316747440 | ahmedwakil545@gmail.com
+MUH2025028M | MD. MAHAMUDUL HASAN TALUKDER	| 01690103839 | hasansayeed791@gmail.com
+MUH2025029M | MITHUN CHANDRA SARKAR		| 01865757496 | mithuniit.bsse@gmail.com
+ASH2025030M | ABDULLAH AL RAFI			| 01837142613 | rafiabdullah748@gmail.com
+MUH2025032M | MEHEDI HASAN			| 01646065553 | mehedihasan81007@gmail.com
+MUH2025033M | MD. SAIFUL ISLAM			| 01785004248 | smtsaiful@gmail.com
+MUH2025035M | TORIQUL ISLAM SHOBUJ		| 01939637006 | toriqul.shobuj.iit@gmail.com
+BKH2025036F | KHOS MAHMUDA AKTER		| 01533392701 | mahmudamumu71@gmail.com
+ASH1925021M | IRFANUL HAQUE			| 01754636162 | irfannabil.iitian@gmail.com

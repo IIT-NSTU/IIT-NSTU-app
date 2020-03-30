@@ -6,7 +6,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,8 +22,8 @@ import java.util.regex.Pattern;
 
 public class Search extends AppCompatActivity {
 
-    InputStream inputStreamName, inputStreamId, inputStreamPhnNo, inputStreamEmail;
-    Scanner inName, inId, inPhnNo, inEmail;
+    InputStream inputStream;
+    Scanner in;
     Context context = this;
     GridLayout gridLayout;
     String input;
@@ -76,32 +75,22 @@ public class Search extends AppCompatActivity {
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    Toast.makeText(context, input, Toast.LENGTH_SHORT).show();
 
 
                     try {
-                        inputStreamId = getAssets().open("ID_database_second.txt");
-                        inId = new Scanner(inputStreamId);
-
-                        inputStreamName = getAssets().open("Name_database_second.txt");
-                        inName = new Scanner(inputStreamName);
-
-                        inputStreamPhnNo = getAssets().open("phn_no_second.txt");
-                        inPhnNo = new Scanner(inputStreamPhnNo);
-
-                        inputStreamEmail = getAssets().open("email_second.txt");
-                        inEmail = new Scanner(inputStreamEmail);
+                        inputStream = getAssets().open("info.txt");
+                        in = new Scanner(inputStream);
 
                         String name = "", id = "", phnNo = "", email = "";
-                        while (inId.hasNext()) {
+                        String[] inputs;
+                        while (in.hasNextLine()) {
 
+                            inputs= in.nextLine().split("[\\s]*[|][\\s]*");
+                            id=inputs[0];
+                            name=inputs[1];
+                            phnNo=inputs[2];
+                            email=inputs[3];
 
-                            name = inName.nextLine();
-
-
-                            id = inId.next();
-                            phnNo = inPhnNo.next();
-                            email = inEmail.next();
                             input=input.toLowerCase();
 
                             Pattern pattern = Pattern.compile(input);
@@ -125,15 +114,12 @@ public class Search extends AppCompatActivity {
                         Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
                     } finally {
                         try {
-                            inputStreamName.close();
-                            inputStreamId.close();
-                            inputStreamPhnNo.close();
-                            inputStreamEmail.close();
+                            inputStream.close();
 
-                            inName.close();
-                            inId.close();
-                            inPhnNo.close();
-                            inEmail.close();
+
+
+                            in.close();
+
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
