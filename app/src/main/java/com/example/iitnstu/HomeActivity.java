@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void startdeveloper(View view){
-        Intent intent=new Intent(HomeActivity.this, developers.class);
+        Intent intent=new Intent(HomeActivity.this, developers2.class);
         startActivity(intent);
     }
 

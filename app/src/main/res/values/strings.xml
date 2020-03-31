@@ -26,5 +26,25 @@ Institute of Information Technology (IIT)</string>
     <string name="assistant_professor_director_acting"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
     <string name="assistant_professor_director_acting_3"><![CDATA[ASSISTANT PROFESSOR & DIRECTOR (ACTING)]]></string>
     <integer name="swing_anim_time">750</integer>
+    <string name="developers_say">IIT NSTU is the official Android Application of Institute of Information Technology, Noakhali Science and technology University.
+
+    The Application is solely made for educational purposes.The app gives a whole overview of The Institute containing various important and useful information for both students and teachers.
+
+    In this modern era of technology having a android app is very important and effective in many ways.For this purpose this application is developed.Special thanks to the honorable teachers of IIT.\n\n
+
+    Since this is a Departmental Application,you are welcome to share new ideas and features.Source Code is given in Github. </string>
+    <string name="developers_say_2"><b><big>Developers\n</big></b>
+    Arnab Dey\n
+    Sunaan Sultan\n
+    Naimur Rahman\n
+    IIT 2nd batch,NSTU\n
+    E-Mail :\n
+        <a href="mailto:arnabdey665@gmail.com">arnabdey665@gmail.com</a>\n
+        <a href="mailto:sunaansultaniit@gmail.com">sunaansultaniit@gmail.com</a>
+        <a href="mailto:nirzon.naim@gmail.com">nirzon.naim@gmail.com</a>
+            </string>
+    <string name="Github">
+        <a href="https://github.com/IIT-NSTU/IIT-NSTU-app">Github</a>
+    </string>
 
 </resources>
