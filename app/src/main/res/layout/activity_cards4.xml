@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,17 +22,17 @@
         android:padding="16dp">
 
         <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/cc_image"
             android:layout_width="180dp"
             android:layout_height="180dp"
             app:civ_border_color="#EEEEEE"
             app:civ_border_width="4dp"
             app:civ_shadow="true"
             app:civ_shadow_radius="10"
-            app:civ_shadow_color="#8BC34A" />
+            app:civ_shadow_color="#8BC34A"
+            android:id="@+id/teacherPic"/>
 
         <TextView
-            android:id="@+id/cc_name"
+            android:id="@+id/teacherName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/assistant_regular"
@@ -39,13 +40,12 @@
             android:textSize="22sp"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/cc_designation"
+            android:id="@+id/teacherDesignation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/assistant_regular"
             android:gravity="center"
             android:textSize="18sp" />
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/cc_phnNo"
+                    android:id="@+id/teacherPhnNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -95,14 +95,13 @@
 
                 <ImageView
                     android:layout_width="28dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_email_black_24dp"
-                    >
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_email_black_24dp">
 
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/cc_email"
+                    android:id="@+id/teacherEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -119,13 +118,13 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
-            android:id="@+id/cc_info"
+            android:id="@+id/discoverMore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/assistant_regular"
             android:gravity="center"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
+            android:textSize="18sp"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
