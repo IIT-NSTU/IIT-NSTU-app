@@ -26,8 +26,8 @@ public class Cards3 extends FrameLayout {
 
         ImageView courseCoordinatorPic=findViewById(R.id.cc_image);
         final Context context1 = courseCoordinatorPic.getContext();
-        int picId = context.getResources().getIdentifier(info.toLowerCase(), "drawable", context1.getPackageName());
-        courseCoordinatorPic.setImageResource(picId);
+        //int picId = context.getResources().getIdentifier(info.toLowerCase(), "drawable", context1.getPackageName());
+        //courseCoordinatorPic.setImageResource(picId);
 
         TextView courseCoordinatorName=findViewById(R.id.cc_name);
         courseCoordinatorName.setText(name);

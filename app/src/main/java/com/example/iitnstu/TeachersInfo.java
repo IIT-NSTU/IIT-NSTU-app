@@ -23,16 +23,16 @@ public class TeachersInfo extends AppCompatActivity {
         GridLayout gridLayout = findViewById(R.id.gridlayout_4);
 
         try {
-            inputStreamName=getAssets().open("teacher-name.txt");
+            inputStreamName=getAssets().open("teacher_name.txt");
             inName=new Scanner(inputStreamName);
 
-            inputStreamDesignation=getAssets().open("teacher-designation.txt");
+            inputStreamDesignation=getAssets().open("teacher_designation.txt");
             inDesignation=new Scanner(inputStreamDesignation);
 
-            inputStreamPhnNo=getAssets().open("teacher-number.txt");
+            inputStreamPhnNo=getAssets().open("teacher_number.txt");
             inPhnNo=new Scanner(inputStreamPhnNo);
 
-            inputStreamEmail=getAssets().open("teacher-email.txt");
+            inputStreamEmail=getAssets().open("teacher_email.txt");
             inEmail=new Scanner(inputStreamEmail);
 
             inputStreamDiscoverMore=getAssets().open("discover-more.txt");

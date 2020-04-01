@@ -30,7 +30,7 @@ public class CourseCoordinator extends AppCompatActivity {
             inDesignation=new Scanner(inputStreamDesignation);
 
             inputStreamPhnNo=getAssets().open("course_coordinator_phnNo.txt");
-            inName=new Scanner(inputStreamPhnNo);
+            inPhnNo=new Scanner(inputStreamPhnNo);
 
             inputStreamEmail=getAssets().open("email_course_coordinator.txt");
             inEmail=new Scanner(inputStreamEmail);
@@ -39,7 +39,7 @@ public class CourseCoordinator extends AppCompatActivity {
             inInfo=new Scanner(inputStreamInfo);
 
             String name="",designation="",phnNo="",email="",info="";
-            while (inName.hasNext()) {
+            while (inName.hasNextLine()) {
                 name = inName.nextLine();
                 designation=inDesignation.nextLine();
                 phnNo = inPhnNo.next();
