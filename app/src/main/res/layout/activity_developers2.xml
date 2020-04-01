@@ -12,7 +12,7 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="426dp"
+            android:layout_width="0dp"
             android:layout_height="311dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.533"
@@ -40,7 +40,6 @@
             android:layout_width="401dp"
             android:layout_height="40dp"
             android:layout_marginTop="6dp"
-            android:background="@color/cardview_light_background"
             android:fontFamily="@font/assistant_regular"
             android:text="Developers Say"
             android:textAlignment="center"
@@ -52,17 +51,19 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="396dp"
-            android:layout_height="261dp"
+            android:layout_width="416dp"
+            android:layout_height="186dp"
             android:layout_marginStart="11dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="4dp"
             android:fontFamily="@font/assistant_regular"
             android:text="@string/developers_say_2"
             android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
