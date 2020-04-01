@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -49,6 +50,7 @@ public class Search extends AppCompatActivity {
 
                 InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
                 inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+
             }
         });
         thread.start();
@@ -78,8 +80,11 @@ public class Search extends AppCompatActivity {
 
 
                     try {
-                        inputStream = getAssets().open("info.txt");
+                        inputStream = openFileInput("infoForSearch.txt");
                         in = new Scanner(inputStream);
+
+                        //URL fileURL = new URL("https://drive.google.com/uc?export=download&id=1GnGleaKtLnOqK6y1TfF5H5BO2d7n0GVi");
+                         //in = new Scanner(fileURL.openStream());
 
                         String name = "", id = "", phnNo = "", email = "";
                         String[] inputs;
@@ -120,7 +125,7 @@ public class Search extends AppCompatActivity {
 
                             in.close();
 
-                        } catch (IOException e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }

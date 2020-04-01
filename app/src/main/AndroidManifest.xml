@@ -3,6 +3,7 @@
     package="com.example.iitnstu">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".developers2"></activity>
-        <activity android:name=".Cards3" />
         <activity android:name=".ThirdBatchInfo" />
         <activity android:name=".Officials" />
         <activity android:name=".Cards2" />
