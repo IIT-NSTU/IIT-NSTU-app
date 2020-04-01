@@ -39,12 +39,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (!dataUpdate){
+        boolean n=new File(getFilesDir() + "/" + FILE_NAME).exists();
+
+        if (!n){
             saveRawToRoot();
+            Log.e("Move","happend");
+
         }
 
         //updateData();
-        download();
+        Thread thread=new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                while (dataUpdate==false) download();
+            }
+        });
+        thread.start();
+
+
 
 
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -141,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     });
+
             Toast.makeText(this, "DataDownloaded "+localFile.getPath(), Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             e.printStackTrace();
