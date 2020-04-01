@@ -20,7 +20,7 @@ public class TeachersInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teachers_info2);
 
-        GridLayout gridLayout = findViewById(R.id.gridlayout_3);
+        GridLayout gridLayout = findViewById(R.id.gridlayout_4);
 
         try {
             inputStreamName=getAssets().open("teacher-name.txt");
