@@ -16,7 +16,7 @@ public class AllCourseDetails extends AppCompatActivity {
         setContentView(R.layout.activity_syllabus);
 
         syllabus1 = (PDFView) findViewById(R.id.PdfSyllabus);
-        syllabus1.fromAsset("BSSE-Syllabus1.pdf").load();
+        syllabus1.fromAsset("BSSE-Syllabus.pdf").load();
 
     }
 
