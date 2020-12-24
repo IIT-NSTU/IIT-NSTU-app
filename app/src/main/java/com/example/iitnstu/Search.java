@@ -88,33 +88,34 @@ public class Search extends AppCompatActivity {
 
                         String name = "", id = "", phnNo = "", email = "";
                         String[] inputs;
-                        while (in.hasNextLine()) {
+                        if(input.length()!=1)
+                            while (in.hasNextLine()) {
 
-                            inputs= in.nextLine().split("[\\s]*[|][\\s]*");
-                            id=inputs[0];
-                            name=inputs[1];
-                            phnNo=inputs[2];
-                            email=inputs[3];
+                                inputs= in.nextLine().split("[\\s]*[|][\\s]*");
+                                id=inputs[0];
+                                name=inputs[1];
+                                phnNo=inputs[2];
+                                email=inputs[3];
 
-                            input=input.toLowerCase();
+                                input=input.toLowerCase();
 
-                            Pattern pattern = Pattern.compile(input);
-                            Matcher matcher = pattern.matcher(name.toLowerCase());
+                                Pattern pattern = Pattern.compile(input);
+                                Matcher matcher = pattern.matcher(name.toLowerCase());
 
 
 
-                                if (matcher.find() || input.equals(id.toLowerCase()) || input.equals(email) || input.equals(phnNo)) {
+                                    if (matcher.find() || input.equals(id.toLowerCase()) || input.equals(email) || input.equals(phnNo)) {
 
-                                    Cards cards = new Cards(context, name, id, phnNo, email);
-                                    gridLayout.addView(cards);
+                                        Cards cards = new Cards(context, name, id, phnNo, email);
+                                        gridLayout.addView(cards);
+
+
+                                }
+
+
 
 
                             }
-
-
-
-
-                        }
                     } catch (IOException e) {
                         Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
                     } finally {

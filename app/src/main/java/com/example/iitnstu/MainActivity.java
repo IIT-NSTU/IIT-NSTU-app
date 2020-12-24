@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -17,12 +16,8 @@ import com.google.firebase.storage.StorageReference;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.URL;
 
 
@@ -44,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         if (!n){
             saveRawToRoot();
             Log.e("Move","happend");
-
         }
 
         //updateData();
@@ -52,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                while (dataUpdate==false) download();
+                while (!dataUpdate) download();
             }
         });
         thread.start();
@@ -98,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
                 out.flush();
             }
 
-            Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -155,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
 
-            Toast.makeText(this, "DataDownloaded "+localFile.getPath(), Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             e.printStackTrace();
         }
