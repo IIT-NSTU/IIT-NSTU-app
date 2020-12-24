@@ -20,21 +20,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
+
 
 @SuppressLint("ViewConstructor")
 public class Cards4 extends FrameLayout {
 
-
-    public Cards4(@NonNull final Context context, String name, String designation, final String phnNo, String email,String discover_More) {
+    public Cards4(@NonNull final Context context, String name, String designation, final String phnNo, String email, String imageLink) {
         super(context);
         LayoutInflater.from(context).inflate(R.layout.activity_cards4, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         setLayoutParams(layoutParams);
 
-        ImageView teacherPic=findViewById(R.id.teacherPic);
-        final Context context1 = teacherPic.getContext();
-        int picId = context.getResources().getIdentifier(designation.toLowerCase(), "drawable", context1.getPackageName());
-        teacherPic.setImageResource(picId);
+
+        ImageView imageView=findViewById(R.id.teacherPic);
+        Picasso.get().load(imageLink).into(imageView);
+
 
         TextView teacherName=findViewById(R.id.teacherName);
         teacherName.setText(name);
@@ -58,8 +61,6 @@ public class Cards4 extends FrameLayout {
         teacherEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
         teacherEmail.setMovementMethod(LinkMovementMethod.getInstance());
 
-        TextView discoverMore = findViewById(R.id.discoverMore);
-        discoverMore.setText(discover_More);
     }
 
 

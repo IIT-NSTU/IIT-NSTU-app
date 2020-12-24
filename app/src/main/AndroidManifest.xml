@@ -34,7 +34,6 @@
             android:name=".StudentInfoLogin"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".courseCoordinatorAcitivity" />
-        <activity android:name=".TeachersInfoActivity" />
         <activity android:name=".AllCourseDetails" />
         <activity android:name=".IntroActivity" />
         <activity android:name=".HomeActivity" />
