@@ -43,7 +43,8 @@ public class TeachersInfo extends AppCompatActivity {
         final LoadingDialog loadingDialog=new LoadingDialog(TeachersInfo.this);
         loadingDialog.startLoadingDialog();
 
-        if(Connection.check(context))db.collection("teachers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        //if(Connection.check(context))
+            db.collection("teachers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
@@ -63,8 +64,7 @@ public class TeachersInfo extends AppCompatActivity {
                 }
             }
         });
-        else {
-            Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();
-        }
+        //else Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();
+
     }
 }

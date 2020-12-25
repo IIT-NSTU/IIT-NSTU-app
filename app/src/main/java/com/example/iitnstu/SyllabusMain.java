@@ -11,7 +11,7 @@ public class SyllabusMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_course_main);
+        setContentView(R.layout.activity_syllabus);
     }
 
     public void firstSemesterStart(View view){

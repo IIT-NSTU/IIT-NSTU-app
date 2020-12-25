@@ -1,22 +1,42 @@
 package com.example.iitnstu;
 import android.os.Bundle;
+import android.widget.Toast;
 
 
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
 
 public class AllCourseDetails extends AppCompatActivity {
 
-    PDFView syllabus1;
+    private PDFView pdfView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_syllabus);
+        setContentView(R.layout.activity_all_course);
 
-        syllabus1 = (PDFView) findViewById(R.id.PdfSyllabus);
-        syllabus1.fromAsset("BSSE-Syllabus.pdf").load();
+        final LoadingDialog loadingDialog=new LoadingDialog(AllCourseDetails.this);
+        loadingDialog.startLoadingDialog();
+
+        pdfView = (PDFView) findViewById(R.id.PdfSyllabus);
+
+        FirebaseStorage.getInstance().getReference().child("course-details").child("course-details.pdf").getBytes(1024 * 1024).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                loadingDialog.dismissDialog();
+                pdfView.fromBytes(bytes).load();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(),"download unsuccessful",Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 

@@ -33,7 +33,7 @@ public class Officials extends AppCompatActivity {
         db=FirebaseFirestore.getInstance();
         final Context context=this;
 
-        if(Connection.check(context))db.collection("officials").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("officials").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
@@ -54,6 +54,6 @@ public class Officials extends AppCompatActivity {
                 }
             }
         });
-        else Toast.makeText(getApplicationContext(), "network error!", Toast.LENGTH_SHORT).show();
+
     }
 }
