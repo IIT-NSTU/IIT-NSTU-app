@@ -57,8 +57,9 @@ public class MainActivity extends AppCompatActivity {
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
          //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        getWindow().setStatusBarColor(this.getResources().getColor(R.color.white));
 
+        /* splash window */
+        getWindow().setStatusBarColor(this.getResources().getColor(R.color.white,null));
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

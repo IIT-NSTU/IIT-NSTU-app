@@ -2,7 +2,9 @@ package com.example.iitnstu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.ContentLoadingProgressBar;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +30,7 @@ public class TeachersInfo extends AppCompatActivity {
     private GridLayout gridLayout;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,8 @@ public class TeachersInfo extends AppCompatActivity {
         db=FirebaseFirestore.getInstance();
         final Context context=this;
 
+        final LoadingDialog loadingDialog=new LoadingDialog(TeachersInfo.this);
+        loadingDialog.startLoadingDialog();
 
         if(Connection.check(context))db.collection("teachers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -51,6 +56,7 @@ public class TeachersInfo extends AppCompatActivity {
                         gridLayout.addView(teacherCard);
                         //Log.d("debug",data.getData().toString());
                     }
+                    loadingDialog.dismissDialog();
                 }
                 else {
                     Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();

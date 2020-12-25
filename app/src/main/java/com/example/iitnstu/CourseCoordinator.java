@@ -25,6 +25,8 @@ public class CourseCoordinator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_coordinator);
 
+        final LoadingDialog loadingDialog=new LoadingDialog(CourseCoordinator.this);
+        loadingDialog.startLoadingDialog();
 
         gridLayout=findViewById(R.id.gridlayout_3);
         db=FirebaseFirestore.getInstance();
@@ -34,6 +36,7 @@ public class CourseCoordinator extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
+                    loadingDialog.dismissDialog();
                         for (QueryDocumentSnapshot data: task.getResult()) {
                             HashMap<String,Object> tmp=(HashMap<String, Object>) data.getData();
 

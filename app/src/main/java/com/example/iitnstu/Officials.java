@@ -26,6 +26,8 @@ public class Officials extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officials);
 
+        final LoadingDialog loadingDialog=new LoadingDialog(Officials.this);
+        loadingDialog.startLoadingDialog();
 
         gridLayout=findViewById(R.id.gridlayout_2);
         db=FirebaseFirestore.getInstance();
@@ -35,6 +37,7 @@ public class Officials extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
+                    loadingDialog.dismissDialog();
                         for (QueryDocumentSnapshot data: task.getResult()) {
                             HashMap<String,Object> tmp=(HashMap<String, Object>) data.getData();
 
