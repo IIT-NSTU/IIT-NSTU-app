@@ -1,67 +1,56 @@
 package com.example.iitnstu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.GridLayout;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Scanner;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.HashMap;
 
 public class Officials extends AppCompatActivity {
 
-    InputStream inputStreamName,inputStreamContactInfo,inputStreamPhnNo,inputStreamEmail;
-    Scanner inName,inContactInfo,inPhnNo,inEmail;
+    private FirebaseFirestore db;
+    private GridLayout gridLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officials);
 
-        GridLayout gridLayout=findViewById(R.id.gridlayout_2);
 
-        try {
-            inputStreamName=getAssets().open("Official_names.txt");
-            inName=new Scanner(inputStreamName);
+        gridLayout=findViewById(R.id.gridlayout_2);
+        db=FirebaseFirestore.getInstance();
+        final Context context=this;
 
-            inputStreamContactInfo=getAssets().open("Staff_contact_address.txt");
-            inContactInfo=new Scanner(inputStreamContactInfo);
+        if(Connection.check(context))db.collection("officials").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                        for (QueryDocumentSnapshot data: task.getResult()) {
+                            HashMap<String,Object> tmp=(HashMap<String, Object>) data.getData();
 
-            inputStreamPhnNo=getAssets().open("Staff_phnno.txt");
-            inPhnNo=new Scanner(inputStreamPhnNo);
+                            OfficialsCard officialsCard = new OfficialsCard(context, tmp.get("name").toString(),
+                                    tmp.get("contactInfo").toString(),tmp.get("phone").toString(),
+                                    tmp.get("email").toString(),tmp.get("imageLink").toString());
 
-            inputStreamEmail=getAssets().open("Staff_email.txt");
-            inEmail=new Scanner(inputStreamEmail);
-
-            String name="",contactInfo="",phnNo="",email="";
-            while (inEmail.hasNext()) {
-                name = inName.nextLine();
-                contactInfo = inContactInfo.nextLine();
-                phnNo=inPhnNo.next();
-                email=inEmail.next();
-
-                Cards2 cards2 = new Cards2(this, name,contactInfo,phnNo,email);
-                gridLayout.addView(cards2);
-
+                            gridLayout.addView(officialsCard);
+                            //Log.d("debug",data.getData().toString());
+                        }
+                }
+                else {
+                    Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();
+                }
             }
-        } catch (IOException e) {
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-        }finally {
-            try {
-                inputStreamName.close();
-                inputStreamContactInfo.close();
-                inputStreamPhnNo.close();
-                inputStreamEmail.close();
-
-                inName.close();
-                inContactInfo.close();
-               // inPhnNo.close();
-                inEmail.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        });
+        else Toast.makeText(getApplicationContext(), "network error!", Toast.LENGTH_SHORT).show();
     }
 }

@@ -2,8 +2,10 @@ package com.example.iitnstu;
 
 import androidx.annotation.NonNull;
 
+
 import android.annotation.SuppressLint;
 import android.content.Context;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.text.Html;
@@ -15,29 +17,31 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-@SuppressLint("ViewConstructor")
-public class Cards2 extends FrameLayout {
+import com.squareup.picasso.Picasso;
 
-    public Cards2(@NonNull final Context context, String name, String contactinfo, final String phnNo, String email) {
+
+@SuppressLint("ViewConstructor")
+public class TeacherCard extends FrameLayout {
+
+    public TeacherCard(@NonNull final Context context, String name, String designation, final String phnNo, String email, String imageLink) {
         super(context);
-        LayoutInflater.from(context).inflate(R.layout.activity_cards2, this, true);
+        LayoutInflater.from(context).inflate(R.layout.activity_techer_card, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         setLayoutParams(layoutParams);
 
-        ImageView staffPic=findViewById(R.id.staffPic);
-        final Context context1 = staffPic.getContext();
-        int picId = context.getResources().getIdentifier("s"+phnNo, "drawable", context1.getPackageName());
-        staffPic.setImageResource(picId);
+
+        ImageView imageView=findViewById(R.id.teacherPic);
+        Picasso.get().load(imageLink).into(imageView);
 
 
-        TextView staffName=findViewById(R.id.staffName);
-        staffName.setText(name);
+        TextView teacherName=findViewById(R.id.teacherName);
+        teacherName.setText(name);
 
-        TextView staffContactAddress=findViewById(R.id.staffContactInfo);
-        staffContactAddress.setText(contactinfo);
+        TextView teacherDesignation=findViewById(R.id.teacherDesignation);
+        teacherDesignation.setText(designation);
 
-        TextView staffPhnNo=findViewById(R.id.staffPhnNo);
-        staffPhnNo.setText(phnNo);
+        TextView teacherPhnNo=findViewById(R.id.teacherPhnNo);
+        teacherPhnNo.setText(phnNo);
         LinearLayout phn=findViewById(R.id.phnNo);
         phn.setOnClickListener(new OnClickListener() {
             @Override
@@ -48,8 +52,11 @@ public class Cards2 extends FrameLayout {
             }
         });
 
-        TextView staffEmail=findViewById(R.id.staffEmail);
-        staffEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
-        staffEmail.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView teacherEmail=findViewById(R.id.teacherEmail);
+        teacherEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
+        teacherEmail.setMovementMethod(LinkMovementMethod.getInstance());
+
     }
+
+
 }

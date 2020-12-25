@@ -61,7 +61,7 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView8"
+                        android:id="@+id/directorImage"
                         android:layout_width="404dp"
                         android:layout_height="391dp"
                         android:layout_gravity="center"
@@ -69,29 +69,26 @@
                         android:layout_marginBottom="15dp"
                         android:adjustViewBounds="false"
                         android:cropToPadding="false"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/sumonsir" />
+                        android:scaleType="fitXY" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/directorName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="Md. Auhidur Rahman"
                         android:textColor="#020000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/directorDesignation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginBottom="5dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="@string/assistant_professor_director_acting"
                         android:textColor="#020000"
                         android:textSize="14sp" />
 
@@ -106,13 +103,12 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/textView27"
+                        android:id="@+id/directorEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="Email: auhidsumon@gmail.com"
                         android:textColor="#020000"
                         android:textSize="16sp" />
 
@@ -127,12 +123,11 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView29"
+                        android:id="@+id/directorMsg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/assistant_regular"
-                        android:text="@string/DirectorMessage"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 

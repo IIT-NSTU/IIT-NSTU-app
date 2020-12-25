@@ -15,19 +15,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-@SuppressLint("ViewConstructor")
-public class Cards3 extends FrameLayout {
+import com.squareup.picasso.Picasso;
 
-    public Cards3(@NonNull final Context context, String name, String designation,final String phnNo, String email,String info) {
+@SuppressLint("ViewConstructor")
+public class CourseCoCard extends FrameLayout {
+
+    public CourseCoCard(@NonNull final Context context, String name, String designation, final String phnNo, String email, String info, String imageLink) {
         super(context);
-        LayoutInflater.from(context).inflate(R.layout.activity_cards3, this, true);
+        LayoutInflater.from(context).inflate(R.layout.activity_course_co_card, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         setLayoutParams(layoutParams);
 
-        ImageView courseCoordinatorPic=findViewById(R.id.cc_image);
-        final Context context1 = courseCoordinatorPic.getContext();
-        //int picId = context.getResources().getIdentifier(info.toLowerCase(), "drawable", context1.getPackageName());
-        //courseCoordinatorPic.setImageResource(picId);
+        ImageView imageView=findViewById(R.id.cc_image);
+        Picasso.get().load(imageLink).into(imageView);
+
 
         TextView courseCoordinatorName=findViewById(R.id.cc_name);
         courseCoordinatorName.setText(name);

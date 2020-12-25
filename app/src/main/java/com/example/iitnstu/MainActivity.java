@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boolean n=new File(getFilesDir() + "/" + FILE_NAME).exists();
+        /*boolean n=new File(getFilesDir() + "/" + FILE_NAME).exists();
 
         if (!n){
             saveRawToRoot();
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         thread.start();
 
 
-
+*/
 
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
          //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 //updateData();
             }
         },1500);
-
 
     }
 

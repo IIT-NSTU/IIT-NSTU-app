@@ -13,13 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TeachersInfo"></activity>
-        <activity android:name=".Cards4" />
+        <activity android:name=".TeacherCard" />
         <activity android:name=".CourseCoordinator" />
-        <activity android:name=".Cards3" />
+        <activity android:name=".CourseCoCard" />
         <activity android:name=".developers2" />
         <activity android:name=".ThirdBatchInfo" />
         <activity android:name=".Officials" />
-        <activity android:name=".Cards2" />
+        <activity android:name=".OfficialsCard" />
         <activity
             android:name=".Search"
             android:windowSoftInputMode="adjustPan" />
@@ -33,7 +33,6 @@
         <activity
             android:name=".StudentInfoLogin"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".courseCoordinatorAcitivity" />
         <activity android:name=".AllCourseDetails" />
         <activity android:name=".IntroActivity" />
         <activity android:name=".HomeActivity" />
