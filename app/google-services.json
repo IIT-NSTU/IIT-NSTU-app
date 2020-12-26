@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:102290779244:android:8bc9c3cb66fb8674543c49",
         "android_client_info": {
-          "package_name": "com.example.iitnstu"
+          "package_name": "com.whatEver.iitnstu"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "102290779244-bl66a3rj1slr45jbr29bj8i6drkhvrta.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.iitnstu",
+            "package_name": "com.whatEver.iitnstu",
             "certificate_hash": "fc170c9f0ce6ebf2a2af2dd1a0d5d93d76ed6c54"
           }
         },

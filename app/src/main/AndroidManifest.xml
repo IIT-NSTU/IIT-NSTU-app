@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.iitnstu">
+    package="com.whatEver.iitnstu">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,31 +13,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SecondBatch"></activity>
-        <activity android:name=".TeachersInfo" />
-        <activity android:name=".TeacherCard" />
-        <activity android:name=".CourseCoordinator" />
-        <activity android:name=".CourseCoCard" />
-        <activity android:name=".Developers" />
-        <activity android:name=".ThirdBatchInfo" />
-        <activity android:name=".Officials" />
-        <activity android:name=".OfficialsCard" />
+        <activity android:name="com.whatEver.iitnstu.StudentAdapter"></activity>
+        <activity android:name="com.whatEver.iitnstu.TeachersInfo" />
+        <activity android:name="com.whatEver.iitnstu.TeacherCard" />
+        <activity android:name="com.whatEver.iitnstu.CourseCoordinator" />
+        <activity android:name="com.whatEver.iitnstu.CourseCoCard" />
+        <activity android:name="com.whatEver.iitnstu.Developers" />
+        <activity android:name="com.whatEver.iitnstu.ThirdBatchInfo" />
+        <activity android:name="com.whatEver.iitnstu.Officials" />
+        <activity android:name="com.whatEver.iitnstu.OfficialsCard" />
         <activity
-            android:name=".Search"
+            android:name="com.whatEver.iitnstu.Search"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".PdfViewer" />
-        <activity android:name=".SyllabusMain" />
-        <activity android:name=".StudentCard" />
-        <activity android:name=".SecondBatchInfo" />
-        <activity android:name=".DirectorProfile" />
-        <activity android:name=".StudentInfoMain" />
+        <activity android:name="com.whatEver.iitnstu.PdfViewer" />
+        <activity android:name="com.whatEver.iitnstu.SyllabusMain" />
+        <activity android:name="com.whatEver.iitnstu.StudentCard" />
+        <activity android:name="com.whatEver.iitnstu.SecondBatchInfo" />
+        <activity android:name="com.whatEver.iitnstu.DirectorProfile" />
+        <activity android:name="com.whatEver.iitnstu.StudentInfoMain" />
         <activity
-            android:name=".StudentInfoLogin"
+            android:name="com.whatEver.iitnstu.StudentInfoLogin"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".AllCourseDetails" />
-        <activity android:name=".IntroActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.whatEver.iitnstu.AllCourseDetails" />
+        <activity android:name="com.whatEver.iitnstu.IntroActivity" />
+        <activity android:name="com.whatEver.iitnstu.HomeActivity" />
+        <activity android:name="com.whatEver.iitnstu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
