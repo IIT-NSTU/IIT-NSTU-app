@@ -36,10 +36,10 @@ import java.util.HashMap;
 
 
 @SuppressLint("ViewConstructor")
-public class Cards extends FrameLayout {
+public class UploadCard extends FrameLayout {
 
 
-    public Cards(@NonNull final Context context, final String name, final String id, final String phnNo, final String email) {
+    public UploadCard(@NonNull final Context context, final String name, final String id, final String phnNo, final String email, final String count) {
         super(context);
         LayoutInflater.from(context).inflate(R.layout.activity_cards, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
@@ -54,7 +54,8 @@ public class Cards extends FrameLayout {
         int picId = context.getResources().getIdentifier(id.toLowerCase(), "drawable", context1.getPackageName());
         studentPic.setImageResource(picId);
 
-        /*final StorageReference ref = FirebaseStorage.getInstance().getReference().child("students").child("batch-2").child(id+".png");
+
+        final StorageReference ref = FirebaseStorage.getInstance().getReference().child("students").child("batch-3").child(id+".png");
         UploadTask uploadTask = ref.putFile(getUriToDrawable(getContext(),picId));
         uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
             @Override
@@ -83,12 +84,12 @@ public class Cards extends FrameLayout {
                     if(count.length()==1)num="0"+count;
                     else  num=count;
                     FirebaseFirestore.getInstance().collection("students").document("info").
-                            collection("batch-2").document(num).set(tmp);
+                            collection("batch-3").document(num).set(tmp);
                     FirebaseFirestore.getInstance().collection("students").document("all-Students").collection("by_id").document(id).set(tmp);
 
                 }
             }
-        });*/
+        });
 
 
         TextView studentName=findViewById(R.id.studentName);
@@ -112,6 +113,15 @@ public class Cards extends FrameLayout {
         TextView studentEmail=findViewById(R.id.studentEmail);
         studentEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
         studentEmail.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    public static final Uri getUriToDrawable(@NonNull Context context,
+                                             @AnyRes int drawableId) {
+        Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
+                "://" + context.getResources().getResourcePackageName(drawableId)
+                + '/' + context.getResources().getResourceTypeName(drawableId)
+                + '/' + context.getResources().getResourceEntryName(drawableId) );
+        return imageUri;
     }
 
 }

@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void startStudentInfo(View view){
-        Intent intent=new Intent(HomeActivity.this, StudentInfoLogin.class);
+        Intent intent=new Intent(HomeActivity.this, StudentInfoMain.class);
         startActivity(intent);
     }
 
@@ -75,14 +75,14 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void startdeveloper(View view){
-        Intent intent=new Intent(HomeActivity.this, developers2.class);
+        Intent intent=new Intent(HomeActivity.this, Developers.class);
         startActivity(intent);
     }
 
-    public void startSearch(View view){
+    /*public void startSearch(View view){
         Intent intent=new Intent(HomeActivity.this, Search.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startAcademicOfficials(View view){
         Intent intent=new Intent(HomeActivity.this, Officials.class);

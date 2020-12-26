@@ -35,14 +35,17 @@ public class ThirdBatchInfo extends AppCompatActivity {
             inEmail=new Scanner(inputStreamEmail);
 
             String name="",id="",phnNo="",email="";
+            int count=0;
             while (inId.hasNext()) {
                 name = inName.nextLine();
                 id = inId.next();
                 phnNo=inPhnNo.next();
                 email=inEmail.next();
 
-                Cards cards = new Cards(this, name,id,phnNo,email);
-                gridLayout.addView(cards);
+                UploadCard card=new UploadCard(this,name,id,phnNo,email,String.valueOf(count++));
+                gridLayout.addView(card);
+                /*Cards cards = new Cards(this, name, id, phnNo, email);
+                gridLayout.addView(cards);*/
 
             }
         } catch (IOException e) {

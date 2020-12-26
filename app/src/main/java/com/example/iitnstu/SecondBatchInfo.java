@@ -1,13 +1,31 @@
 package com.example.iitnstu;
 
+import androidx.annotation.AnyRes;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.GridLayout;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Scanner;
+
+import static java.security.AccessController.getContext;
 
 
 public class SecondBatchInfo extends AppCompatActivity {
@@ -34,15 +52,19 @@ public class SecondBatchInfo extends AppCompatActivity {
             inputStreamEmail=getAssets().open("email_second.txt");
             inEmail=new Scanner(inputStreamEmail);
 
-                String name="",id="",phnNo="",email="";
+            String name,id,phnNo,email;
+            int count=0;
             while (inId.hasNext()) {
                 name = inName.nextLine();
                 id = inId.next();
-                phnNo=inPhnNo.next();
-                email=inEmail.next();
+                phnNo =inPhnNo.next();
+                email =inEmail.next();
 
-                Cards cards = new Cards(this, name,id,phnNo,email);
-                gridLayout.addView(cards);
+                UploadCard card=new UploadCard(this,name,id,phnNo,email,String.valueOf(count++));
+                gridLayout.addView(card);
+
+                //StudentCard studentCard = new StudentCard(this, name,id,phnNo,email);
+                //gridLayout.addView(studentCard);
 
             }
         } catch (IOException e) {
@@ -71,6 +93,14 @@ public class SecondBatchInfo extends AppCompatActivity {
        // gridLayout.addView(cards2);
 
 
+    }
+    public static final Uri getUriToDrawable(@NonNull Context context,
+                                             @AnyRes int drawableId) {
+        Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
+                "://" + context.getResources().getResourcePackageName(drawableId)
+                + '/' + context.getResources().getResourceTypeName(drawableId)
+                + '/' + context.getResources().getResourceEntryName(drawableId) );
+        return imageUri;
     }
 
 }

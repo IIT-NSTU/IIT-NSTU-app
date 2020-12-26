@@ -13,21 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TeachersInfo"></activity>
+        <activity android:name=".SecondBatch"></activity>
+        <activity android:name=".TeachersInfo" />
         <activity android:name=".TeacherCard" />
         <activity android:name=".CourseCoordinator" />
         <activity android:name=".CourseCoCard" />
-        <activity android:name=".developers2" />
+        <activity android:name=".Developers" />
         <activity android:name=".ThirdBatchInfo" />
         <activity android:name=".Officials" />
         <activity android:name=".OfficialsCard" />
         <activity
             android:name=".Search"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".developers" />
         <activity android:name=".PdfViewer" />
         <activity android:name=".SyllabusMain" />
-        <activity android:name=".Cards" />
+        <activity android:name=".StudentCard" />
         <activity android:name=".SecondBatchInfo" />
         <activity android:name=".DirectorProfile" />
         <activity android:name=".StudentInfoMain" />

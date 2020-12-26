@@ -32,7 +32,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="22sp" />
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -41,7 +41,7 @@
                 android:layout_marginStart="333dp"
                 android:layout_marginTop="7dp"
                 android:onClick="startSearch"
-                app:srcCompat="@android:drawable/ic_menu_search" />
+                app:srcCompat="@android:drawable/ic_menu_search" />-->
 
 
         </RelativeLayout>
