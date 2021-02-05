@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -63,9 +65,22 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent=new Intent(MainActivity.this,HomeActivity.class);
+                ////here auth with if/else
+                FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+                if(user!=null){
+                    Intent homeIntent=new Intent(MainActivity.this,HomeActivity.class);
+                    startActivity(homeIntent);
+                    finish();
+                }
+                else{
+                    Intent homeIntent=new Intent(MainActivity.this,Authentication.class);
+                    startActivity(homeIntent);
+                    finish();
+                }
+
+                /*Intent homeIntent=new Intent(MainActivity.this,HomeActivity.class);
                 startActivity(homeIntent);
-                finish();
+                finish();*/
                 //updateData();
             }
         },1500);

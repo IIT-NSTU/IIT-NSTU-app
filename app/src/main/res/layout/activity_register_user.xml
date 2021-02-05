@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapps1"
+    tools:context=".StudentInfoLogin">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bgapps"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterUser">
+
+    <RadioGroup
+        android:id="@+id/radiogrp"
+        android:layout_width="314dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="53dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teacher" />
+
+        <RadioButton
+            android:id="@+id/radioOfficial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Official" />
+
+        <RadioButton
+            android:id="@+id/radioStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/resName"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="45dp"
+        android:ems="10"
+        android:hint="Full Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resConfirmPass" />
+
+    <EditText
+        android:id="@+id/resPhone"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:hint="Phone No."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resName" />
+
+    <EditText
+        android:id="@+id/resID"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:hint="Student ID"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resPhone"
+        tools:visibility="gone" />
+
+    <EditText
+        android:id="@+id/resEmail"
+        android:layout_width="315dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogrp" />
+
+    <EditText
+        android:id="@+id/resPass"
+        android:layout_width="315dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resEmail" />
+
+    <EditText
+        android:id="@+id/resConfirmPass"
+        android:layout_width="315dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="45dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resPass" />
+
+    <Button
+        android:id="@+id/resbutton"
+        android:layout_width="312dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginBottom="80dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

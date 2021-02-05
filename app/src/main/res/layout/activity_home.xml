@@ -17,8 +17,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -31,6 +31,23 @@
                 android:text="Home"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+
+                android:id="@+id/userIcon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="4dp"
+                app:civ_shadow="true"
+                app:civ_shadow_color="#8BC34A"
+                app:civ_shadow_radius="10"
+                tools:visibility="gone" />
 
             <!--<ImageView
                 android:id="@+id/imageView5"

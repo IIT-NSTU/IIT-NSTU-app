@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
@@ -59,8 +61,15 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void startStudentInfo(View view){
-        Intent intent=new Intent(HomeActivity.this, StudentInfoLogin.class);
-        startActivity(intent);
+        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        if(user.isAnonymous()){
+            startActivity(new Intent(HomeActivity.this,Authentication.class));
+        }
+        else{
+            Intent intent=new Intent(HomeActivity.this, StudentInfoMain.class);
+            startActivity(intent);
+        }
+
     }
 
     public void startDirectorProfile(View view){

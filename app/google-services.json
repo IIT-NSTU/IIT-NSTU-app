@@ -10,12 +10,49 @@
       "client_info": {
         "mobilesdk_app_id": "1:102290779244:android:8bc9c3cb66fb8674543c49",
         "android_client_info": {
-          "package_name": "com.whatEver.iitnstu"
+          "package_name": "com.example.iitnstu"
         }
       },
       "oauth_client": [
         {
           "client_id": "102290779244-bl66a3rj1slr45jbr29bj8i6drkhvrta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iitnstu",
+            "certificate_hash": "fc170c9f0ce6ebf2a2af2dd1a0d5d93d76ed6c54"
+          }
+        },
+        {
+          "client_id": "102290779244-h9dcj6hicij3cuolbnf4oiconuk9879s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9VAaYjaTM7Xs5wTQ_h13D9qBQ0Jer8xI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102290779244-h9dcj6hicij3cuolbnf4oiconuk9879s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102290779244:android:0f50eda04a673784543c49",
+        "android_client_info": {
+          "package_name": "com.whatEver.iitnstu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102290779244-iejqjo5duvv0dba1amkiqcf6fdmsrq69.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.whatEver.iitnstu",

@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridLayout;
 import android.widget.Toast;
 
@@ -45,6 +47,14 @@ public class TeachersInfo extends AppCompatActivity {
                         TeacherCard teacherCard = new TeacherCard(context, tmp.get("name").toString(),
                                 tmp.get("designation").toString(), tmp.get("phone").toString(),
                                 tmp.get("email").toString(), tmp.get("imageLink").toString());
+
+                        teacherCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(TeachersInfo.this,Profile.class));
+                                finish();
+                            }
+                        });
 
                         gridLayout.addView(teacherCard);
                         //Log.d("debug",data.getData().toString());
