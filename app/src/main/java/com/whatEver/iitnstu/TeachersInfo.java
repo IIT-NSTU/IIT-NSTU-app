@@ -16,12 +16,14 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 public class TeachersInfo extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private GridLayout gridLayout;
+
 
 
 
@@ -37,13 +39,14 @@ public class TeachersInfo extends AppCompatActivity {
         final LoadingDialog loadingDialog=new LoadingDialog(TeachersInfo.this);
         loadingDialog.startLoadingDialog();
 
+
         //if(Connection.check(context))
             db.collection("teachers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
                     for (DocumentSnapshot data: task.getResult()) {
-                        HashMap<String, Object> tmp = (HashMap<String, Object>) data.getData();
+                        final HashMap<String, Object> tmp = (HashMap<String, Object>) data.getData();
                         TeacherCard teacherCard = new TeacherCard(context, tmp.get("name").toString(),
                                 tmp.get("designation").toString(), tmp.get("phone").toString(),
                                 tmp.get("email").toString(), tmp.get("imageLink").toString());
@@ -51,8 +54,7 @@ public class TeachersInfo extends AppCompatActivity {
                         teacherCard.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                startActivity(new Intent(TeachersInfo.this,Profile.class));
-                                finish();
+                                startActivity(new Intent(TeachersInfo.this,Profile.class).putExtra("info",tmp));
                             }
                         });
 
