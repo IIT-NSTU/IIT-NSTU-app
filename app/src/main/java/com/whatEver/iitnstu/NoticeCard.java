@@ -23,38 +23,23 @@ import com.squareup.picasso.Picasso;
 @SuppressLint("ViewConstructor")
 public class NoticeCard extends FrameLayout {
 
-    public NoticeCard(@NonNull final Context context, String name, String designation, final String phnNo, String email, String imageLink) {
+    public NoticeCard(@NonNull final Context context, String date, String about,String des) {
         super(context);
-        LayoutInflater.from(context).inflate(R.layout.activity_techer_card, this, true);
+        LayoutInflater.from(context).inflate(R.layout.activity_notice_card, this, true);
         LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         setLayoutParams(layoutParams);
 
 
-        ImageView imageView=findViewById(R.id.teacherPic);
-        Picasso.get().load(imageLink).into(imageView);
 
+        TextView teacherName=findViewById(R.id.notice_date);
+        teacherName.setText(date);
 
-        TextView teacherName=findViewById(R.id.teacherName);
-        teacherName.setText(name);
+        TextView teacherDesignation=findViewById(R.id.notice_about);
+        teacherDesignation.setText(about);
 
-        TextView teacherDesignation=findViewById(R.id.teacherDesignation);
-        teacherDesignation.setText(designation);
+        TextView teacherPhnNo=findViewById(R.id.notice_des);
+        teacherPhnNo.setText(des);
 
-        TextView teacherPhnNo=findViewById(R.id.teacherPhnNo);
-        teacherPhnNo.setText(phnNo);
-        LinearLayout phn=findViewById(R.id.phnNo);
-        phn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel: "+phnNo));
-                v.getContext().startActivity(intent);
-            }
-        });
-
-        TextView teacherEmail=findViewById(R.id.teacherEmail);
-        teacherEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
-        teacherEmail.setMovementMethod(LinkMovementMethod.getInstance());
 
     }
 

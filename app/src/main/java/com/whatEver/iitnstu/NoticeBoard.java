@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.Toast;
@@ -35,23 +36,25 @@ public class NoticeBoard extends AppCompatActivity {
         final LoadingDialog loadingDialog=new LoadingDialog(NoticeBoard.this);
         loadingDialog.startLoadingDialog();
 
-        db.collection("teachers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("notice").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (DocumentSnapshot data : task.getResult()) {
                         final HashMap<String, Object> tmp = (HashMap<String, Object>) data.getData();
-                        TeacherCard teacherCard = new TeacherCard(context, tmp.get("name").toString(),
-                                tmp.get("designation").toString(), tmp.get("phone").toString(),
-                                tmp.get("email").toString(), tmp.get("imageLink").toString());
+                        NoticeCard noticeCard = new NoticeCard(context, tmp.get("date").toString(),
+                                tmp.get("about").toString(), tmp.get("description").toString());
 
-                        teacherCard.setOnClickListener(new View.OnClickListener() {
+                        //Log.d("debug",tmp.toString());
+
+                        noticeCard.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                startActivity(new Intent(NoticeBoard.this, Profile.class).putExtra("info", tmp));
+                                Intent intent=new Intent(NoticeBoard.this, PdfViewer.class).putExtra("pdfName",tmp.get("pdfNo").toString()).putExtra("folder","notice");
+                                startActivity(intent);
                             }
                         });
-                        gridLayout.addView(teacherCard);
+                        gridLayout.addView(noticeCard);
                         //Log.d("debug",data.getData().toString());
                     }
                     loadingDialog.dismissDialog();

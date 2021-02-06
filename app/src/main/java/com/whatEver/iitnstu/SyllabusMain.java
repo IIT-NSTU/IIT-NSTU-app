@@ -15,42 +15,42 @@ public class SyllabusMain extends AppCompatActivity {
     }
 
     public void firstSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","1stSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","1stSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void secondSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","2ndSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","2ndSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void thirdSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","3rdSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","3rdSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void fourthSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","4thSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","4thSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void fifthSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","5thSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","5thSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void sixthSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","6thSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","6thSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void seventhSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","7thSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","7thSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 
     public void eighthSemesterStart(View view){
-        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","8thSemester.pdf");
+        Intent intent=new Intent(SyllabusMain.this, PdfViewer.class).putExtra("pdfName","8thSemester.pdf").putExtra("folder","syllabus");
         startActivity(intent);
     }
 

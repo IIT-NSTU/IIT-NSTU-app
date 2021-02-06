@@ -24,11 +24,12 @@ public class PdfViewer extends AppCompatActivity {
         loadingDialog.startLoadingDialog();
 
         String pdfName=getIntent().getExtras().getString("pdfName");
+        String folder=getIntent().getExtras().getString("folder");
 
         pdfView = (PDFView) findViewById(R.id.Pdf);
         //pdfView.fromAsset(pdfName).load();
 
-        FirebaseStorage.getInstance().getReference().child("syllabus").child(pdfName).getBytes(1024 * 1024).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+        FirebaseStorage.getInstance().getReference().child(folder).child(pdfName).getBytes(1024 * 1024).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
             public void onSuccess(byte[] bytes) {
                 loadingDialog.dismissDialog();
