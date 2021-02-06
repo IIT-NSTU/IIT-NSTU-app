@@ -97,4 +97,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent=new Intent(HomeActivity.this, Officials.class);
         startActivity(intent);
     }
+
+    public void startNoticeBoard(View view){
+        Intent intent=new Intent(HomeActivity.this, NoticeBoard.class);
+        startActivity(intent);
+    }
 }

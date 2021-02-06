@@ -16,29 +16,25 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.io.Serializable;
 import java.util.HashMap;
 
-public class TeachersInfo extends AppCompatActivity {
+public class NoticeBoard extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private GridLayout gridLayout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teachers_info);
+        setContentView(R.layout.activity_notice_board);
 
-        gridLayout = findViewById(R.id.gridlayout_4);
-        db = FirebaseFirestore.getInstance();
-        final Context context = this;
+        gridLayout = findViewById(R.id.notice_layout);
+        db=FirebaseFirestore.getInstance();
+        final Context context=this;
 
-        final LoadingDialog loadingDialog = new LoadingDialog(TeachersInfo.this);
+        final LoadingDialog loadingDialog=new LoadingDialog(NoticeBoard.this);
         loadingDialog.startLoadingDialog();
 
-
-        //if(Connection.check(context))
         db.collection("teachers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -52,20 +48,18 @@ public class TeachersInfo extends AppCompatActivity {
                         teacherCard.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                startActivity(new Intent(TeachersInfo.this, Profile.class).putExtra("info", tmp));
+                                startActivity(new Intent(NoticeBoard.this, Profile.class).putExtra("info", tmp));
                             }
                         });
-
                         gridLayout.addView(teacherCard);
                         //Log.d("debug",data.getData().toString());
                     }
                     loadingDialog.dismissDialog();
-                } else {
+                }
+                else {
                     Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        //else Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();
-
     }
 }
