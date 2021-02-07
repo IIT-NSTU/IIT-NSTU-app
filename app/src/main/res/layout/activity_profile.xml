@@ -78,7 +78,7 @@
                 <TextView
                     android:layout_width="354dp"
                     android:layout_height="20dp"
-                    android:text="<Education : "
+                    android:text="Education : "
                     android:fontFamily="@font/assistant_regular"
                     android:paddingBottom="1dp"
                     android:textSize="15dp"
