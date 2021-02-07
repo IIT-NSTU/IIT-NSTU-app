@@ -49,7 +49,5 @@ public class Profile extends AppCompatActivity {
             linearLayout.addView(textView);
         }
 
-
-
     }
 }
