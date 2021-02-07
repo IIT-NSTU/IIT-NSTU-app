@@ -15,7 +15,7 @@ public class Profile extends AppCompatActivity {
 
     private HashMap<String, Object> tmp;
     private ImageView profileImage;
-    private TextView profileName,profileWork;
+    private TextView profileName,profileWork,educationInfo,educationInfo2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +27,14 @@ public class Profile extends AppCompatActivity {
         profileImage=findViewById(R.id.profile_img);
         profileName=findViewById(R.id.profile_name);
         profileWork=findViewById(R.id.profile_work);
+        educationInfo=findViewById(R.id.education_info);
+        educationInfo2=findViewById(R.id.education_info2);
 
         Picasso.get().load(tmp.get("imageLink").toString()).into(profileImage);
         profileName.setText(tmp.get("name").toString());
         profileWork.setText(tmp.get("designation").toString());
+        educationInfo.setText(tmp.get("educationInfo").toString());
+        educationInfo2.setText(tmp.get("educationInfo2").toString());
 
 
 

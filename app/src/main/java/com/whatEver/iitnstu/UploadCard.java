@@ -45,7 +45,7 @@ public class UploadCard extends FrameLayout {
         setLayoutParams(layoutParams);
 
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.fromdown);
-        CardView cardView=findViewById(R.id.card);
+        CardView cardView=findViewById(R.id.education_info);
         cardView.startAnimation(animation);
 
         ImageView studentPic=findViewById(R.id.studentPic);

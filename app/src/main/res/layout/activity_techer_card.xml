@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    android:id="@+id/card"
+    android:id="@+id/education_info"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,6 +39,7 @@
             android:gravity="center"
             android:textSize="22sp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/teacherDesignation"
             android:layout_width="match_parent"
@@ -46,6 +47,7 @@
             android:fontFamily="@font/assistant_regular"
             android:gravity="center"
             android:textSize="18sp" />
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
