@@ -19,13 +19,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.HashMap;
 
 public class StudentAdapter extends AppCompatActivity {
-
     private FirebaseFirestore db;
     private GridLayout gridLayout;
     private String batch_id;
     private String header;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

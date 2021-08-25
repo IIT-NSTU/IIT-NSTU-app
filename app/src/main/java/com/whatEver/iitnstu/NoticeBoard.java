@@ -14,10 +14,14 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldPath;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Vector;
 
 public class NoticeBoard extends AppCompatActivity {
 
@@ -36,11 +40,16 @@ public class NoticeBoard extends AppCompatActivity {
         final LoadingDialog loadingDialog=new LoadingDialog(NoticeBoard.this);
         loadingDialog.startLoadingDialog();
 
-        db.collection("notice").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("notice").orderBy("#no", Query.Direction.DESCENDING).limit(10).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
+                    Vector<DocumentSnapshot> vector=new Vector<>();
                     for (DocumentSnapshot data : task.getResult()) {
+                        /*vector.add(documentSnapshot);
+                    }
+                    for (int i=vector.size()-1 ; i>=0 ; i--) {
+                        DocumentSnapshot data=vector.elementAt(i);*/
                         final HashMap<String, Object> tmp = (HashMap<String, Object>) data.getData();
                         NoticeCard noticeCard = new NoticeCard(context, tmp.get("date").toString(),
                                 tmp.get("about").toString(), tmp.get("description").toString());

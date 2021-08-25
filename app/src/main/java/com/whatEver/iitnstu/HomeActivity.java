@@ -6,6 +6,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,8 +18,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-
-
+    private ImageView searchButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,10 @@ public class HomeActivity extends AppCompatActivity {
                 .setPermissions(Manifest.permission.CALL_PHONE, Manifest.permission.INTERNET,Manifest.permission.ACCESS_NETWORK_STATE)
                 .check();
 
+        /*searchButton=findViewById(R.id.search_image);
+        if(FirebaseAuth.getInstance().getCurrentUser().isAnonymous()){
+            searchButton.setVisibility(View.INVISIBLE);
+        }*/
     }
 
     public void onClick(View view){
@@ -83,15 +87,21 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    public void startdeveloper(View view){
+    public void startDeveloper(View view){
         Intent intent=new Intent(HomeActivity.this, Developers.class);
         startActivity(intent);
     }
 
-    /*public void startSearch(View view){
-        Intent intent=new Intent(HomeActivity.this, Search.class);
-        startActivity(intent);
-    }*/
+    public void startSearch(View view){
+        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        if(user.isAnonymous()){
+            startActivity(new Intent(HomeActivity.this,Authentication.class));
+        }
+        else {
+            Intent intent = new Intent(HomeActivity.this, Search.class);
+            startActivity(intent);
+        }
+    }
 
     public void startAcademicOfficials(View view){
         Intent intent=new Intent(HomeActivity.this, Officials.class);

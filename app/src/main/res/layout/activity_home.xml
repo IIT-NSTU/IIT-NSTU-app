@@ -32,33 +32,16 @@
                 android:textColor="#FFFFFF"
                 android:textSize="22sp" />
 
-            <com.mikhaellopez.circularimageview.CircularImageView
-
-                android:id="@+id/userIcon"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+            <ImageView
+                android:id="@+id/search_image"
+                android:layout_width="60dp"
+                android:layout_height="51dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:visibility="gone"
-                app:civ_border_color="#EEEEEE"
-                app:civ_border_width="4dp"
-                app:civ_shadow="true"
-                app:civ_shadow_color="#8BC34A"
-                app:civ_shadow_radius="10"
-                tools:visibility="gone" />
-
-            <!--<ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="333dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginEnd="2dp"
                 android:onClick="startSearch"
-                app:srcCompat="@android:drawable/ic_menu_search" />-->
+                app:srcCompat="@android:drawable/ic_menu_search" />
 
 
         </RelativeLayout>
@@ -434,7 +417,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="startdeveloper"
+                    android:onClick="startDeveloper"
                     android:orientation="vertical"
                     android:padding="16dp">
 
