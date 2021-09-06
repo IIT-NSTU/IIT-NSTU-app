@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,8 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class Authentication extends AppCompatActivity {
 
     private EditText email,password;
-    private Button login,guest;
-    private TextView register;
+    private Button login;
+    private TextView register,guest;
     private FirebaseAuth auth;
 
 
@@ -43,20 +44,23 @@ public class Authentication extends AppCompatActivity {
                 String txt_email=email.getText().toString();
                 String txt_password=password.getText().toString();
 
-                auth.signInWithEmailAndPassword(txt_email,txt_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(Authentication.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(Authentication.this,HomeActivity.class));
-                            finish();
+                if(TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)){
+                    Toast.makeText(Authentication.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
+                }else{
+                    auth.signInWithEmailAndPassword(txt_email,txt_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(Authentication.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(Authentication.this,HomeActivity.class));
+                                finish();
+                            }
+                            else{
+                                Toast.makeText(Authentication.this, "Wrong email & password!", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                        else{
-                            Toast.makeText(Authentication.this, "Wrong email & password!", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
+                    });
+                }
             }
         });
         guest.setOnClickListener(new View.OnClickListener() {

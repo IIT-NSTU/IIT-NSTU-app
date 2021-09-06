@@ -36,5 +36,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="first_time_register_here">First time? register <u>here</u>.</string>
+    <string name="click_here_to_continue_as_guest"><u>Click here</u> to continue as guest.</string>
 
 </resources>

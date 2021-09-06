@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -41,6 +42,7 @@ public class RegisterUser extends AppCompatActivity {
     private int tmp=-1;
     private CollectionReference ref;
     private FirebaseAuth auth;
+    private TextView goBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class RegisterUser extends AppCompatActivity {
         phone=findViewById(R.id.resPhone);
         Id=findViewById(R.id.resID);
         register=findViewById(R.id.resbutton);
+        goBack=findViewById(R.id.go_back);
         db=FirebaseFirestore.getInstance();
         auth=FirebaseAuth.getInstance();
 
@@ -131,6 +134,14 @@ public class RegisterUser extends AppCompatActivity {
 
                     registerUser(txt_email,txt_password,txt_name,txt_phn,txt_id);
                 }
+            }
+        });
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterUser.this,Authentication.class));
+                finish();
             }
         });
 
