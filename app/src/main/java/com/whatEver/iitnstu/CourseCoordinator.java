@@ -8,6 +8,8 @@ import android.widget.GridLayout;
 import android.widget.Toast;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.whatEver.iitnstu.cards.CourseCoCard;
+
 import java.util.HashMap;
 
 

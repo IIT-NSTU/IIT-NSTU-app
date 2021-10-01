@@ -13,32 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoticeCard" />
         <activity android:name=".NoticeBoard" />
         <activity android:name=".Profile" />
         <activity android:name=".RegisterUser" />
         <activity android:name=".Authentication" />
         <activity android:name=".StudentAdapter" />
         <activity android:name=".TeachersInfo" />
-        <activity android:name=".TeacherCard" />
         <activity android:name=".CourseCoordinator" />
-        <activity android:name=".CourseCoCard" />
         <activity android:name=".Developers" />
-        <activity android:name=".ThirdBatchInfo" />
         <activity android:name=".Officials" />
-        <activity android:name=".OfficialsCard" />
         <activity
             android:name=".Search"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".PdfViewer" />
         <activity android:name=".SyllabusMain" />
-        <activity android:name=".StudentCard" />
-        <activity android:name=".SecondBatchInfo" />
         <activity android:name=".DirectorProfile" />
         <activity android:name=".StudentInfoMain" />
-        <activity
-            android:name=".StudentInfoLogin"
-            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".AllCourseDetails" />
         <activity android:name=".IntroActivity" />
         <activity android:name=".HomeActivity" />

@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.whatEver.iitnstu.cards.StudentCard;
+
 import java.util.HashMap;
 
 
@@ -25,7 +27,7 @@ public class StudentAdapter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_batch_info);
+        setContentView(R.layout.activity_student_adapter);
 
         gridLayout = findViewById(R.id.gridlayout_2);
         db=FirebaseFirestore.getInstance();

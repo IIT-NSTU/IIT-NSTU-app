@@ -7,7 +7,7 @@
     android:background="@drawable/bgapps"
     android:orientation="vertical"
     tools:ignore="contentDescription"
-    tools:context=".StudentInfoLogin">
+    tools:context=".DirectorProfile">
 
 
     <LinearLayout

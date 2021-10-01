@@ -13,6 +13,7 @@ import java.util.HashMap;
 
 public class DirectorProfile extends AppCompatActivity {
 
+    //declaration
     private ImageView image;
     private TextView name;
     private TextView designation;
@@ -25,7 +26,7 @@ public class DirectorProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_director_profile);
 
-
+        //initialization
         image=findViewById(R.id.directorImage);
         name=findViewById(R.id.directorName);
         designation=findViewById(R.id.directorDesignation);

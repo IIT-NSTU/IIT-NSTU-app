@@ -10,6 +10,8 @@ import android.widget.Toast;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.whatEver.iitnstu.cards.NoticeCard;
+
 import java.util.HashMap;
 
 
@@ -48,10 +50,14 @@ public class NoticeBoard extends AppCompatActivity {
                             tmp.get("about").toString(), tmp.get("description").toString());
 
                     noticeCard.setOnClickListener(v -> {
-                        Intent intent = new Intent(NoticeBoard.this, PdfViewer.class)
-                                .putExtra("pdfName", tmp.get("pdfNo").toString())
-                                .putExtra("folder", "notice");
-                        startActivity(intent);
+                        try {
+                            Intent intent = new Intent(NoticeBoard.this, PdfViewer.class)
+                                    .putExtra("pdfName", tmp.get("pdfNo").toString())
+                                    .putExtra("folder", "notice");
+                            startActivity(intent);
+                        }catch (Exception e){
+                            Toast.makeText(context, "No attached Pdf", Toast.LENGTH_SHORT).show();
+                        }
                     });
                     gridLayout.addView(noticeCard);
                 }

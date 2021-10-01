@@ -134,7 +134,12 @@ public class RegisterUser extends AppCompatActivity {
                             if(tmp==3){
                                 if(!Uid.toLowerCase().equals(document.get("id").toString().toLowerCase()))ok=false;
                             }
-                            if(ok)register(UEmail,UPassword);
+
+                            if(ok){
+                                register(UEmail,UPassword);
+                            } else {
+                                Toast.makeText(RegisterUser.this, "Invalid information", Toast.LENGTH_SHORT).show();
+                            }
 
                             Log.e("debug", String.valueOf(ok));
                             Log.e("debug", document.getId() + " => " + document.getData());

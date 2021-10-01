@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.whatEver.iitnstu.cards.StudentCard;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -24,6 +26,7 @@ import java.util.regex.Pattern;
 
 
 public class Search extends AppCompatActivity {
+
     private FirebaseFirestore db;
     private Context context = this;
     private GridLayout gridLayout;
@@ -50,8 +53,8 @@ public class Search extends AppCompatActivity {
             }
             InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
             inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-
         });
+
         thread.start();
         inputText.setFocusableInTouchMode(true);
         inputText.requestFocus();
