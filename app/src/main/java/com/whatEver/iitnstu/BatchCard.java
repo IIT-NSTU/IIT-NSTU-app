@@ -25,12 +25,9 @@ public class BatchCard extends FrameLayout {
         setLayoutParams(layoutParams);
 
         LinearLayout linearLayout=findViewById(R.id.linearLayout);
-        linearLayout.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context, StudentAdapter.class).putExtra("batch_id",name).putExtra("des",des);
-                context.startActivity(intent);
-            }
+        linearLayout.setOnClickListener(v -> {
+            Intent intent=new Intent(context, StudentAdapter.class).putExtra("batch_id",name).putExtra("des",des);
+            context.startActivity(intent);
         });
 
         ImageView imageView=findViewById(R.id.icon_batch);
