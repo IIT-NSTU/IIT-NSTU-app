@@ -2,18 +2,18 @@
     <string name="app_name">IIT NSTU</string>
     <string name="welcomeString">Institute of Information Technology (IIT), <b>Noakhali Science and Technology University</b> established in <b>2015</b> is an
         educational institution aimed at evolving high and IT professionals and qualified humanistic source in the realm of information technology.
-        By assuring professionalism,distinction and recognition IIT ensures that alumni from our Institute can efficiently contribute to the IT industry
+        By assuring professionalism, distinction and recognition IIT ensures that alumni from our Institute can efficiently contribute to the IT industry
         of Bangladesh and all over the world.</string>
     <string name="teachers">Teachers</string>
     <string name="this_is_an_imageview">this_is_an_imageview</string>
     <integer name="swing_anim_time">750</integer>
-    <string name="developers_say">IIT NSTU is the official Android Application of Institute of Information Technology, Noakhali Science and technology University.
+    <string name="developers_say">IIT NSTU is the official Android Application of Institute of Information Technology, Noakhali Science and Technology University.
 
-    The Application is solely made for educational purposes.The app gives a whole overview of The Institute containing various important and useful information for both students and teachers.
+    The Application is solely made for educational purposes. The app gives a whole overview of The Institute containing various important and useful information for both students and teachers.
 
-    In this modern era of technology having a android app is very important and effective in many ways.For this purpose this application is developed.Special thanks to the honorable teachers of IIT.\n\n
+    In this modern era of technology having an android app is very important and effective in many ways. For this purpose this application is developed. Special thanks to the honorable teachers of IIT.\n\n
 
-    Since this is a Departmental Application,you are welcome to share new ideas and features.Source Code is given in Github. </string>
+    Since this is a Departmental Application, you are welcome to share new ideas and features. Source Code is given in Github. </string>
     <string name="developers_say_2"><b><big>Developers\n</big></b>
     Arnab Dey\n
     Sunaan Sultan\n
