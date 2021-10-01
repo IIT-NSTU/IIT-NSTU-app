@@ -1,46 +1,44 @@
 package com.whatEver.iitnstu;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import com.github.barteksc.pdfviewer.PDFView;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
+
 
 public class PdfViewer extends AppCompatActivity {
 
     private PDFView pdfView;
+    private LoadingDialog loadingDialog;
+    private String folder;
+    private String pdfName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_viewer);
 
-        final LoadingDialog loadingDialog=new LoadingDialog(PdfViewer.this);
+        loadingDialog=new LoadingDialog(PdfViewer.this);
+        pdfName=getIntent().getExtras().getString("pdfName");
+        folder=getIntent().getExtras().getString("folder");
+        pdfView = (PDFView) findViewById(R.id.Pdf);
+
+        fetchingData();
+    }
+
+
+    private void fetchingData() {
         loadingDialog.startLoadingDialog();
 
-        String pdfName=getIntent().getExtras().getString("pdfName");
-        String folder=getIntent().getExtras().getString("folder");
-
-        pdfView = (PDFView) findViewById(R.id.Pdf);
-        //pdfView.fromAsset(pdfName).load();
-
-        FirebaseStorage.getInstance().getReference().child(folder).child(pdfName).getBytes(1024 * 1024).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-            @Override
-            public void onSuccess(byte[] bytes) {
-                loadingDialog.dismissDialog();
-                Toast.makeText(getApplicationContext(),"Zoom out !!",Toast.LENGTH_LONG).show();
-                pdfView.fromBytes(bytes).load();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getApplicationContext(),"download unsuccessful",Toast.LENGTH_LONG).show();
-            }
+        FirebaseStorage.getInstance().getReference().child(folder).child(pdfName)
+                .getBytes(1024 * 1024).addOnSuccessListener(bytes -> {
+            loadingDialog.dismissDialog();
+            Toast.makeText(getApplicationContext(),"Zoom out !!",Toast.LENGTH_LONG).show();
+            pdfView.fromBytes(bytes).load();
+        }).addOnFailureListener(e -> {
+            Toast.makeText(getApplicationContext(),"download unsuccessful",Toast.LENGTH_LONG).show();
         });
     }
 }

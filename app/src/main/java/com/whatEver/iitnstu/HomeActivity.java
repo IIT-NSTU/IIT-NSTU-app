@@ -1,24 +1,20 @@
 package com.whatEver.iitnstu;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
-
 import java.util.List;
+
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageView searchButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +22,7 @@ public class HomeActivity extends AppCompatActivity {
 
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
-            public void onPermissionGranted() {
-                //Toast.makeText(HomeActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
-            }
+            public void onPermissionGranted() {}
             @Override
             public void onPermissionDenied(List<String> deniedPermissions) {
                 Toast.makeText(HomeActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
@@ -40,30 +34,23 @@ public class HomeActivity extends AppCompatActivity {
                 .setPermissions(Manifest.permission.CALL_PHONE, Manifest.permission.INTERNET,Manifest.permission.ACCESS_NETWORK_STATE)
                 .check();
 
-        /*searchButton=findViewById(R.id.search_image);
-        if(FirebaseAuth.getInstance().getCurrentUser().isAnonymous()){
-            searchButton.setVisibility(View.INVISIBLE);
-        }*/
     }
 
-    public void onClick(View view){
+    public void startIntro(View view){
         Intent intent=new Intent(HomeActivity.this,IntroActivity.class);
         startActivity(intent);
     }
 
-    public void Click_Function(View view){
-        Intent intent=new Intent(HomeActivity.this, AllCourseDetails.class);
-        startActivity(intent);
-    }
-
-    public void startCourseCoodinator(View view){
+    public void startCourseCoordinator(View view){
         Intent intent=new Intent(HomeActivity.this,CourseCoordinator.class);
         startActivity(intent);
     }
-    public void teachers(View view){
+
+    public void startTeachersInfo(View view){
         Intent intent=new Intent(HomeActivity.this,TeachersInfo.class);
         startActivity(intent);
     }
+
     public void startStudentInfo(View view){
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         if(user.isAnonymous()){
@@ -81,8 +68,13 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startAllCourse(View view){
+    public void startSyllabus(View view){
         Intent intent=new Intent(HomeActivity.this, SyllabusMain.class);
+        startActivity(intent);
+    }
+
+    public void startAllCourse(View view){
+        Intent intent=new Intent(HomeActivity.this, AllCourseDetails.class);
         startActivity(intent);
     }
 

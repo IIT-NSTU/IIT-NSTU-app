@@ -74,7 +74,6 @@ public class RegisterUser extends AppCompatActivity {
             }
         });
 
-        Log.e("debug",String.valueOf(tmp));
         register.setOnClickListener(v -> {
             setDb();
             String txt_email=email.getText().toString();
@@ -84,13 +83,6 @@ public class RegisterUser extends AppCompatActivity {
             String txt_phn=phone.getText().toString();
             String txt_id=Id.getText().toString();
 
-
-            Log.e("debug",txt_email);
-            Log.e("debug",txt_password);
-            Log.e("debug",txt_name);
-            Log.e("debug",txt_password1);
-            Log.e("debug",txt_phn);
-            Log.e("debug",txt_id);
             if(tmp==-1){
                 Toast.makeText(RegisterUser.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
             }

@@ -16,6 +16,7 @@ public class CourseCoordinator extends AppCompatActivity {
     private FirebaseFirestore db;
     private GridLayout gridLayout;
     private Context context;
+    private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,12 @@ public class CourseCoordinator extends AppCompatActivity {
         gridLayout=findViewById(R.id.gridlayout_3);
         db=FirebaseFirestore.getInstance();
         context=this;
+        loadingDialog=new LoadingDialog(CourseCoordinator.this);
 
         fetchingData();
     }
 
     private void fetchingData() {
-        final LoadingDialog loadingDialog=new LoadingDialog(CourseCoordinator.this);
         loadingDialog.startLoadingDialog();
 
         db.collection("course-co-ordinates").get().addOnCompleteListener(task -> {

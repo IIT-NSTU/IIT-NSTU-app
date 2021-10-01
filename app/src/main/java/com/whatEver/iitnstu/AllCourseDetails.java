@@ -9,6 +9,7 @@ import com.google.firebase.storage.FirebaseStorage;
 public class AllCourseDetails extends AppCompatActivity {
 
     private PDFView pdfView;
+    private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,13 +17,13 @@ public class AllCourseDetails extends AppCompatActivity {
         setContentView(R.layout.activity_all_course);
 
         pdfView = findViewById(R.id.PdfSyllabus);
+        loadingDialog = new LoadingDialog(AllCourseDetails.this);
 
         fetchingData();
     }
 
 
     private void fetchingData() {
-        final LoadingDialog loadingDialog = new LoadingDialog(AllCourseDetails.this);
         loadingDialog.startLoadingDialog();
 
         FirebaseStorage.getInstance().getReference().child("course-details").child("course-details.pdf")

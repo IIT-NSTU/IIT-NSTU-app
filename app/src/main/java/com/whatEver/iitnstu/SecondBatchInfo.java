@@ -3,14 +3,12 @@ package com.whatEver.iitnstu;
 import androidx.annotation.AnyRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.GridLayout;
 import android.widget.Toast;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
@@ -50,10 +48,6 @@ public class SecondBatchInfo extends AppCompatActivity {
 
                 UploadCard card=new UploadCard(this,name,id,phnNo,email,String.valueOf(count++));
                 gridLayout.addView(card);
-
-                //StudentCard studentCard = new StudentCard(this, name,id,phnNo,email);
-                //gridLayout.addView(studentCard);
-
             }
         } catch (IOException e) {
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
@@ -73,12 +67,6 @@ public class SecondBatchInfo extends AppCompatActivity {
             }
         }
 
-       // Cards cards=new Cards(this,"Arnab");
-       // Cards cards1=new Cards(this,"Naim");
-       // Cards cards2=new Cards(this,"Sunan");
-       // gridLayout.addView(cards);
-       // gridLayout.addView(cards1);
-       // gridLayout.addView(cards2);
 
 
     }

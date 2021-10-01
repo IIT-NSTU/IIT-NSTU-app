@@ -5,14 +5,15 @@ import android.app.AlertDialog;
 import android.view.LayoutInflater;
 
 public class LoadingDialog {
+
     private Activity activity;
     private AlertDialog alertDialog;
 
-    LoadingDialog(Activity activity){
+    public LoadingDialog(Activity activity){
         this.activity=activity;
     }
 
-    void startLoadingDialog(){
+    public void startLoadingDialog(){
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         LayoutInflater inflater=activity.getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.custom_dialog,null));
@@ -22,7 +23,7 @@ public class LoadingDialog {
         alertDialog.show();
     }
 
-    void dismissDialog(){
+    public void dismissDialog(){
         alertDialog.dismiss();
     }
 }

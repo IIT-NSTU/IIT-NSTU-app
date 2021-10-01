@@ -1,23 +1,11 @@
 package com.whatEver.iitnstu;
 
 import androidx.annotation.NonNull;
-
-
 import android.annotation.SuppressLint;
 import android.content.Context;
-
-import android.content.Intent;
-import android.net.Uri;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
 
 
 @SuppressLint("ViewConstructor")

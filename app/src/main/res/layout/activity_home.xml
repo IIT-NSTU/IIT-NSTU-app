@@ -70,7 +70,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="onClick"
+                    android:onClick="startIntro"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -186,7 +186,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
-                    android:onClick="teachers"
+                    android:onClick="startTeachersInfo"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -303,7 +303,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="startCourseCoodinator"
+                    android:onClick="startCourseCoordinator"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -341,7 +341,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="Click_Function"
+                    android:onClick="startAllCourse"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -379,7 +379,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="startAllCourse"
+                    android:onClick="startSyllabus"
                     android:orientation="vertical"
                     android:padding="16dp">
 
