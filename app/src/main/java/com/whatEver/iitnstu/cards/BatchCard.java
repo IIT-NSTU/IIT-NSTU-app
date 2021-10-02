@@ -1,44 +1,55 @@
 package com.whatEver.iitnstu.cards;
 
-import androidx.annotation.NonNull;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-
 import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.whatEver.iitnstu.R;
-import com.whatEver.iitnstu.StudentAdapter;
+import com.whatEver.iitnstu.StudentAdapterActivity;
+import com.whatEver.iitnstu.models.Batch;
 
 
-@SuppressLint("ViewConstructor")
-public class BatchCard extends FrameLayout {
+public class BatchCard extends Card {
 
+    private Context context;
+    private Batch batch;
+    private LinearLayout linearLayout;
+    private ImageView imageView;
+    private TextView batchName;
 
-    public BatchCard(@NonNull final Context context, final String name, final String des, String session,String icon) {
+    public BatchCard(Context context) {
         super(context);
+        this.context = context;
+    }
+
+    public BatchCard(Context context, Batch batch) {
+        this(context);
+        this.batch = batch;
+
         LayoutInflater.from(context).inflate(R.layout.batch_card, this, true);
-        LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        setLayoutParams(layoutParams);
 
-        LinearLayout linearLayout=findViewById(R.id.linearLayout);
-        linearLayout.setOnClickListener(v -> {
-            Intent intent=new Intent(context, StudentAdapter.class).putExtra("batch_id",name).putExtra("des",des);
-            context.startActivity(intent);
-        });
+        linearLayout = findViewById(R.id.linearLayout);
+        imageView = findViewById(R.id.icon_batch);
+        batchName = findViewById(R.id.batchName);
 
-        ImageView imageView=findViewById(R.id.icon_batch);
-        int picId = context.getResources().getIdentifier(icon, "drawable", context.getPackageName());
-        imageView.setImageResource(picId);
-        TextView batchName=findViewById(R.id.batchName);
-        batchName.setText(String.format("%s\n%s", des, session));
+        setData();
 
     }
 
+    @Override
+    public void setData() {
+        batchName.setText(String.format("%s\n%s", batch.getDescription(), batch.getSession()));
+
+        linearLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(context, StudentAdapterActivity.class).putExtra("batch_id", batch.getName()).putExtra("des", batch.getDescription());
+            context.startActivity(intent);
+        });
+
+        int picId = context.getResources().getIdentifier(batch.getIcon(), "drawable", context.getPackageName());
+        imageView.setImageResource(picId);
+    }
 }

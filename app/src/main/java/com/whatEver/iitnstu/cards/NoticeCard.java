@@ -1,37 +1,46 @@
 package com.whatEver.iitnstu.cards;
 
-import androidx.annotation.NonNull;
-import android.annotation.SuppressLint;
+
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.whatEver.iitnstu.R;
+import com.whatEver.iitnstu.models.Notice;
 
 
-@SuppressLint("ViewConstructor")
-public class NoticeCard extends FrameLayout {
+public class NoticeCard extends Card {
 
-    public NoticeCard(@NonNull final Context context, String date, String about,String des) {
+    private Context context;
+    private Notice notice;
+    private TextView noticeDateText;
+    private TextView noticeAboutText;
+    private TextView noticeDescriptionText;
+
+    public NoticeCard(Context context) {
         super(context);
+        this.context = context;
+    }
+
+    public NoticeCard(Context context, Notice notice) {
+        this(context);
+        this.notice = notice;
+
         LayoutInflater.from(context).inflate(R.layout.activity_notice_card, this, true);
-        LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        setLayoutParams(layoutParams);
 
+        noticeDateText = findViewById(R.id.notice_date);
+        noticeAboutText = findViewById(R.id.notice_about);
+        noticeDescriptionText = findViewById(R.id.notice_des);
 
-
-        TextView teacherName=findViewById(R.id.notice_date);
-        teacherName.setText(date);
-
-        TextView teacherDesignation=findViewById(R.id.notice_about);
-        teacherDesignation.setText(about);
-
-        TextView teacherPhnNo=findViewById(R.id.notice_des);
-        teacherPhnNo.setText(des);
-
+        setData();
 
     }
 
+    @Override
+    public void setData() {
+        noticeDateText.setText(notice.getDate());
+        noticeAboutText.setText(notice.getAbout());
+        noticeDescriptionText.setText(notice.getDescription());
+    }
 
 }

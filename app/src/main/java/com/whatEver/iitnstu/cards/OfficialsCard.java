@@ -1,56 +1,71 @@
 package com.whatEver.iitnstu.cards;
 
-import androidx.annotation.NonNull;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.whatEver.iitnstu.R;
+import com.whatEver.iitnstu.models.Officials;
 
-@SuppressLint("ViewConstructor")
-public class OfficialsCard extends FrameLayout {
 
-    public OfficialsCard(@NonNull final Context context, String name, String contactInfo, final String phnNo, String email, String imageLink) {
+public class OfficialsCard extends Card {
+
+    private Context context;
+    private Officials officials;
+    private ImageView imageView;
+    private TextView staffName;
+    private TextView staffContactAddress;
+    private TextView staffPhnNo;
+    private TextView staffEmail;
+    private LinearLayout layout;
+
+
+    public OfficialsCard(Context context) {
         super(context);
+        this.context = context;
+    }
+
+
+    public OfficialsCard(Context context, Officials officials) {
+        this(context);
+        this.officials = officials;
+
         LayoutInflater.from(context).inflate(R.layout.activity_officials_card, this, true);
-        LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        setLayoutParams(layoutParams);
-
-        ImageView imageView=findViewById(R.id.staffPic);
-        Picasso.get().load(imageLink).into(imageView);
 
 
-        TextView staffName=findViewById(R.id.staffName);
-        staffName.setText(name);
+        imageView = findViewById(R.id.staffPic);
+        staffName = findViewById(R.id.staffName);
+        staffContactAddress = findViewById(R.id.staffContactInfo);
+        staffPhnNo = findViewById(R.id.staffPhnNo);
+        staffEmail = findViewById(R.id.staffEmail);
+        layout = findViewById(R.id.official_layout);
 
-        TextView staffContactAddress=findViewById(R.id.staffContactInfo);
-        staffContactAddress.setText(contactInfo);
+        setData();
+    }
 
-        TextView staffPhnNo=findViewById(R.id.staffPhnNo);
-        staffPhnNo.setText(phnNo);
-        LinearLayout phn=findViewById(R.id.phnNo);
-        phn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel: "+phnNo));
-                v.getContext().startActivity(intent);
-            }
-        });
+    @Override
+    public void setData() {
+        staffName.setText(officials.getName());
+        staffContactAddress.setText(officials.getContactInfo());
 
-        TextView staffEmail=findViewById(R.id.staffEmail);
-        staffEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
+        staffEmail.setText(Html.fromHtml("<a href=\"mailto:" + officials.getEmail() + "\">" + officials.getEmail() + "</a>"));
         staffEmail.setMovementMethod(LinkMovementMethod.getInstance());
+        Picasso.get().load(officials.getImageLink()).into(imageView);
+
+        staffPhnNo.setText(officials.getPhnNo());
+
+        layout.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel: " + officials.getPhnNo()));
+            v.getContext().startActivity(intent);
+        });
     }
 }

@@ -2,18 +2,23 @@ package com.whatEver.iitnstu;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.GridLayout;
 import android.widget.Toast;
+
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.whatEver.iitnstu.cards.TeacherCard;
+import com.whatEver.iitnstu.models.Teacher;
+import com.whatEver.iitnstu.tools.LoadingDialog;
+
 import java.util.HashMap;
 
 
-public class TeachersInfo extends AppCompatActivity {
+public class TeachersInfoActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private GridLayout gridLayout;
@@ -29,7 +34,7 @@ public class TeachersInfo extends AppCompatActivity {
         gridLayout = findViewById(R.id.gridlayout_4);
         db = FirebaseFirestore.getInstance();
         context = this;
-        loadingDialog = new LoadingDialog(TeachersInfo.this);
+        loadingDialog = new LoadingDialog(TeachersInfoActivity.this);
 
 
         fetchingData();
@@ -43,12 +48,15 @@ public class TeachersInfo extends AppCompatActivity {
             if (task.isSuccessful()) {
                 for (DocumentSnapshot data : task.getResult()) {
                     final HashMap<String, Object> tmp = (HashMap<String, Object>) data.getData();
-                    TeacherCard teacherCard = new TeacherCard(context, tmp.get("name").toString(),
+
+                    Teacher teacher = new Teacher(tmp.get("name").toString(),
                             tmp.get("designation").toString(), tmp.get("phone").toString(),
                             tmp.get("email").toString(), tmp.get("imageLink").toString());
 
+                    TeacherCard teacherCard = new TeacherCard(context, teacher);
+
                     teacherCard.setOnClickListener(v -> {
-                        startActivity(new Intent(TeachersInfo.this, Profile.class).putExtra("info", tmp));
+                        startActivity(new Intent(TeachersInfoActivity.this, ProfileActivity.class).putExtra("info", tmp));
                     });
 
                     gridLayout.addView(teacherCard);

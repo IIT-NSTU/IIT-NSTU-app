@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Developers extends AppCompatActivity {
+public class DevelopersActivity extends AppCompatActivity {
 
     private TextView textView;
 

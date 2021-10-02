@@ -1,59 +1,68 @@
 package com.whatEver.iitnstu.cards;
 
-import androidx.annotation.NonNull;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.whatEver.iitnstu.R;
+import com.whatEver.iitnstu.models.CourseCo;
 
-@SuppressLint("ViewConstructor")
-public class CourseCoCard extends FrameLayout {
+public class CourseCoCard extends Card {
 
-    public CourseCoCard(@NonNull final Context context, String name, String designation, final String phnNo, String email, String info, String imageLink) {
+    private CourseCo courseCo;
+    private Context context;
+    private ImageView imageView;
+    private TextView courseCoordinatorName;
+    private TextView courseCoordinatorDesignation;
+    private TextView courseCoordinatorPhnNo;
+    private TextView courseCoordinatorEmail;
+    private TextView courseCoordinatorInfo;
+    private LinearLayout layout;
+
+    public CourseCoCard(Context context) {
         super(context);
+        this.context = context;
+    }
+
+    public CourseCoCard(Context context, CourseCo courseCo) {
+        this(context);
+        this.courseCo = courseCo;
+
         LayoutInflater.from(context).inflate(R.layout.activity_course_co_card, this, true);
-        LayoutParams layoutParams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        setLayoutParams(layoutParams);
 
-        ImageView imageView=findViewById(R.id.cc_image);
-        Picasso.get().load(imageLink).into(imageView);
+        imageView = findViewById(R.id.cc_image);
+        courseCoordinatorName = findViewById(R.id.cc_name);
+        courseCoordinatorDesignation = findViewById(R.id.cc_designation);
+        courseCoordinatorPhnNo = findViewById(R.id.cc_phnNo);
+        layout = findViewById(R.id.cc_layout);
+        courseCoordinatorEmail = findViewById(R.id.cc_email);
+        courseCoordinatorInfo = findViewById(R.id.cc_info);
 
+        setData();
+    }
 
-        TextView courseCoordinatorName=findViewById(R.id.cc_name);
-        courseCoordinatorName.setText(name);
+    @Override
+    public void setData() {
+        courseCoordinatorName.setText(courseCo.getName());
+        courseCoordinatorDesignation.setText(courseCo.getDesignation());
+        courseCoordinatorPhnNo.setText(courseCo.getPhnNo());
 
-        TextView courseCoordinatorDesignation=findViewById(R.id.cc_designation);
-        courseCoordinatorDesignation.setText(designation);
-
-        TextView courseCoordinatorPhnNo=findViewById(R.id.cc_phnNo);
-        courseCoordinatorPhnNo.setText(phnNo);
-        LinearLayout phn=findViewById(R.id.phnNo);
-        phn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel: "+phnNo));
-                v.getContext().startActivity(intent);
-            }
-        });
-
-        TextView courseCoordinatorEmail=findViewById(R.id.cc_email);
-        courseCoordinatorEmail.setText(Html.fromHtml("<a href=\"mailto:"+email+"\">"+email+"</a>" ));
+        courseCoordinatorEmail.setText(Html.fromHtml("<a href=\"mailto:" + courseCo.getEmail() + "\">" + courseCo.getEmail() + "</a>"));
         courseCoordinatorEmail.setMovementMethod(LinkMovementMethod.getInstance());
+        courseCoordinatorInfo.setText(courseCo.getInfo());
+        Picasso.get().load(courseCo.getImageLink()).into(imageView);
 
-        TextView courseCoordinatorInfo = findViewById(R.id.cc_info);
-        courseCoordinatorInfo.setText(info);
+        layout.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel: " + courseCo.getPhnNo()));
+            v.getContext().startActivity(intent);
+        });
     }
 }

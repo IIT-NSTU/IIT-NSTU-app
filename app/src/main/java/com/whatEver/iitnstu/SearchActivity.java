@@ -2,6 +2,7 @@ package com.whatEver.iitnstu;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,9 +15,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.whatEver.iitnstu.cards.StudentCard;
+import com.whatEver.iitnstu.models.Student;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,8 +27,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-
-public class Search extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private Context context = this;
@@ -39,8 +41,8 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search);
 
-        students=new ArrayList<>();
-        db=FirebaseFirestore.getInstance();
+        students = new ArrayList<>();
+        db = FirebaseFirestore.getInstance();
         gridLayout = findViewById(R.id.gridlayout1);
         inputText = findViewById(R.id.input);
 
@@ -65,7 +67,8 @@ public class Search extends AppCompatActivity {
 
         inputText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -92,8 +95,8 @@ public class Search extends AppCompatActivity {
                         Pattern pattern = Pattern.compile(input);
                         Matcher matcher = pattern.matcher(name.toLowerCase());
                         if (matcher.find() || input.equals(id.toLowerCase()) || input.equals(email) || input.equals(phnNo)) {
-                            StudentCard studentCard = new StudentCard(context, name,
-                                    id, phnNo, email, student.getImageLink());
+
+                            StudentCard studentCard = new StudentCard(context, student);
                             gridLayout.addView(studentCard);
                         }
                     }
@@ -122,7 +125,7 @@ public class Search extends AppCompatActivity {
 
                     students.add(student);
 
-                    Log.d("debug", data.getData().toString()+students.size());
+                    Log.d("debug", data.getData().toString() + students.size());
                 }
             } else {
                 Toast.makeText(context, "network error!", Toast.LENGTH_SHORT).show();

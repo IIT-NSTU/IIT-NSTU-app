@@ -13,11 +13,11 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 
 
-public class Profile extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     private HashMap<String, Object> tmp;
     private ImageView profileImage;
-    private TextView profileName,profileWork,educationInfo,educationInfo2;
+    private TextView profileName, profileWork, educationInfo, educationInfo2;
     private LinearLayout linearLayout;
 
     @Override
@@ -25,15 +25,15 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        tmp=(HashMap)getIntent().getSerializableExtra("info");
-        HashMap<String,String> educationInfo=(HashMap) tmp.get("educationInfo");
+        tmp = (HashMap) getIntent().getSerializableExtra("info");
+        HashMap<String, String> educationInfo = (HashMap) tmp.get("educationInfo");
 
-        Log.d("debug",educationInfo.toString());
+        Log.d("debug", educationInfo.toString());
 
-        profileImage=findViewById(R.id.profile_img);
-        profileName=findViewById(R.id.profile_name);
-        profileWork=findViewById(R.id.profile_work);
-        linearLayout=findViewById(R.id.profile_edu_card);
+        profileImage = findViewById(R.id.profile_img);
+        profileName = findViewById(R.id.profile_name);
+        profileWork = findViewById(R.id.profile_work);
+        linearLayout = findViewById(R.id.profile_edu_card);
         //educationInfo=findViewById(R.id.education_info);
         //educationInfo2=findViewById(R.id.education_info2);
 
@@ -44,8 +44,8 @@ public class Profile extends AppCompatActivity {
         //educationInfo2.setText(tmp.get("educationInfo2").toString());
 
         for (String s : educationInfo.keySet()) {
-            TextView textView=new TextView(getApplicationContext());
-            textView.setText("\n"+s+" : "+educationInfo.get(s));
+            TextView textView = new TextView(getApplicationContext());
+            textView.setText("\n" + s + " : " + educationInfo.get(s));
             linearLayout.addView(textView);
         }
 

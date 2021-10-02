@@ -1,4 +1,4 @@
-package com.whatEver.iitnstu;
+package com.whatEver.iitnstu.models;
 
 public class Student {
 
