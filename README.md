@@ -2,7 +2,7 @@
 It is an android application with the basic information of IIT. All the teachers, student’s information and courses with their syllabus and all other necessary information’s of Institute of Information Technology, NSTU can be easily accessed by this application.
 
 
-![Screenshot (403)](https://user-images.githubusercontent.com/61958899/135705055-7d5c6256-56e5-46ac-83ae-7662ffa4c5f8.png)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/58462502/135713542-35bb8461-43b8-4b5b-a38d-486e3b5fb09d.gif)
 
 
 # Features
@@ -34,6 +34,7 @@ It is an android application with the basic information of IIT. All the teachers
 
 # Students Information
 ![Screenshot (400)](https://user-images.githubusercontent.com/61958899/135704967-12df8666-7a09-494c-83e6-e7af653fc237.png)
+
 
 
 
