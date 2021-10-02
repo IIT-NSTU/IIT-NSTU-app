@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.whatEver.iitnstu.R;
-import com.whatEver.iitnstu.models.Officials;
+import com.whatEver.iitnstu.models.Official;
 
 
 public class OfficialsCard extends Card {
 
     private Context context;
-    private Officials officials;
+    private Official official;
     private ImageView imageView;
     private TextView staffName;
     private TextView staffContactAddress;
@@ -34,9 +34,9 @@ public class OfficialsCard extends Card {
     }
 
 
-    public OfficialsCard(Context context, Officials officials) {
+    public OfficialsCard(Context context, Official official) {
         this(context);
-        this.officials = officials;
+        this.official = official;
 
         LayoutInflater.from(context).inflate(R.layout.activity_officials_card, this, true);
 
@@ -53,18 +53,18 @@ public class OfficialsCard extends Card {
 
     @Override
     public void setData() {
-        staffName.setText(officials.getName());
-        staffContactAddress.setText(officials.getContactInfo());
+        staffName.setText(official.getName());
+        staffContactAddress.setText(official.getContactInfo());
 
-        staffEmail.setText(Html.fromHtml("<a href=\"mailto:" + officials.getEmail() + "\">" + officials.getEmail() + "</a>"));
+        staffEmail.setText(Html.fromHtml("<a href=\"mailto:" + official.getEmail() + "\">" + official.getEmail() + "</a>"));
         staffEmail.setMovementMethod(LinkMovementMethod.getInstance());
-        Picasso.get().load(officials.getImageLink()).into(imageView);
+        Picasso.get().load(official.getImageLink()).into(imageView);
 
-        staffPhnNo.setText(officials.getPhnNo());
+        staffPhnNo.setText(official.getPhnNo());
 
         layout.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("tel: " + officials.getPhnNo()));
+            intent.setData(Uri.parse("tel: " + official.getPhnNo()));
             v.getContext().startActivity(intent);
         });
     }

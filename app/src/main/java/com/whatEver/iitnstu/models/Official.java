@@ -1,13 +1,13 @@
 package com.whatEver.iitnstu.models;
 
-public class Officials {
+public class Official {
     private String name;
     private String contactInfo;
     private String phnNo;
     private String email;
     private String imageLink;
 
-    public Officials(String name, String contactInfo, String phnNo, String email, String imageLink) {
+    public Official(String name, String contactInfo, String phnNo, String email, String imageLink) {
         this.name = name;
         this.contactInfo = contactInfo;
         this.phnNo = phnNo;

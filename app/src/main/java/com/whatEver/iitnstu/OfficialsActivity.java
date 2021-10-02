@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.whatEver.iitnstu.cards.OfficialsCard;
-import com.whatEver.iitnstu.models.Officials;
+import com.whatEver.iitnstu.models.Official;
 import com.whatEver.iitnstu.tools.LoadingDialog;
 
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class OfficialsActivity extends AppCompatActivity {
                 for (QueryDocumentSnapshot data : task.getResult()) {
                     HashMap<String, Object> tmp = (HashMap<String, Object>) data.getData();
 
-                    Officials officials = new Officials(tmp.get("name").toString(),
+                    Official official = new Official(tmp.get("name").toString(),
                             tmp.get("contactInfo").toString(), tmp.get("phone").toString(),
                             tmp.get("email").toString(), tmp.get("imageLink").toString());
 
-                    OfficialsCard officialsCard = new OfficialsCard(context, officials);
+                    OfficialsCard officialsCard = new OfficialsCard(context, official);
 
                     gridLayout.addView(officialsCard);
                 }
