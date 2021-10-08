@@ -1,5 +1,10 @@
 package com.whatEver.iitnstu.models;
 
+/**
+ * Model class for CourseCo.
+ *
+ * It represent a courseCo with all its data accordingly
+ */
 public class CourseCo {
 
     private String name;

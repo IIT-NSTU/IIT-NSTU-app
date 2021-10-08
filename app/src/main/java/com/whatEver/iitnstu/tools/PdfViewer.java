@@ -10,7 +10,11 @@ import com.github.barteksc.pdfviewer.PDFView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.whatEver.iitnstu.R;
 
-
+/**
+ * A custom Pdf viewer for display any pdf.
+ *
+ * It will act as a Activity so the is extending AppCompatActivity.
+ */
 public class PdfViewer extends AppCompatActivity {
 
     private PDFView pdfView;
@@ -31,7 +35,9 @@ public class PdfViewer extends AppCompatActivity {
         fetchingData();
     }
 
-
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

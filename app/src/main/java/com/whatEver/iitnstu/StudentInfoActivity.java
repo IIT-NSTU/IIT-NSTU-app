@@ -16,7 +16,10 @@ import com.whatEver.iitnstu.tools.LoadingDialog;
 
 import java.util.HashMap;
 
-
+/**
+ * Activity for Student Info.
+ *
+ */
 public class StudentInfoActivity extends AppCompatActivity {
 
     private GridLayout gridLayout;
@@ -38,6 +41,9 @@ public class StudentInfoActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

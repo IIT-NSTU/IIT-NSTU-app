@@ -1,5 +1,10 @@
 package com.whatEver.iitnstu.models;
 
+/**
+ * Model class for Notice.
+ *
+ * It represent a notice with all its data accordingly
+ */
 public class Notice {
     private String date;
     private String about;

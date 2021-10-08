@@ -8,7 +8,11 @@ import android.widget.TextView;
 import com.whatEver.iitnstu.R;
 import com.whatEver.iitnstu.models.Notice;
 
-
+/**
+ * This NoticeCard class is used to display a Notice object in a form of card.
+ *
+ * A child class of Card.
+ */
 public class NoticeCard extends Card {
 
     private Context context;
@@ -17,11 +21,25 @@ public class NoticeCard extends Card {
     private TextView noticeAboutText;
     private TextView noticeDescriptionText;
 
+
+    /**
+     * Default constructor.
+     *
+     * @param context: from the activity the card is invoked.
+     */
     public NoticeCard(Context context) {
         super(context);
         this.context = context;
     }
 
+
+    /**
+     * Another constructor which will take a specific Notice object
+     * to display it in a form of card.
+     *
+     * @param context: from the activity the card is invoked.
+     * @param notice: The Notice object which it will display.
+     */
     public NoticeCard(Context context, Notice notice) {
         this(context);
         this.notice = notice;

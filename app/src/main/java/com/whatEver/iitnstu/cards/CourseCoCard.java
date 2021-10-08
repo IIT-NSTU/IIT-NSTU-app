@@ -14,6 +14,12 @@ import com.squareup.picasso.Picasso;
 import com.whatEver.iitnstu.R;
 import com.whatEver.iitnstu.models.CourseCo;
 
+
+/**
+ * This CourseCoCard class is used to display a CourseCo object in a form of card.
+ *
+ * A child class of Card.
+ */
 public class CourseCoCard extends Card {
 
     private CourseCo courseCo;
@@ -26,11 +32,24 @@ public class CourseCoCard extends Card {
     private TextView courseCoordinatorInfo;
     private LinearLayout layout;
 
+    /**
+     * Default constructor.
+     *
+     * @param context: from the activity the card is invoked.
+     */
     public CourseCoCard(Context context) {
         super(context);
         this.context = context;
     }
 
+
+    /**
+     * Another constructor which will take a specific CourseCo object
+     * to display it in a form of card.
+     *
+     * @param context: from the activity the card is invoked.
+     * @param courseCo: The CourseCo object which it will display.
+     */
     public CourseCoCard(Context context, CourseCo courseCo) {
         this(context);
         this.courseCo = courseCo;

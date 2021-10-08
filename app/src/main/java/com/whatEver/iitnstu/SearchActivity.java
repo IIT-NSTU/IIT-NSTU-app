@@ -27,7 +27,10 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+/**
+ * Activity for Searching.
+ *
+ */
 public class SearchActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
@@ -103,6 +106,10 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Search official from all officials data using the input keyword
+     * Its a regex search.
+     */
     private void searchOfficial() {
         for (Official official : officials) {
             String name = official.getName();
@@ -120,6 +127,10 @@ public class SearchActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Search student from all student data using the input keyword
+     * Its a regex search.
+     */
     private void searchStudent() {
         for (Student student : students) {
             String id = student.getId();
@@ -138,6 +149,10 @@ public class SearchActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Search teacher from all teacher data using the input keyword
+     * Its a regex search.
+     */
     private void searchTeacher() {
         for (Teacher teacher : teachers) {
             String name = teacher.getName();
@@ -155,6 +170,9 @@ public class SearchActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Fetch all student data from server.
+     */
     private void fetchingStudentData() {
         db.collection("students").document("all-Students").
                 collection("by_id").get().addOnCompleteListener(task -> {
@@ -172,6 +190,9 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Fetch all teachers data from server.
+     */
     private void fetchingTeacherData() {
         db.collection("teachers").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -188,6 +209,9 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Fetch all officials data from server.
+     */
     private void fetchingOfficialData() {
         db.collection("officials").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

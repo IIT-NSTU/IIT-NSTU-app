@@ -26,7 +26,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Vector;
 
-
+/**
+ * Activity for Notice Board.
+ *
+ */
 public class NoticeBoardActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
@@ -51,7 +54,9 @@ public class NoticeBoardActivity extends AppCompatActivity {
         fetchingData();
     }
 
-
+    /**
+     * Sort all notices by date wise
+     */
     private void sortNoticesByDate(){
         Log.e("before sort", String.valueOf(notices));
         notices.sort((o1, o2) -> {
@@ -64,6 +69,9 @@ public class NoticeBoardActivity extends AppCompatActivity {
         Log.e("after sort", String.valueOf(notices));
     }
 
+    /**
+     * Display all notices on the activity window
+     */
     private void viewNotices() {
         Log.e("debug", "view");
         for (Notice notice : notices) {
@@ -85,6 +93,9 @@ public class NoticeBoardActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

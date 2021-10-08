@@ -14,7 +14,10 @@ import com.whatEver.iitnstu.tools.LoadingDialog;
 
 import java.util.HashMap;
 
-
+/**
+ * Activity for Director Profile.
+ *
+ */
 public class DirectorProfileActivity extends AppCompatActivity {
 
     //declaration
@@ -42,6 +45,9 @@ public class DirectorProfileActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

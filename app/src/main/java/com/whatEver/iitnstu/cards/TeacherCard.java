@@ -16,7 +16,11 @@ import com.squareup.picasso.Picasso;
 import com.whatEver.iitnstu.R;
 import com.whatEver.iitnstu.models.Teacher;
 
-
+/**
+ * This TeacherCard class is used to display a Teacher object in a form of card.
+ *
+ * A child class of Card.
+ */
 public class TeacherCard extends Card {
 
     private Context context;
@@ -29,12 +33,24 @@ public class TeacherCard extends Card {
     private LinearLayout phn;
 
 
+    /**
+     * Default constructor.
+     *
+     * @param context: from the activity the card is invoked.
+     */
     public TeacherCard(Context context) {
         super(context);
         this.context = context;
     }
 
 
+    /**
+     * Another constructor which will take a specific Teacher object
+     * to display it in a form of card.
+     *
+     * @param context: from the activity the card is invoked.
+     * @param teacher: The Teacher object which it will display.
+     */
     public TeacherCard(Context context, Teacher teacher) {
         this(context);
         this.teacher = teacher;

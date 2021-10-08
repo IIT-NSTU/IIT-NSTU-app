@@ -9,6 +9,10 @@ import com.github.barteksc.pdfviewer.PDFView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.whatEver.iitnstu.tools.LoadingDialog;
 
+/**
+ * Activity for All Course Details.
+ *
+ */
 public class AllCourseDetailsActivity extends AppCompatActivity {
 
     private PDFView pdfView;
@@ -25,7 +29,9 @@ public class AllCourseDetailsActivity extends AppCompatActivity {
         fetchingData();
     }
 
-
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

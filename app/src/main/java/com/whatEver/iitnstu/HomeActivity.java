@@ -15,7 +15,10 @@ import com.gun0912.tedpermission.TedPermission;
 
 import java.util.List;
 
-
+/**
+ * Activity for main Home screen.
+ *
+ */
 public class HomeActivity extends AppCompatActivity {
 
     @Override
@@ -41,21 +44,41 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Onclick function for intro button.
+     *
+     * @param view: intro button
+     */
     public void startIntro(View view) {
         Intent intent = new Intent(HomeActivity.this, IntroActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for Course Coordinator button.
+     *
+     * @param view: Course Coordinator button
+     */
     public void startCourseCoordinator(View view) {
         Intent intent = new Intent(HomeActivity.this, CourseCoordinatorActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for Teachers Info button.
+     *
+     * @param view: Teachers Info button
+     */
     public void startTeachersInfo(View view) {
         Intent intent = new Intent(HomeActivity.this, TeachersInfoActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for Student Info button.
+     *
+     * @param view: Student Info button
+     */
     public void startStudentInfo(View view) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user.isAnonymous()) {
@@ -67,27 +90,51 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Onclick function for Director Profile button.
+     *
+     * @param view: Director Profile button
+     */
     public void startDirectorProfile(View view) {
         Intent intent = new Intent(HomeActivity.this, DirectorProfileActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for Syllabus button.
+     *
+     * @param view: Syllabus button
+     */
     public void startSyllabus(View view) {
         Intent intent = new Intent(HomeActivity.this, SyllabusActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for All Course button.
+     *
+     * @param view: All Course button
+     */
     public void startAllCourse(View view) {
         Intent intent = new Intent(HomeActivity.this, AllCourseDetailsActivity.class);
         startActivity(intent);
     }
 
-
+    /**
+     * Onclick function for Developer button.
+     *
+     * @param view: Developer button
+     */
     public void startDeveloper(View view) {
         Intent intent = new Intent(HomeActivity.this, DevelopersActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for Search button.
+     *
+     * @param view: Search button
+     */
     public void startSearch(View view) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user.isAnonymous()) {
@@ -98,11 +145,21 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Onclick function for Academic Officials button.
+     *
+     * @param view: Academic Officials button
+     */
     public void startAcademicOfficials(View view) {
         Intent intent = new Intent(HomeActivity.this, OfficialsActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Onclick function for Notice Board button.
+     *
+     * @param view: Notice Board button
+     */
     public void startNoticeBoard(View view) {
         Intent intent = new Intent(HomeActivity.this, NoticeBoardActivity.class);
         startActivity(intent);

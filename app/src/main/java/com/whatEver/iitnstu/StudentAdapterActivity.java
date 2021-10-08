@@ -18,7 +18,10 @@ import com.whatEver.iitnstu.tools.LoadingDialog;
 
 import java.util.HashMap;
 
-
+/**
+ * Activity for displaying all the student batch wise.
+ *
+ */
 public class StudentAdapterActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private GridLayout gridLayout;
@@ -48,6 +51,9 @@ public class StudentAdapterActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

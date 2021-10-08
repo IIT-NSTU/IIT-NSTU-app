@@ -1,5 +1,10 @@
 package com.whatEver.iitnstu.models;
 
+/**
+ * Model class for Official.
+ *
+ * It represent a official with all its data accordingly
+ */
 public class Official {
     private String name;
     private String contactInfo;

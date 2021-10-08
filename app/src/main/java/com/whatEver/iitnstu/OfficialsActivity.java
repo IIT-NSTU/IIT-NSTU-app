@@ -16,7 +16,10 @@ import com.whatEver.iitnstu.tools.LoadingDialog;
 
 import java.util.HashMap;
 
-
+/**
+ * Activity for Officials.
+ *
+ */
 public class OfficialsActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
@@ -37,6 +40,9 @@ public class OfficialsActivity extends AppCompatActivity {
         fetchingData();
     }
 
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

@@ -1,5 +1,10 @@
 package com.whatEver.iitnstu.models;
 
+/**
+ * Model class for Teacher.
+ *
+ * It represent a teacher with all its data accordingly
+ */
 public class Teacher {
     private String name;
     private String designation;

@@ -6,15 +6,27 @@ import android.view.LayoutInflater;
 
 import com.whatEver.iitnstu.R;
 
+/**
+ * A custom loading dialog for displaying loading state.
+ *
+ */
 public class LoadingDialog {
 
     private Activity activity;
     private AlertDialog alertDialog;
 
+    /**
+     * Default constructor.
+     *
+     * @param activity: from the activity the card is invoked.
+     */
     public LoadingDialog(Activity activity) {
         this.activity = activity;
     }
 
+    /**
+     * Start the LoadingDialog.
+     */
     public void startLoadingDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         LayoutInflater inflater = activity.getLayoutInflater();
@@ -25,6 +37,9 @@ public class LoadingDialog {
         alertDialog.show();
     }
 
+    /**
+     * Dismissed the LoadingDialog.
+     */
     public void dismissDialog() {
         alertDialog.dismiss();
     }

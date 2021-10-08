@@ -17,7 +17,10 @@ import com.whatEver.iitnstu.tools.LoadingDialog;
 
 import java.util.HashMap;
 
-
+/**
+ * Activity for Teachers Info.
+ *
+ */
 public class TeachersInfoActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
@@ -41,6 +44,9 @@ public class TeachersInfoActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Fetch data from server.
+     */
     private void fetchingData() {
         loadingDialog.startLoadingDialog();
 

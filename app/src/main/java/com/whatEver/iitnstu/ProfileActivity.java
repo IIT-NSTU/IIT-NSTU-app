@@ -12,7 +12,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
-
+/**
+ * Activity for displaying profile for the teacher.
+ *
+ */
 public class ProfileActivity extends AppCompatActivity {
 
     private HashMap<String, Object> tmp;

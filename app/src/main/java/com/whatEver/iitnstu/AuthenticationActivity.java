@@ -12,7 +12,10 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-
+/**
+ * Activity for Course Authentication.
+ *
+ */
 public class AuthenticationActivity extends AppCompatActivity {
 
     private EditText email, password;

@@ -12,7 +12,11 @@ import com.whatEver.iitnstu.R;
 import com.whatEver.iitnstu.StudentAdapterActivity;
 import com.whatEver.iitnstu.models.Batch;
 
-
+/**
+ * This BatchCard class is used to display a batch in a form of card.
+ *
+ * A child class of Card.
+ */
 public class BatchCard extends Card {
 
     private Context context;
@@ -21,11 +25,25 @@ public class BatchCard extends Card {
     private ImageView imageView;
     private TextView batchName;
 
+
+    /**
+     * Default constructor.
+     *
+     * @param context: from the activity the card is invoked.
+     */
     public BatchCard(Context context) {
         super(context);
         this.context = context;
     }
 
+
+    /**
+     * Another constructor which will take a specific Batch object
+     * to display it in a form of card.
+     *
+     * @param context: from the activity the card is invoked.
+     * @param batch: The Batch object which it will display.
+     */
     public BatchCard(Context context, Batch batch) {
         this(context);
         this.batch = batch;

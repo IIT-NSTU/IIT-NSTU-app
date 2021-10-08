@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Activity for Developers.
+ *
+ */
 public class DevelopersActivity extends AppCompatActivity {
 
     private TextView textView;

@@ -10,7 +10,15 @@ import android.os.Handler;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-
+/**
+ * This is the initial activity.
+ * This activity start when the start.
+ *
+ * When the will start first time on a device this activity redirect the users to
+ * different activity based on their state.
+ *
+ * Also It has a splash window. Which will disappear after 1.5 seconds.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

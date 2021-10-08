@@ -15,7 +15,11 @@ import com.squareup.picasso.Picasso;
 import com.whatEver.iitnstu.R;
 import com.whatEver.iitnstu.models.Official;
 
-
+/**
+ * This OfficialsCard class is used to display a Officials object in a form of card.
+ *
+ * A child class of Card.
+ */
 public class OfficialsCard extends Card {
 
     private Context context;
@@ -28,12 +32,26 @@ public class OfficialsCard extends Card {
     private LinearLayout layout;
 
 
+
+    /**
+     * Default constructor.
+     *
+     * @param context: from the activity the card is invoked.
+     */
     public OfficialsCard(Context context) {
         super(context);
         this.context = context;
     }
 
 
+
+    /**
+     * Another constructor which will take a specific Official object
+     * to display it in a form of card.
+     *
+     * @param context: from the activity the card is invoked.
+     * @param official: The Official object which it will display.
+     */
     public OfficialsCard(Context context, Official official) {
         this(context);
         this.official = official;

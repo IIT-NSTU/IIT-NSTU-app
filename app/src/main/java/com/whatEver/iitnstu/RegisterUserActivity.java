@@ -20,7 +20,10 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-
+/**
+ * Activity for User Registration.
+ *
+ */
 public class RegisterUserActivity extends AppCompatActivity {
 
     private RadioGroup radioGroup;
@@ -108,7 +111,9 @@ public class RegisterUserActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * set the database path
+     */
     private void setDb() {
         if (tmp == 1) ref = db.collection("teachers");
         else if (tmp == 2) ref = db.collection("officials");
@@ -118,6 +123,15 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * register a User.
+     *
+     * @param UEmail: email
+     * @param UPassword: password
+     * @param Uname: name
+     * @param UPhone: phone number
+     * @param Uid: id
+     */
     private void registerUser(final String UEmail, final String UPassword, final String Uname, final String UPhone, final String Uid) {
         ref.whereEqualTo("email", UEmail)
                 .get()
@@ -154,6 +168,12 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * register by email and password.
+     *
+     * @param email: email
+     * @param password: password
+     */
     private void register(String email, String password) {
         Log.e("debug", "registering");
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterUserActivity.this, task -> {
