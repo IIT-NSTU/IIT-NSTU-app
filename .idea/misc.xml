@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/NAIMUR/Desktop/NSTU/IITNSTU/app/src/main/res/layout/activity_developers.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/NAIMUR/Desktop/NSTU/IITNSTU/app/src/main/res/layout/activity_officials_card.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/NAIMUR/Desktop/NSTU/IITNSTU/app/src/main/res/layout/activity_pdf_viewer.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/NAIMUR/Desktop/NSTU/IITNSTU/app/src/main/res/layout/activity_profile.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/NAIMUR/Desktop/NSTU/IITNSTU/app/src/main/res/layout/activity_student_info_main.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/NAIMUR/Desktop/NSTU/IITNSTU/app/src/main/res/layout/batch_card.xml" value="0.23143115942028986" />
       </map>
     </option>
   </component>
