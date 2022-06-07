@@ -133,38 +133,42 @@ public class RegisterUserActivity extends AppCompatActivity {
      * @param Uid: id
      */
     private void registerUser(final String UEmail, final String UPassword, final String Uname, final String UPhone, final String Uid) {
-        ref.whereEqualTo("email", UEmail)
-                .get()
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        for (QueryDocumentSnapshot document : task.getResult()) {
-                            boolean ok = true;
-                            if (!Uname.toLowerCase().equals(document.get("name").toString().toLowerCase()))
-                                ok = false;
-                            if (!UPhone.toLowerCase().equals(document.get("phone").toString().toLowerCase()))
-                                ok = false;
-                            if (tmp == 3) {
-                                if (!Uid.toLowerCase().equals(document.get("id").toString().toLowerCase()))
+        if(UEmail.matches(".*25[\\d][\\d]@student.nstu.edu.bd")){ //for edu mail
+            register(UEmail,UPassword);
+        }else{         // for normal mail that we have in our database
+            ref.whereEqualTo("email", UEmail)
+                    .get()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                boolean ok = true;
+                                if (!Uname.toLowerCase().equals(document.get("name").toString().toLowerCase()))
                                     ok = false;
-                            }
+                                if (!UPhone.toLowerCase().equals(document.get("phone").toString().toLowerCase()))
+                                    ok = false;
+                                if (tmp == 3) {
+                                    if (!Uid.toLowerCase().equals(document.get("id").toString().toLowerCase()))
+                                        ok = false;
+                                }
 
-                            if (ok) {
-                                register(UEmail, UPassword);
-                            } else {
-                                Toast.makeText(RegisterUserActivity.this, "Invalid information", Toast.LENGTH_SHORT).show();
-                            }
+                                if (ok) {
+                                    register(UEmail, UPassword);
+                                } else {
+                                    Toast.makeText(RegisterUserActivity.this, "Invalid information", Toast.LENGTH_SHORT).show();
+                                }
 
-                            Log.e("debug", String.valueOf(ok));
-                            Log.e("debug", document.getId() + " => " + document.getData());
+                                Log.e("debug", String.valueOf(ok));
+                                Log.e("debug", document.getId() + " => " + document.getData());
+                                startActivity(new Intent(RegisterUserActivity.this, AuthenticationActivity.class));
+                                finish();
+                            }
+                        } else {
                             startActivity(new Intent(RegisterUserActivity.this, AuthenticationActivity.class));
                             finish();
+                            Log.d("debug", "Error getting documents: ", task.getException());
                         }
-                    } else {
-                        startActivity(new Intent(RegisterUserActivity.this, AuthenticationActivity.class));
-                        finish();
-                        Log.d("debug", "Error getting documents: ", task.getException());
-                    }
-                });
+                    });
+        }
     }
 
 
@@ -179,6 +183,8 @@ public class RegisterUserActivity extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterUserActivity.this, task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(RegisterUserActivity.this, "Successfully registered", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(RegisterUserActivity.this, HomeActivity.class));
+                finish();
             } else {
                 Toast.makeText(RegisterUserActivity.this, "registration failed", Toast.LENGTH_SHORT).show();
             }
