@@ -61,9 +61,9 @@ public class TeachersInfoActivity extends AppCompatActivity {
 
                     TeacherCard teacherCard = new TeacherCard(context, teacher);
 
-                    teacherCard.setOnClickListener(v -> {
+                    /*teacherCard.setOnClickListener(v -> {
                         startActivity(new Intent(TeachersInfoActivity.this, ProfileActivity.class).putExtra("info", tmp));
-                    });
+                    });*/
 
                     gridLayout.addView(teacherCard);
                 }

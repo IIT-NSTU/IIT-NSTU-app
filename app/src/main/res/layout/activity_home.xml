@@ -34,14 +34,25 @@
 
             <ImageView
                 android:id="@+id/search_image"
-                android:layout_width="60dp"
-                android:layout_height="51dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/logout_image"
+                android:onClick="startSearch"
+                app:srcCompat="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/logout_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="2dp"
-                android:onClick="startSearch"
-                app:srcCompat="@android:drawable/ic_menu_search" />
+                android:onClick="logout"
+                app:srcCompat="@drawable/logout" />
 
 
         </RelativeLayout>
