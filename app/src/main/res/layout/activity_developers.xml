@@ -22,11 +22,11 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="397dp"
+            android:layout_width="0dp"
             android:layout_height="439dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="18dp"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="18dp"
             android:layout_marginBottom="31dp"
             android:fontFamily="@font/assistant_regular"
             android:text="@string/developers_say"
