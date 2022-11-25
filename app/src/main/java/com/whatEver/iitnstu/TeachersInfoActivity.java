@@ -23,6 +23,7 @@ import java.util.HashMap;
  */
 public class TeachersInfoActivity extends AppCompatActivity {
 
+    
     private FirebaseFirestore db;
     private GridLayout gridLayout;
     private Context context;
