@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,15 +31,26 @@ public class MainActivity extends AppCompatActivity {
         /* splash window */
         getWindow().setStatusBarColor(this.getResources().getColor(R.color.white, null));
         new Handler().postDelayed(() -> {
-            ////here auth with if/else
+
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
-                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(homeIntent);
-                finish();
+
+                FirebaseAuth.getInstance().getCurrentUser().reload();
+
+                if(user.isEmailVerified()){
+                    Log.e("TEST","here");
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(MainActivity.this, AuthenticationActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
             } else {
-                Intent homeIntent = new Intent(MainActivity.this, AuthenticationActivity.class);
-                startActivity(homeIntent);
+                Intent intent = new Intent(MainActivity.this, AuthenticationActivity.class);
+                startActivity(intent);
                 finish();
             }
         }, 1500);

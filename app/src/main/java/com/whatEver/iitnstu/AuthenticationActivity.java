@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
@@ -46,9 +47,23 @@ public class AuthenticationActivity extends AppCompatActivity {
             } else {
                 auth.signInWithEmailAndPassword(txt_email, txt_password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Toast.makeText(AuthenticationActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AuthenticationActivity.this, HomeActivity.class));
-                        finish();
+
+
+                        if(auth.getCurrentUser().isEmailVerified()){
+                            Toast.makeText(AuthenticationActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(AuthenticationActivity.this, HomeActivity.class));
+                            finish();
+                        }else{
+
+                            auth.getCurrentUser().sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(AuthenticationActivity.this, "Please verify your email. A verify email is already sent to your email.", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        }
+
+
                     } else {
                         Toast.makeText(AuthenticationActivity.this, "Wrong email & password!", Toast.LENGTH_SHORT).show();
                     }
