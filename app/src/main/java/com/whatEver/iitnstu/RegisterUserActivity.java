@@ -15,7 +15,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -26,9 +28,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
  */
 public class RegisterUserActivity extends AppCompatActivity {
 
-    private RadioGroup radioGroup;
-    private RadioButton teacher, official, student;
-    private EditText email, password, password1, name, phone, Id;
+    private EditText email, password, password1;
     private Button register;
     private FirebaseFirestore db;
     private int tmp = -1;
@@ -41,66 +41,30 @@ public class RegisterUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
 
-        radioGroup = findViewById(R.id.radiogrp);
-        teacher = findViewById(R.id.radioTeacher);
-        official = findViewById(R.id.radioOfficial);
-        student = findViewById(R.id.radioStudent);
         email = findViewById(R.id.resEmail);
         password = findViewById(R.id.resPass);
         password1 = findViewById(R.id.resConfirmPass);
-        name = findViewById(R.id.resName);
-        phone = findViewById(R.id.resPhone);
-        Id = findViewById(R.id.resID);
         register = findViewById(R.id.resbutton);
         goBack = findViewById(R.id.go_back);
         db = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        student.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                tmp = 3;
-                Log.e("debug", String.valueOf(tmp));
-                Id.setVisibility(View.VISIBLE);
-            }
-        });
-        teacher.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                tmp = 1;
-                Log.e("debug", String.valueOf(tmp));
-                Id.setVisibility(View.GONE);
-            }
-        });
-        official.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                tmp = 2;
-                Log.e("debug", String.valueOf(tmp));
-                Id.setVisibility(View.GONE);
-            }
-        });
-
         register.setOnClickListener(v -> {
-            setDb();
             String txt_email = email.getText().toString();
             String txt_password = password.getText().toString();
             String txt_password1 = password1.getText().toString();
-            String txt_name = name.getText().toString();
-            String txt_phn = phone.getText().toString();
-            String txt_id = Id.getText().toString();
 
-            if (tmp == -1) {
-                Toast.makeText(RegisterUserActivity.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
-            } else if (tmp == 3 && TextUtils.isEmpty(txt_id)) {
-                Toast.makeText(RegisterUserActivity.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
-            } else if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password) || TextUtils.isEmpty(txt_password1) || TextUtils.isEmpty(txt_name)
-                    || TextUtils.isEmpty(txt_phn)) {
+            if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password) || TextUtils.isEmpty(txt_password1)) {
                 Toast.makeText(RegisterUserActivity.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
             } else if (!txt_password.equals(txt_password1)) {
                 Toast.makeText(RegisterUserActivity.this, "Password not matched!", Toast.LENGTH_SHORT).show();
             } else if (txt_password.length() < 6) {
                 Toast.makeText(RegisterUserActivity.this, "Password is too short!", Toast.LENGTH_SHORT).show();
+            }else if(emailValidation(txt_email)){
+                Toast.makeText(RegisterUserActivity.this, "Please use your edu mail", Toast.LENGTH_SHORT).show();
             } else {
                 Log.e("debug", "calling");
-                registerUser(txt_email, txt_password, txt_name, txt_phn, txt_id);
+                register(txt_email, txt_password);
             }
         });
 
@@ -181,13 +145,35 @@ public class RegisterUserActivity extends AppCompatActivity {
     private void register(String email, String password) {
         Log.e("debug", "registering");
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterUserActivity.this, task -> {
+
+            //Log.e("debug",task.getResult().toString());
+
             if (task.isSuccessful()) {
-                Toast.makeText(RegisterUserActivity.this, "Successfully registered", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(RegisterUserActivity.this, HomeActivity.class));
-                finish();
+
+                auth.getCurrentUser().sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(RegisterUserActivity.this, "A verification email is sent to your edu mail", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(RegisterUserActivity.this, AuthenticationActivity.class));
+                        finish();
+                    }
+                });
+
             } else {
-                Toast.makeText(RegisterUserActivity.this, "registration failed", Toast.LENGTH_SHORT).show();
+                if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                    Toast.makeText(RegisterUserActivity.this, "This email is already registered", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(RegisterUserActivity.this, "registration failed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    private boolean emailValidation(String email) {
+        if(email.endsWith("nstu.edu.bd")){
+            return false;
+        }else {
+            return true;
+        }
     }
 }

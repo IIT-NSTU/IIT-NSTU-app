@@ -14,97 +14,19 @@
         android:background="@drawable/bgapps"
         tools:context=".RegisterUserActivity">
 
-        <RadioGroup
-            android:id="@+id/radiogrp"
-            android:layout_width="157dp"
-            android:layout_height="96dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="76dp"
-            android:layout_marginEnd="53dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <RadioButton
-                android:id="@+id/radioTeacher"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="#F4EFEF"
-                android:text="Teacher"
-                android:textColor="#F6F5F5" />
-
-            <RadioButton
-                android:id="@+id/radioOfficial"
-                android:layout_width="144dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="#F4EFEF"
-                android:text="Official"
-                android:textColor="#FAF7F7" />
-
-            <RadioButton
-                android:id="@+id/radioStudent"
-                android:layout_width="107dp"
-                android:layout_height="wrap_content"
-                android:buttonTint="#FAF8F8"
-                android:text="Student"
-                android:textColor="#F8F6F6" />
-
-        </RadioGroup>
-
-        <EditText
-            android:id="@+id/resName"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginEnd="51dp"
-            android:ems="10"
-            android:hint="Full Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resConfirmPass" />
-
-        <EditText
-            android:id="@+id/resPhone"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginEnd="51dp"
-            android:ems="10"
-            android:hint="Phone No."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resName" />
-
-        <EditText
-            android:id="@+id/resID"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="51dp"
-            android:ems="10"
-            android:hint="Student ID"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radiogrp"
-            tools:visibility="gone" />
-
         <EditText
             android:id="@+id/resEmail"
             android:layout_width="0dp"
             android:layout_height="39dp"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="150dp"
             android:layout_marginEnd="51dp"
             android:ems="10"
-            android:hint="Email"
+            android:hint="NSTU Educational Email"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radiogrp" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
             android:id="@+id/resPass"
@@ -137,16 +59,14 @@
             android:id="@+id/resbutton"
             android:layout_width="312dp"
             android:layout_height="47dp"
-            android:layout_marginTop="103dp"
-            android:layout_marginBottom="80dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/button_bg"
             android:text="Register"
             android:textColor="#F6F3F3"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resPhone" />
+            app:layout_constraintTop_toBottomOf="@+id/resConfirmPass" />
 
         <TextView
             android:id="@+id/textView"
@@ -154,12 +74,10 @@
             android:layout_height="35dp"
             android:layout_marginStart="49dp"
             android:layout_marginTop="76dp"
-            android:layout_marginEnd="32dp"
-            android:text="Register as:"
+            android:text="Register:"
             android:textColor="#F8F4F4"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/radiogrp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
